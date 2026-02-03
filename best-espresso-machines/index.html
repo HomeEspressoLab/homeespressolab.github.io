@@ -1,4 +1,4 @@
-<!doctype html>
+     <!doctype html>
 <html lang="en-CA">
 <head>
   <meta charset="utf-8" />
@@ -20,6 +20,13 @@
   <link rel="alternate" href="https://homeespressolab.github.io/fr/best-espresso-machines/" hreflang="fr-CA" />
   <link rel="alternate" href="https://homeespressolab.github.io/best-espresso-machines/" hreflang="x-default" />
 
+  <!-- Preload (Hero image) -->
+  <link rel="preload" as="image"
+        href="/assets/images/hero/best-espresso-machines-hero-1600x840.webp"
+        imagesrcset="/assets/images/hero/best-espresso-machines-hero-1600x840.webp 1600w, /assets/images/hero/best-espresso-machines-hero-2400x1260.webp 2400w"
+        imagesizes="(max-width: 980px) 100vw, 52vw"
+        fetchpriority="high" />
+
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
@@ -30,7 +37,7 @@
   <meta property="og:title" content="Best Espresso Machines (2026) | HomeEspressoLab" />
   <meta property="og:description" content="Top picks for home espresso in 2026, with a clean comparison table and buying advice. Clear trade-offs, no hype." />
   <meta property="og:url" content="https://homeespressolab.github.io/best-espresso-machines/" />
-  <meta property="og:image" content="https://homeespressolab.github.io/assets/img/best-espresso-machines-og-1200x630.webp" />
+  <meta property="og:image" content="https://homeespressolab.github.io/assets/images/og/best-espresso-machines-og-1200x630.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="article:published_time" content="2026-02-03" />
@@ -40,7 +47,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Best Espresso Machines (2026) | HomeEspressoLab" />
   <meta name="twitter:description" content="Top picks for home espresso in 2026, with a clean comparison table and buying advice. Clear trade-offs, no hype." />
-  <meta name="twitter:image" content="https://homeespressolab.github.io/assets/img/best-espresso-machines-og-1200x630.webp" />
+  <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/best-espresso-machines-og-1200x630.webp" />
 
   <!-- Favicons (root) - aligned with your repo files -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -136,7 +143,7 @@
         "breadcrumb":{"@id":"https://homeespressolab.github.io/best-espresso-machines/#breadcrumbs"},
         "primaryImageOfPage":{
           "@type":"ImageObject",
-          "url":"https://homeespressolab.github.io/assets/img/best-espresso-machines-og-1200x630.webp",
+          "url":"https://homeespressolab.github.io/assets/images/og/best-espresso-machines-og-1200x630.webp",
           "width":1200,
           "height":630
         },
@@ -337,6 +344,25 @@
               <a class="link-accent" href="/best-espresso-grinders/">a capable grinder</a>.
             </p>
           </div>
+
+          <!-- HERO IMAGE (added) -->
+          <figure class="hero__media" aria-label="Espresso machine and crema close-up">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="/assets/images/hero/best-espresso-machines-hero-1600x840.webp 1600w,
+                        /assets/images/hero/best-espresso-machines-hero-2400x1260.webp 2400w"
+                sizes="(max-width: 980px) 100vw, 52vw" />
+              <img
+                src="/assets/images/hero/best-espresso-machines-hero-1600x840.webp"
+                alt="Premium espresso setup: espresso machine details and a fresh shot with crema on a dark counter."
+                width="2400"
+                height="1260"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high" />
+            </picture>
+          </figure>
 
           <aside class="hero__panel">
             <h3 class="mb-2">Quick summary</h3>

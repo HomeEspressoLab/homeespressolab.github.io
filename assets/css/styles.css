@@ -1,12 +1,3 @@
-/* =========================================================
-   HomeEspressoLab — Dark Discord-inspired UI (Premium)
-   Author: ChatGPT
-   Notes:
-   - Vanilla CSS, mobile-first, accessible, fast
-   - Discord-like dark neutrals + violet gradients
-   ========================================================= */
-
-/* ---------- Design Tokens ---------- */
 :root{
   /* Fonts */
   --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";

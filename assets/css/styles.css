@@ -1,6 +1,6 @@
 /* =========================================================
    HomeEspressoLab — Discord-ish Editorial CSS (UPDATED)
-   Goals: clean, premium, fast, accessible, mobile-first
+   Goals: clean, fast, accessible, mega-menu fixed
    ========================================================= */
 
 /* ---------- Design Tokens ---------- */
@@ -129,7 +129,6 @@ html{
   scroll-behavior: smooth;
   color-scheme: dark light;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
 }
 
 body{
@@ -158,13 +157,7 @@ a{
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-
 a:hover{ text-decoration: underline; }
-
-::selection{
-  background: rgba(167,139,250,.25);
-  color: var(--text);
-}
 
 p{ margin: 0 0 var(--s-5); }
 h1,h2,h3,h4{ margin: 0 0 var(--s-4); line-height: var(--lh-tight); }
@@ -211,13 +204,10 @@ blockquote{
 
 /* ---------- Accessibility ---------- */
 :focus{ outline: none; }
-
 :focus-visible{
-  outline: 2px solid transparent; /* fallback */
   box-shadow: var(--ring);
   border-radius: 10px;
 }
-
 .skip-link{
   position: absolute;
   left: 12px;
@@ -341,11 +331,11 @@ blockquote{
 .site-header{
   position: sticky;
   top: 0;
-  z-index: 200;
+  z-index: 300; /* raised for dropdown safety */
   height: var(--headerH);
   display:flex;
   align-items:center;
-  backdrop-filter: saturate(1.2);
+  backdrop-filter: saturate(1.2) blur(10px);
   background: rgba(11,13,20,.70);
   border-bottom: 1px solid var(--line2);
 }
@@ -359,12 +349,15 @@ blockquote{
   justify-content: space-between;
   gap: var(--s-4);
 }
+
+/* Brand */
 .brand{
   display:flex;
   align-items:center;
   gap: 10px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.01em;
+  min-width: max-content;
 }
 .brand__logo{
   width: 34px;
@@ -375,29 +368,44 @@ blockquote{
 }
 .brand__name{ font-size: 1.05rem; }
 
+/* Nav links */
 .nav{
   display:flex;
   align-items:center;
   gap: var(--s-2);
 }
-.nav a{
+.nav a,
+.nav button{
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.nav a,
+.nav .nav__link,
+.nav button.nav__link{
   display:inline-flex;
   align-items:center;
   gap: 8px;
   padding: 10px 12px;
   border-radius: 12px;
   border: 1px solid transparent;
-  color: var(--muted);
   transition: background var(--t1) var(--ease), border-color var(--t1) var(--ease), color var(--t1) var(--ease);
   text-decoration: none;
+  white-space: nowrap;
 }
-.nav a:hover{
+.nav a:hover,
+.nav .nav__link:hover{
   background: rgba(255,255,255,.04);
   border-color: var(--line2);
   color: var(--text);
   text-decoration: none;
 }
-.nav a[aria-current="page"]{
+.nav a[aria-current="page"],
+.nav .nav__link[aria-current="page"]{
   background: rgba(139,92,246,.10);
   border-color: rgba(167,139,250,.28);
   color: var(--text);
@@ -408,6 +416,147 @@ blockquote{
   display:flex;
   align-items:center;
   gap: var(--s-3);
+}
+
+/* ---------- Mega menu / Dropdown FIX (important) ---------- */
+/* Supports multiple class names to match your HTML */
+.nav-item,
+.nav__item{ position: relative; }
+
+.has-dropdown,
+.has-mega,
+.is-dropdown,
+.is-mega{ position: relative; }
+
+/* The overlay backdrop (optional if you use it in HTML) */
+.menu-backdrop,
+.nav-backdrop,
+.mega-backdrop{
+  position: fixed;
+  inset: var(--headerH) 0 0 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(6px);
+  z-index: 250;
+}
+
+/* The actual dropdown panel */
+.dropdown,
+.dropdown-menu,
+.dropdown__menu,
+.nav__dropdown,
+.mega,
+.mega-menu,
+.mega__menu{
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(980px, calc(100vw - 24px));
+  max-height: calc(100vh - var(--headerH) - 24px);
+  overflow: auto;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.03), transparent 55%),
+    rgba(17,23,40,.92);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(0,0,0,.55);
+  z-index: 350;
+
+  padding: 14px;
+}
+
+/* If your dropdown is full-width by accident, this prevents it */
+.dropdown[style*="width: 100%"],
+.mega[style*="width: 100%"],
+.mega-menu[style*="width: 100%"]{
+  width: min(980px, calc(100vw - 24px)) !important;
+}
+
+/* Inner layout: grid columns */
+.dropdown__grid,
+.mega__grid,
+.mega-grid{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px){
+  .dropdown__grid,
+  .mega__grid,
+  .mega-grid{
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Column cards inside menu */
+.dropdown__col,
+.mega__col,
+.menu__col{
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+/* Links inside mega menu */
+.dropdown a,
+.dropdown-menu a,
+.nav__dropdown a,
+.mega a,
+.mega-menu a{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 10px;
+  border-radius: 12px;
+  color: var(--muted);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.dropdown a:hover,
+.dropdown-menu a:hover,
+.nav__dropdown a:hover,
+.mega a:hover,
+.mega-menu a:hover{
+  color: var(--text);
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.08);
+}
+
+/* Small label above sections (like "Capsule picks") */
+.menu-label,
+.dropdown__label,
+.mega__label{
+  font-size: var(--text-xs);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin: 6px 6px 10px;
+}
+
+/* Close spacing for dropdown on small screens */
+@media (max-width: 520px){
+  .dropdown,
+  .dropdown-menu,
+  .nav__dropdown,
+  .mega,
+  .mega-menu{
+    padding: 12px;
+    border-radius: 16px;
+  }
+}
+
+/* Prevent header overlap bug */
+.site-header *{
+  scroll-margin-top: calc(var(--headerH) + 18px);
+}
+
+/* Optional: keep body scroll when dropdown open (if you add .menu-open on body) */
+body.menu-open{
+  overflow: hidden;
 }
 
 /* ---------- Breadcrumbs ---------- */
@@ -425,7 +574,6 @@ blockquote{
 
 /* ---------- Hero ---------- */
 .hero{ padding: var(--s-9) 0 var(--s-7); }
-
 .hero__wrap{
   display:grid;
   gap: var(--s-6);
@@ -454,7 +602,6 @@ blockquote{
   box-shadow: var(--shadow1);
 }
 .hero__panel h3{ margin-bottom: var(--s-2); }
-
 .hero__meta{
   display:flex;
   flex-wrap:wrap;
@@ -519,7 +666,6 @@ blockquote{
   text-decoration: none;
   transition: transform var(--t1) var(--ease), box-shadow var(--t1) var(--ease), background var(--t1) var(--ease), border-color var(--t1) var(--ease);
   white-space: nowrap;
-  -webkit-tap-highlight-color: transparent;
 }
 .btn:active{ transform: translateY(1px); }
 
@@ -560,7 +706,6 @@ blockquote{
   font-weight: 650;
 }
 .btn--link:hover{ text-decoration: underline; }
-
 .btn[disabled],
 .btn.is-disabled{
   opacity: .55;
@@ -568,7 +713,6 @@ blockquote{
   transform: none;
   box-shadow: none !important;
 }
-
 .btn--sm{ padding: 10px 12px; border-radius: 12px; }
 .btn--lg{ padding: 14px 16px; border-radius: 16px; font-size: var(--text-base); }
 
@@ -588,14 +732,12 @@ blockquote{
 
 /* ---------- Forms ---------- */
 .form{ display:grid; gap: var(--s-4); }
-
 .label{
   display:block;
   font-size: var(--text-sm);
   color: var(--muted);
   margin-bottom: 8px;
 }
-
 .input, textarea, select{
   width: 100%;
   padding: 12px 12px;
@@ -606,15 +748,12 @@ blockquote{
   outline: none;
   transition: border-color var(--t1) var(--ease), background var(--t1) var(--ease), box-shadow var(--t1) var(--ease);
 }
-
 textarea{ min-height: 120px; resize: vertical; }
-
 .input:focus, textarea:focus, select:focus{
   border-color: rgba(167,139,250,.38);
   box-shadow: var(--ring);
   background: rgba(255,255,255,.04);
 }
-
 .help{ font-size: var(--text-sm); color: var(--muted2); }
 
 /* ---------- Images ---------- */
@@ -625,7 +764,6 @@ textarea{ min-height: 120px; resize: vertical; }
   background: rgba(255,255,255,.02);
 }
 .figure img{ width:100%; height:auto; }
-
 .img--rounded{ border-radius: var(--imgRadius); }
 .img--shadow{ box-shadow: var(--shadow2); }
 .ar-16x9{ aspect-ratio: 16/9; object-fit: cover; }
@@ -646,17 +784,14 @@ textarea{ min-height: 120px; resize: vertical; }
 .notice--warn{
   border-color: rgba(251,191,36,.24);
   background: rgba(251,191,36,.10);
-  color: var(--text);
 }
 .notice--danger{
   border-color: rgba(239,68,68,.22);
   background: rgba(239,68,68,.08);
-  color: var(--text);
 }
 .notice--info{
   border-color: rgba(96,165,250,.22);
   background: rgba(96,165,250,.08);
-  color: var(--text);
 }
 
 .disclosure{
@@ -670,11 +805,9 @@ textarea{ min-height: 120px; resize: vertical; }
 
 /* Pros / Cons */
 .procon{ display:grid; gap: var(--s-4); }
-
 @media (min-width: 860px){
   .procon{ grid-template-columns: 1fr 1fr; }
 }
-
 .pros, .cons{
   padding: var(--s-5);
   border-radius: var(--r-lg);
@@ -683,9 +816,7 @@ textarea{ min-height: 120px; resize: vertical; }
 }
 .pros{ border-color: rgba(34,197,94,.20); }
 .cons{ border-color: rgba(239,68,68,.18); }
-
-/* Support h3 and h4 */
-.pros h3, .pros h4, .cons h3, .cons h4{ margin-bottom: var(--s-3); }
+.pros h3, .cons h3{ margin-bottom: var(--s-3); }
 
 /* ---------- TOC ---------- */
 .toc{
@@ -729,7 +860,6 @@ textarea{ min-height: 120px; resize: vertical; }
   border: 1px solid var(--line2);
   background: rgba(255,255,255,.02);
 }
-
 table{
   width: 100%;
   border-collapse: separate;
@@ -777,10 +907,7 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 .row--best .table__name{ color: var(--text); }
 
 /* Mobile alternative: table to cards (helper) */
-.table-cards{
-  display:grid;
-  gap: var(--s-5);
-}
+.table-cards{ display:grid; gap: var(--s-5); }
 @media (min-width: 860px){
   .table-cards{ display:none; }
 }
@@ -838,10 +965,7 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 }
 
 /* ---------- FAQ (accordion-friendly) ---------- */
-.faq{
-  display:grid;
-  gap: var(--s-3);
-}
+.faq{ display:grid; gap: var(--s-3); }
 .faq details{
   border: 1px solid var(--line2);
   border-radius: var(--r-lg);
@@ -984,59 +1108,43 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 /* ---------- Print ---------- */
 @media print{
   body{ background:#fff; color:#111; }
-  .site-header, .site-footer, .btn, .toc, .consent{ display:none !important; }
+  .site-header, .site-footer, .btn, .toc,
+  .dropdown, .dropdown-menu, .nav__dropdown, .mega, .mega-menu,
+  .menu-backdrop, .nav-backdrop, .mega-backdrop{ display:none !important; }
   .card, .panel, .panel2, .product-box{ box-shadow:none; border-color:#ddd; background:#fff; }
   a{ text-decoration: underline; color:#111; }
 }
 
-/* =========================================================
-   Consent banner (cookie / GA consent)
-   ========================================================= */
-
+/* ---------- Consent banner ---------- */
 .consent{
-  position: fixed;
-  inset: auto 0 0 0;
-  padding: 16px;
-  padding-bottom: calc(16px + env(safe-area-inset-bottom)); /* iOS safe-area */
-  z-index: 9999;
+  position:fixed;
+  inset:auto 0 0 0;
+  padding:16px;
+  z-index:9999;
 }
-
 .consent__card{
-  max-width: 980px;
-  margin: 0 auto;
-  background: var(--panel, rgba(20,22,30,.96));
-  border: 1px solid var(--line, rgba(255,255,255,.10));
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  max-width:980px;
+  margin:0 auto;
+  background: rgba(17,23,40,.92);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,.35);
 }
-
 .consent__actions{
   display:flex;
-  gap: 10px;
+  gap:10px;
   justify-content:flex-end;
   flex-wrap:wrap;
-  margin-top: 12px;
+  margin-top:12px;
 }
-
 .consent__custom{
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line, rgba(255,255,255,.10));
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.10);
 }
-
 .consent__toggle{
   display:flex;
-  gap: 10px;
+  gap:10px;
   align-items:center;
-}
-
-/* Optional: make consent buttons look consistent even if you reuse .btn */
-.consent .btn{ margin: 0; }
-
-/* Optional: checkbox sizing */
-.consent input[type="checkbox"]{
-  width: 18px;
-  height: 18px;
-  accent-color: var(--violet);
 }

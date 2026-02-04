@@ -1439,7 +1439,7 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 }
 
 /* =========================================================
-   HERO Banner Override (FULL WIDTH)
+   HERO Banner Override (FULL WIDTH) — UPDATED (no overlap)
    Put at VERY END of styles.css
    ========================================================= */
 
@@ -1506,13 +1506,19 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   margin-inline: auto;
 }
 
-/* Bottom bar stays in container width */
+/* =========================================================
+   Bottom bar (FIXED): no negative margin, clean spacing
+   ========================================================= */
 .hero.hero--banner .hero__bar{
   position: relative;
   z-index: 3;
-  margin-top: -34px;
 
-  padding: 0 var(--gutter) var(--s-7);
+  /* ✅ remove overlap */
+  margin-top: 0;
+
+  /* ✅ create real space below image */
+  padding: var(--s-5) var(--gutter) var(--s-7);
+
   max-width: var(--container);
   margin-inline: auto;
 
@@ -1534,14 +1540,16 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
     padding: var(--s-5) var(--gutter) 0;
     background: transparent;
   }
+
+  /* keep spacing consistent on mobile too */
   .hero.hero--banner .hero__bar{
-    margin-top: var(--s-4);
+    margin-top: 0;
+    padding-top: var(--s-4);
   }
 }
 
 /* =========================================================
    HERO — Perfect placement for buttons + "Fast rule" note
-   Put at VERY END of styles.css
    ========================================================= */
 
 /* Keep full-width helper */
@@ -1551,21 +1559,15 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   margin-inline: 0;
 }
 
-/* Ensure the bottom bar items can’t overlap */
-.hero__bar{
-  position: relative;
-  z-index: 3;
-}
-
 /* Left block (buttons + note) = stacked, predictable spacing */
 .hero__actions{
   display: flex;
   flex-direction: column;
-  gap: 0;                 /* we control spacing precisely below */
+  gap: 0;
   min-width: 0;
 }
 
-/* Button row stays a neat wrap row */
+/* Button row */
 .hero__actions .cluster{
   display: flex;
   flex-wrap: wrap;
@@ -1574,10 +1576,10 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   margin: 0;
 }
 
-/* The note is a real "separate line" under buttons */
+/* The note is clearly BELOW the buttons */
 .hero__tip{
-  margin: 18px 0 0;       /* pushes it down (desktop) */
-  padding: 12px 0 0;      /* space + separator feel */
+  margin: 22px 0 0;       /* ✅ pushes it lower (desktop) */
+  padding: 12px 0 0;
   max-width: 62ch;
 
   font-size: var(--text-sm);
@@ -1586,24 +1588,23 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 
   background: none;
   border: none;
-
   border-top: 1px solid rgba(255,255,255,.08);
 }
 
-/* Subtle accent dot */
 .hero__tip::before{
   content: "•";
   color: var(--violet2);
   margin-right: 8px;
 }
 
-/* Mobile: more breathing room + avoid tight stacking */
+/* Mobile: more breathing room */
 @media (max-width: 720px){
   .hero__actions .cluster{
     gap: 10px;
   }
   .hero__tip{
-    margin-top: 16px;
+    margin-top: 18px;
     padding-top: 12px;
   }
 }
+

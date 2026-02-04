@@ -1549,3 +1549,32 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   margin-inline: 0;
 }
 
+/* =========================================================
+   FIX: Hero tip under buttons (no overlap)
+   Put at VERY END of styles.css
+   ========================================================= */
+
+.hero__actions{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero__actions .cluster{
+  margin: 0;
+}
+
+.hero__tip{
+  margin: 0;
+  max-width: 62ch;
+  font-size: var(--text-sm);
+  line-height: 1.35;
+  color: rgba(235, 238, 255, .86);
+
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(10, 12, 20, .55);
+  border: 1px solid rgba(140, 120, 255, .18);
+  backdrop-filter: blur(10px);
+}
+

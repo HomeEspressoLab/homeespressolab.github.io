@@ -17,7 +17,7 @@
 
   <!-- Hreflang (SEO: English + French URLs) -->
   <link rel="alternate" href="https://homeespressolab.github.io/best-espresso-machines/" hreflang="en-CA" />
-  <link rel="alternate" href="https://homeespressolab.github.io/fr/best-espresso-machines/" hreflang="fr-CA" />
+  <link rel="alternate" href="https://homeespressolab.github.io/fr/meilleures-machines-espresso/" hreflang="fr-CA" />
   <link rel="alternate" href="https://homeespressolab.github.io/best-espresso-machines/" hreflang="x-default" />
 
   <!-- Preload (Hero image) -->
@@ -58,36 +58,38 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
 
-  <!-- GA4 + Consent Mode v2 -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+  <!-- GA4 + Consent Mode v2 (correct order: consent default BEFORE gtag.js loads) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
 
-    /* Default: deny until user choice */
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      functionality_storage: 'granted',
-      personalization_storage: 'denied',
-      security_storage: 'granted',
-      wait_for_update: 1200
-    });
+  // Default: deny until user choice
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'granted',
+    personalization_storage: 'denied',
+    security_storage: 'granted',
+    wait_for_update: 1200
+  });
+</script>
 
-    gtag('js', new Date());
-
-    gtag('config', 'G-G72603892F', {
-      anonymize_ip: true,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false
-    });
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G72603892F"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G72603892F"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-G72603892F', {
+    anonymize_ip: true,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+</script>
 
   <!-- Site JS (defer) -->
   <script defer src="/assets/js/consent.js"></script>
   <script defer src="/assets/js/affiliate-clicks.js"></script>
+  <script defer src="/assets/js/nav.js"></script>
 
   <!-- JSON-LD: Organization + WebSite + Breadcrumb + CollectionPage + ItemList + FAQ -->
   <script type="application/ld+json">
@@ -285,36 +287,75 @@
 
   <!-- Header -->
   <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="/" aria-label="HomeEspressoLab home">
-        <img
-          class="brand__img"
-          src="/assets/images/brand/homeespressolab-brandmark-1024.png"
-          alt="HomeEspressoLab"
-          width="28"
-          height="28"
-          loading="eager"
-          decoding="async"
-        />
-        <span class="brand__name">HomeEspressoLab</span>
-      </a>
+  <div class="container navbar">
+    <a class="brand" href="/" aria-label="HomeEspressoLab home">
+      <img
+        class="brand__img"
+        src="/assets/images/brand/homeespressolab-brandmark-1024.png"
+        alt="HomeEspressoLab"
+        width="28"
+        height="28"
+        loading="eager"
+        decoding="async"
+      />
+      <span class="brand__name">HomeEspressoLab</span>
+    </a>
 
-      <div class="navbar__right">
-        <nav class="nav" aria-label="Primary navigation">
-          <a aria-current="page" href="/best-espresso-machines/">Best machines</a>
-          <a href="/best-espresso-machine-for-beginners/">Beginners</a>
-          <a href="/best-espresso-machine-under-500/">Under $500</a>
-          <a href="/best-espresso-grinders/">Best grinders</a>
-          <a href="/how-we-test/">How we test</a>
-        </nav>
+    <div class="navbar__right">
 
-        <div class="lang-switch" aria-label="Language switch">
-          <a class="btn btn--ghost btn--sm" href="/best-espresso-machines/" aria-current="true">EN</a>
-          <a class="btn btn--ghost btn--sm" href="/fr/best-espresso-machines/" hreflang="fr-CA" lang="fr-CA">FR</a>
-        </div>
+      <!-- Desktop nav -->
+      <nav class="nav nav--desktop" aria-label="Primary navigation">
+        <a aria-current="page" href="/best-espresso-machines/">Best machines</a>
+        <a href="/best-espresso-machine-for-beginners/">Beginners</a>
+        <a href="/best-espresso-machine-under-500/">Under $500</a>
+        <a href="/best-espresso-grinders/">Best grinders</a>
+        <a href="/how-we-test/">How we test</a>
+      </nav>
+
+      <!-- Desktop language switch -->
+      <div class="lang-switch lang-switch--desktop" aria-label="Language switch">
+        <a class="btn btn--ghost btn--sm" href="/best-espresso-machines/" aria-current="true">EN</a>
+        <a class="btn btn--ghost btn--sm" href="/fr/best-espresso-machines/" hreflang="fr-CA" lang="fr-CA">FR</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        class="menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mobileNav"
+        aria-expanded="false"
+        data-menu-btn>
+        <span class="menu-btn__icon" aria-hidden="true"></span>
+        <span class="menu-btn__text">Menu</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-nav" id="mobileNav" hidden data-mobile-nav>
+    <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+      <div class="mobile-nav__top">
+        <strong>Menu</strong>
+        <button class="btn btn--ghost btn--sm" type="button" aria-label="Close menu" data-menu-close>Close</button>
+      </div>
+
+      <nav class="mobile-nav__links" aria-label="Mobile navigation">
+        <a aria-current="page" href="/best-espresso-machines/">Best machines</a>
+        <a href="/best-espresso-machine-for-beginners/">Beginners</a>
+        <a href="/best-espresso-machine-under-500/">Under $500</a>
+        <a href="/best-espresso-grinders/">Best grinders</a>
+        <a href="/how-we-test/">How we test</a>
+      </nav>
+
+      <div class="mobile-nav__lang" aria-label="Language switch">
+        <a class="btn btn--ghost btn--sm" href="/best-espresso-machines/" aria-current="true">EN</a>
+        <a class="btn btn--ghost btn--sm" href="/fr/best-espresso-machines/" hreflang="fr-CA" lang="fr-CA">FR</a>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <main id="content">
     <div class="container section--tight">

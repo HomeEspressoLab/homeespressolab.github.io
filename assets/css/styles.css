@@ -1551,7 +1551,8 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 
 /* =========================================================
    Hero editorial note (Fast rule)
-   Clean, separated, non-intrusive
+   - pushed lower (more breathing room)
+   - optional subtle separator line
    ========================================================= */
 
 .hero__actions{
@@ -1560,8 +1561,10 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   gap: 10px;
 }
 
+/* Push the tip LOWER (increase if needed) */
 .hero__tip{
-  margin-top: 6px;
+  margin-top: 26px;       /* <-- change to 18 / 32 / 40 if you want */
+  padding-top: 12px;      /* space above text */
   padding-left: 2px;
 
   max-width: 60ch;
@@ -1569,16 +1572,19 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   line-height: 1.4;
   color: rgba(235, 238, 255, .72);
 
-  /* editorial feel */
   background: none;
   border: none;
+
+  /* subtle separation so it feels "below" the buttons */
+  border-top: 1px solid rgba(255,255,255,.08);
 }
 
-/* Optional: subtle accent bar (very light) */
+/* Optional: subtle accent dot (kept) */
 .hero__tip::before{
   content: "•";
   color: var(--violet2);
   margin-right: 6px;
 }
+
 
 

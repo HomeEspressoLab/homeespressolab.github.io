@@ -1307,3 +1307,134 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   }
 }
 
+/* ---------- Hero (Homepage layout like screenshot) ---------- */
+
+.hero{
+  padding: var(--s-9) 0 var(--s-7);
+}
+
+/* The hero "card" wrapper */
+.hero__wrap{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.03), transparent 55%),
+    rgba(17,23,40,.55);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--r-xl);
+  box-shadow: 0 22px 60px rgba(0,0,0,.45);
+  padding: clamp(16px, 2.2vw, 26px);
+
+  display: grid;
+  gap: var(--s-6);
+  align-items: center;
+}
+
+/* Desktop split: text left, image right */
+@media (min-width: 860px){
+  .hero__wrap{
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: var(--s-7);
+  }
+}
+
+/* Optional if you use this class in HTML (recommended) */
+.hero__copy{ min-width: 0; }
+
+.hero__title{
+  margin-bottom: var(--s-3);
+}
+
+.hero__lead{
+  color: var(--muted);
+  font-size: var(--text-md);
+  line-height: var(--lh-snug);
+  max-width: 60ch;
+}
+
+/* Right image block */
+.hero__media{
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+}
+
+/* Force 16:9 look like your screenshot */
+.hero__media img{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* The magic: dark overlay + violet glow on the LEFT side of the image */
+.hero__media::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 520px at 22% 55%, rgba(124,58,237,.22), transparent 60%),
+    linear-gradient(90deg, rgba(8,10,16,.82) 0%, rgba(8,10,16,.50) 42%, rgba(8,10,16,0) 74%);
+  pointer-events:none;
+}
+
+/* Badges row spacing */
+.hero__meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-4);
+}
+
+/* Bottom bar: CTAs left + Start here panel right */
+.hero__bar{
+  grid-column: 1 / -1;
+  display: grid;
+  gap: var(--s-5);
+  margin-top: var(--s-5);
+}
+
+@media (min-width: 860px){
+  .hero__bar{
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+  }
+}
+
+.hero__actions{
+  padding: var(--s-5);
+  border-radius: var(--r-xl);
+  border: 1px solid rgba(255,255,255,.08);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.03), transparent 65%),
+    rgba(15,19,32,.45);
+}
+
+/* Make CTA buttons look like your screenshot row */
+.hero__actions .cluster{
+  gap: var(--s-3);
+}
+
+.hero__tip{
+  margin-top: var(--s-4);
+  margin-bottom: 0;
+}
+
+/* Start here panel: slightly tighter + same card feel */
+.hero__panel{
+  padding: var(--s-5);
+  border-radius: var(--r-xl);
+  border: 1px solid rgba(167,139,250,.22);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.03), transparent 60%),
+    rgba(17,23,40,.58);
+  box-shadow: var(--shadow1);
+}
+
+/* Mobile: stack cleanly */
+@media (max-width: 859px){
+  .hero__bar{ margin-top: var(--s-4); }
+  .hero__actions{ padding: var(--s-5); }
+}
+

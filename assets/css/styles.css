@@ -1608,3 +1608,20 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   }
 }
 
+/* =========================================================
+   HERO Banner — stop content bleeding behind bottom bar
+   Put at VERY END of styles.css
+   ========================================================= */
+
+/* Limit the overlay content to the IMAGE height only */
+.hero.hero--banner .hero__content{
+  inset: 0 0 auto 0; /* top right bottom left */
+  height: clamp(320px, 46vw, 520px); /* same as your image height */
+}
+
+/* Make the actions panel slightly more opaque to hide anything behind */
+.hero__actions{
+  background: rgba(15, 19, 32, .78) !important;
+  backdrop-filter: blur(10px);
+}
+

@@ -1439,35 +1439,102 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 }
 
 /* =========================================================
-   HERO Banner Override (image full-width + text overlay)
+   HERO Banner Override (FULL WIDTH)
    Put at VERY END of styles.css
    ========================================================= */
 
+.hero.hero--banner{
+  padding: 0;
+  margin-top: var(--s-7);
+}
+
+/* Cancel the "card" look for banner */
 .hero.hero--banner .hero__wrap{
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr;
   position: relative;
-  grid-template-columns: 1fr; /* stop split */
+  overflow: hidden;
 }
 
+/* Full-width image */
 .hero.hero--banner .hero__media{
-  grid-column: 1 / -1;
-  border-radius: var(--r-xl);
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
 }
 
+.hero.hero--banner .hero__media img{
+  width: 100%;
+  height: clamp(320px, 46vw, 520px);
+  object-fit: cover;
+}
+
+/* Dark overlay + violet glow */
+.hero.hero--banner .hero__media::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 520px at 18% 55%, rgba(124,58,237,.28), transparent 60%),
+    linear-gradient(90deg, rgba(8,10,16,.88) 0%, rgba(8,10,16,.58) 46%, rgba(8,10,16,0) 78%);
+  pointer-events:none;
+  z-index: 1;
+}
+
+/* Overlay text centered in container width */
 .hero.hero--banner .hero__content{
   position: absolute;
-  top: clamp(18px, 4vw, 38px);
-  left: clamp(18px, 4vw, 38px);
-  z-index: 3;
-  max-width: 52ch;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  align-content: center;
+
+  padding: clamp(18px, 4vw, 52px);
+  max-width: var(--container);
+  margin-inline: auto;
 }
 
+/* Bottom bar stays in container width */
 .hero.hero--banner .hero__bar{
-  grid-column: 1 / -1;
+  position: relative;
+  z-index: 3;
+  margin-top: -34px;
+
+  padding: 0 var(--gutter) var(--s-7);
+  max-width: var(--container);
+  margin-inline: auto;
+
+  display: grid;
+  gap: var(--s-5);
 }
 
+@media (min-width: 860px){
+  .hero.hero--banner .hero__bar{
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+  }
+}
+
+/* Mobile: move text under image */
 @media (max-width: 720px){
   .hero.hero--banner .hero__content{
     position: static;
+    padding: var(--s-5) var(--gutter) 0;
+    background: transparent;
+  }
+  .hero.hero--banner .hero__bar{
     margin-top: var(--s-4);
   }
 }

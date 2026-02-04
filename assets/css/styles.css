@@ -1438,3 +1438,37 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   .hero__actions{ padding: var(--s-5); }
 }
 
+/* =========================================================
+   HERO Banner Override (image full-width + text overlay)
+   Put at VERY END of styles.css
+   ========================================================= */
+
+.hero.hero--banner .hero__wrap{
+  position: relative;
+  grid-template-columns: 1fr; /* stop split */
+}
+
+.hero.hero--banner .hero__media{
+  grid-column: 1 / -1;
+  border-radius: var(--r-xl);
+}
+
+.hero.hero--banner .hero__content{
+  position: absolute;
+  top: clamp(18px, 4vw, 38px);
+  left: clamp(18px, 4vw, 38px);
+  z-index: 3;
+  max-width: 52ch;
+}
+
+.hero.hero--banner .hero__bar{
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 720px){
+  .hero.hero--banner .hero__content{
+    position: static;
+    margin-top: var(--s-4);
+  }
+}
+

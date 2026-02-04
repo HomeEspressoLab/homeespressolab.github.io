@@ -1540,51 +1540,70 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 }
 
 /* =========================================================
-   HERO Full Width helper
+   HERO — Perfect placement for buttons + "Fast rule" note
    Put at VERY END of styles.css
    ========================================================= */
+
+/* Keep full-width helper */
 .hero--full{
   width: 100%;
   max-width: none;
   margin-inline: 0;
 }
 
-/* =========================================================
-   Hero editorial note (Fast rule)
-   - pushed lower (more breathing room)
-   - optional subtle separator line
-   ========================================================= */
+/* Ensure the bottom bar items can’t overlap */
+.hero__bar{
+  position: relative;
+  z-index: 3;
+}
 
+/* Left block (buttons + note) = stacked, predictable spacing */
 .hero__actions{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;                 /* we control spacing precisely below */
+  min-width: 0;
 }
 
-/* Push the tip LOWER (increase if needed) */
-.hero__tip{
-  margin-top: 26px;       /* <-- change to 18 / 32 / 40 if you want */
-  padding-top: 12px;      /* space above text */
-  padding-left: 2px;
+/* Button row stays a neat wrap row */
+.hero__actions .cluster{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  align-items: center;
+  margin: 0;
+}
 
-  max-width: 60ch;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: rgba(235, 238, 255, .72);
+/* The note is a real "separate line" under buttons */
+.hero__tip{
+  margin: 18px 0 0;       /* pushes it down (desktop) */
+  padding: 12px 0 0;      /* space + separator feel */
+  max-width: 62ch;
+
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: rgba(235, 238, 255, .74);
 
   background: none;
   border: none;
 
-  /* subtle separation so it feels "below" the buttons */
   border-top: 1px solid rgba(255,255,255,.08);
 }
 
-/* Optional: subtle accent dot (kept) */
+/* Subtle accent dot */
 .hero__tip::before{
   content: "•";
   color: var(--violet2);
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
-
-
+/* Mobile: more breathing room + avoid tight stacking */
+@media (max-width: 720px){
+  .hero__actions .cluster{
+    gap: 10px;
+  }
+  .hero__tip{
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+}

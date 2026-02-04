@@ -23,7 +23,12 @@
   <!-- Preload (Hero image) -->
   <link rel="preload" as="image"
         href="/assets/images/hero/home-espresso-hero-1600x840.webp"
-        imagesrcset="/assets/images/hero/home-espresso-hero-1600x840.webp 1600w, /assets/images/hero/home-espresso-hero-2400x1260.webp 2400w"
+        imagesrcset="
+          /assets/images/hero/home-espresso-hero-768x432.webp 768w,
+          /assets/images/hero/home-espresso-hero-960x540.webp 960w,
+          /assets/images/hero/home-espresso-hero-1200x630.webp 1200w,
+          /assets/images/hero/home-espresso-hero-1600x840.webp 1600w,
+          /assets/images/hero/home-espresso-hero-2400x1260.webp 2400w"
         imagesizes="(max-width: 980px) 100vw, 52vw"
         fetchpriority="high" />
 
@@ -196,7 +201,6 @@
       </a>
 
       <div class="navbar__right">
-
         <!-- Desktop nav -->
         <nav class="nav nav--desktop" aria-label="Primary navigation">
           <a href="/best-espresso-machines/">Best Machines</a>
@@ -223,7 +227,6 @@
           <span class="menu-btn__icon" aria-hidden="true"></span>
           <span class="menu-btn__text">Menu</span>
         </button>
-
       </div>
     </div>
 
@@ -254,34 +257,29 @@
   <main id="content">
     <div class="container section--tight">
 
+      <!-- HERO (updated structure to match your screenshot layout) -->
       <section class="hero">
         <div class="hero__wrap">
-          <div>
+
+          <!-- Left: copy -->
+          <div class="hero__content">
             <p class="kicker">Guides + comparisons</p>
+
             <h1 class="hero__title">Home Espresso Guides (Canada)</h1>
+
             <p class="hero__lead">
               Quick picks, clean comparison tables, and honest trade-offs for semi-automatic, automatic, and capsule espresso.
-              Built for real kitchens and real mornings.
+              Built for real home use, not cafés.
             </p>
 
             <div class="hero__meta">
-              <span class="badge badge--best">Updated: 2026</span>
+              <span class="badge badge--best">Updated 2026</span>
               <span class="badge">Canada-friendly picks</span>
-              <span class="badge">Clear trade-offs, no fluff</span>
+              <span class="badge">Clear trade-offs</span>
             </div>
-
-            <div class="mt-6 cluster">
-              <a class="btn btn--primary btn--lg" href="/best-espresso-machines/">Best Espresso Machines</a>
-              <a class="btn btn--ghost btn--lg" href="/best-espresso-grinders/">Best Espresso Grinders</a>
-              <a class="btn btn--secondary btn--lg" href="/how-we-test/">How We Test</a>
-            </div>
-
-            <p class="small mt-4">
-              Fast rule: if your shots are inconsistent, it’s usually the
-              <a class="link-accent" href="/best-espresso-grinders/">grinder</a>, not the machine.
-            </p>
           </div>
 
+          <!-- Right: image -->
           <figure class="hero__media" aria-label="Home espresso setup with crema">
             <picture>
               <source
@@ -306,33 +304,49 @@
             </picture>
           </figure>
 
-          <aside class="hero__panel">
-            <h3 class="mb-2">Start here</h3>
-            <p class="muted mb-4">Pick your path, then compare confidently.</p>
+          <!-- Bottom bar: buttons + tip (left) + start panel (right) -->
+          <div class="hero__bar">
+            <div class="hero__actions">
+              <div class="cluster">
+                <a class="btn btn--primary btn--lg" href="/best-espresso-machines/">Best Espresso Machines</a>
+                <a class="btn btn--ghost btn--lg" href="/best-espresso-grinders/">Best Espresso Grinders</a>
+                <a class="btn btn--secondary btn--lg" href="/how-we-test/">How We Test</a>
+              </div>
 
-            <div class="stack--sm">
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>Best Machines</strong></span>
-                <a class="btn btn--link" href="/best-espresso-machines/">Go</a>
-              </div>
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>Beginners</strong></span>
-                <a class="btn btn--link" href="/best-espresso-machine-for-beginners/">Go</a>
-              </div>
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>Under $500</strong></span>
-                <a class="btn btn--link" href="/best-espresso-machine-under-500/">Go</a>
-              </div>
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>Best Grinders</strong></span>
-                <a class="btn btn--link" href="/best-espresso-grinders/">Go</a>
-              </div>
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>How We Test</strong></span>
-                <a class="btn btn--link" href="/how-we-test/">Go</a>
-              </div>
+              <p class="small mt-4">
+                Fast rule: most bad espresso comes from inconsistent grinding, not the machine.
+              </p>
             </div>
-          </aside>
+
+            <aside class="hero__panel">
+              <h3 class="mb-2">Start here</h3>
+              <p class="muted mb-4">Pick your profile, then compare with confidence.</p>
+
+              <div class="stack--sm">
+                <div class="cluster cluster--between">
+                  <span class="pill"><strong>Best machines</strong></span>
+                  <a class="btn btn--link" href="/best-espresso-machines/">Go</a>
+                </div>
+                <div class="cluster cluster--between">
+                  <span class="pill"><strong>Beginners</strong></span>
+                  <a class="btn btn--link" href="/best-espresso-machine-for-beginners/">Go</a>
+                </div>
+                <div class="cluster cluster--between">
+                  <span class="pill"><strong>Under $500</strong></span>
+                  <a class="btn btn--link" href="/best-espresso-machine-under-500/">Go</a>
+                </div>
+                <div class="cluster cluster--between">
+                  <span class="pill"><strong>Best grinders</strong></span>
+                  <a class="btn btn--link" href="/best-espresso-grinders/">Go</a>
+                </div>
+                <div class="cluster cluster--between">
+                  <span class="pill"><strong>How we test</strong></span>
+                  <a class="btn btn--link" href="/how-we-test/">Go</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+
         </div>
       </section>
 

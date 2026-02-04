@@ -1259,3 +1259,51 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   border-top: 1px solid rgba(255,255,255,.08);
 }
 
+/* =========================================================
+   Mobile Menu — readability boost (drop-in override)
+   Put AFTER your current Mobile Menu styles
+   ========================================================= */
+
+@media (max-width: 980px){
+
+  /* Panel a tiny bit darker for contrast */
+  .mobile-nav__panel{
+    background: rgba(10, 12, 20, .98);
+  }
+
+  /* Make sure links are always bright */
+  .mobile-nav__links a{
+    color: rgba(255,255,255,.94) !important;
+    font-weight: 700;
+    letter-spacing: .2px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.35);
+
+    /* Slightly stronger card contrast */
+    background: rgba(255,255,255,.05);
+    border-color: rgba(255,255,255,.12);
+  }
+
+  /* Hover/focus for accessibility + clarity */
+  .mobile-nav__links a:hover{
+    background: rgba(255,255,255,.08);
+    border-color: rgba(167,139,250,.22);
+  }
+  .mobile-nav__links a:focus-visible{
+    outline: none;
+    box-shadow: var(--ring);
+  }
+
+  /* Active page: keep the purple, but FORCE bright text */
+  .mobile-nav__links a[aria-current="page"]{
+    color: #ffffff !important;
+    background: rgba(139, 92, 246, .18) !important;
+    border-color: rgba(139, 92, 246, .55) !important;
+  }
+
+  /* Optional: if you also have a close button or top text */
+  .mobile-nav__top,
+  .mobile-nav__top *{
+    color: rgba(255,255,255,.92);
+  }
+}
+

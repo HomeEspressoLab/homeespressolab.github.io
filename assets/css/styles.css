@@ -1539,3 +1539,13 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   }
 }
 
+/* =========================================================
+   HERO Full Width helper
+   Put at VERY END of styles.css
+   ========================================================= */
+.hero--full{
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+

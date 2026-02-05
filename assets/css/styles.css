@@ -1684,3 +1684,41 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   font-size: var(--text-sm);
 }
 
+/* =========================================================
+   Detailed picks cards — better CTA placement
+   Paste at END of styles.css
+   ========================================================= */
+
+.card--detail{
+  display:flex;
+  flex-direction:column;
+}
+
+.card--detail .card__footer{
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line2);
+
+  display:flex;
+  align-items:center;
+  justify-content:flex-end; /* bouton aligné à droite (desktop) */
+  gap: var(--s-3);
+  flex-wrap:wrap;
+}
+
+/* Bouton: pas full width, style "CTA propre" */
+.card--detail .card__footer .btn{
+  width: auto;
+  min-width: 240px;
+}
+
+/* Mobile: bouton pleine largeur (clean) */
+@media (max-width: 640px){
+  .card--detail .card__footer{
+    justify-content: stretch;
+  }
+  .card--detail .card__footer .btn{
+    width: 100%;
+    min-width: 0;
+  }
+}

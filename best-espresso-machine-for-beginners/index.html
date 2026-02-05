@@ -61,7 +61,7 @@
   <meta name="twitter:description" content="Beginner-friendly espresso picks with clear trade-offs: daily workflow, milk drinks, cleaning, and what to buy first." />
   <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/beginners-espresso-machines-og-1200x630.webp" />
 
-  <!-- GA4 + Consent Mode v2 (optional, matches your Under $500 pattern) -->
+  <!-- GA4 + Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
@@ -358,29 +358,32 @@
 
           <figure class="hero__media" aria-label="Beginner espresso setup">
             <picture>
-  <source
-    type="image/webp"
-    srcset="
-      /assets/images/hero/beginners-espresso-hero-960x540.webp 960w,
-      /assets/images/hero/beginners-espresso-hero-1600x900.webp 1600w,
-      /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w
-    "
-    sizes="(max-width: 980px) 100vw, 52vw"
-  />
-  <img
-    src="/assets/images/hero/beginners-espresso-hero-1600x900.webp"
-    alt="A beginner-friendly home espresso setup on a clean countertop with an espresso machine and simple accessories."
-    width="2400"
-    height="1350"
-    loading="eager"
-    decoding="async"
-    fetchpriority="high"
-  />
-</picture>
+              <source
+                type="image/webp"
+                srcset="
+                  /assets/images/hero/beginners-espresso-hero-960x540.webp 960w,
+                  /assets/images/hero/beginners-espresso-hero-1600x900.webp 1600w,
+                  /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w
+                "
+                sizes="(max-width: 980px) 100vw, 52vw"
+              />
+              <img
+                src="/assets/images/hero/beginners-espresso-hero-1600x900.webp"
+                alt="A beginner-friendly home espresso setup on a clean countertop with an espresso machine and simple accessories."
+                width="2400"
+                height="1350"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
           </figure>
 
           <aside class="hero__panel">
-            <h3 class="mb-2">Quick answer</h3>
+            <h3 class="mb-2 icon-pill">
+              <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
+              Quick answer
+            </h3>
             <p class="muted mb-4">
               Want the lowest friction daily lattes? Choose a solid automatic (and commit to milk cleaning).
               Want the best long-term platform? Choose a semi-auto and prioritize your grinder.
@@ -447,19 +450,28 @@
 
           <div class="grid mt-6" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
             <a class="card" href="/espresso-basics/" aria-label="Read espresso basics">
-              <h3 class="mb-2">Espresso basics</h3>
+              <h3 class="mb-2 card__title">
+                <svg class="icon icon--muted" aria-hidden="true"><use href="#i-book"></use></svg>
+                Espresso basics
+              </h3>
               <p class="muted mb-0">Dose, yield, ratios, and what actually matters when you start.</p>
               <p class="small mt-3"><strong>Read:</strong> Espresso basics</p>
             </a>
 
             <a class="card" href="/how-to-dial-in-espresso/" aria-label="Read how to dial in espresso">
-              <h3 class="mb-2">Dial in espresso</h3>
+              <h3 class="mb-2 card__title">
+                <svg class="icon icon--muted" aria-hidden="true"><use href="#i-target"></use></svg>
+                Dial in espresso
+              </h3>
               <p class="muted mb-0">A beginner-friendly workflow that avoids endless tweaking.</p>
               <p class="small mt-3"><strong>Read:</strong> How to dial in</p>
             </a>
 
             <a class="card" href="/how-to-steam-milk/" aria-label="Read how to steam milk">
-              <h3 class="mb-2">Steam milk</h3>
+              <h3 class="mb-2 card__title">
+                <svg class="icon icon--muted" aria-hidden="true"><use href="#i-milk"></use></svg>
+                Steam milk
+              </h3>
               <p class="muted mb-0">Milk drinks made easier, plus cleaning habits that keep taste fresh.</p>
               <p class="small mt-3"><strong>Read:</strong> Milk steaming</p>
             </a>
@@ -515,17 +527,28 @@
               </div>
 
               <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card">
-                  <strong>Daily effort</strong>
-                  <div class="muted small">Medium</div>
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
+                  <div>
+                    <strong>Daily effort</strong>
+                    <div class="muted small">Medium</div>
+                  </div>
                 </div>
-                <div class="card">
-                  <strong>Milk drinks</strong>
-                  <div class="muted small">Good (with practice)</div>
+
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-milk"></use></svg>
+                  <div>
+                    <strong>Milk drinks</strong>
+                    <div class="muted small">Good (with practice)</div>
+                  </div>
                 </div>
-                <div class="card">
-                  <strong>Maintenance</strong>
-                  <div class="muted small">Weekly basics</div>
+
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-wrench"></use></svg>
+                  <div>
+                    <strong>Maintenance</strong>
+                    <div class="muted small">Weekly basics</div>
+                  </div>
                 </div>
               </div>
 
@@ -571,17 +594,28 @@
               </div>
 
               <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card">
-                  <strong>Daily effort</strong>
-                  <div class="muted small">Low</div>
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
+                  <div>
+                    <strong>Daily effort</strong>
+                    <div class="muted small">Low</div>
+                  </div>
                 </div>
-                <div class="card">
-                  <strong>Milk drinks</strong>
-                  <div class="muted small">Very easy</div>
+
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-milk"></use></svg>
+                  <div>
+                    <strong>Milk drinks</strong>
+                    <div class="muted small">Very easy</div>
+                  </div>
                 </div>
-                <div class="card">
-                  <strong>Maintenance</strong>
-                  <div class="muted small">Milk cleaning</div>
+
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-wrench"></use></svg>
+                  <div>
+                    <strong>Maintenance</strong>
+                    <div class="muted small">Milk cleaning</div>
+                  </div>
                 </div>
               </div>
 
@@ -627,17 +661,28 @@
               </div>
 
               <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card">
-                  <strong>Daily effort</strong>
-                  <div class="muted small">Medium to high</div>
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-target"></use></svg>
+                  <div>
+                    <strong>Daily effort</strong>
+                    <div class="muted small">Medium to high</div>
+                  </div>
                 </div>
-                <div class="card">
-                  <strong>Milk drinks</strong>
-                  <div class="muted small">Good (skill-based)</div>
+
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-milk"></use></svg>
+                  <div>
+                    <strong>Milk drinks</strong>
+                    <div class="muted small">Good (skill-based)</div>
+                  </div>
                 </div>
-                <div class="card">
-                  <strong>Maintenance</strong>
-                  <div class="muted small">Routine matters</div>
+
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-wrench"></use></svg>
+                  <div>
+                    <strong>Maintenance</strong>
+                    <div class="muted small">Routine matters</div>
+                  </div>
                 </div>
               </div>
 
@@ -679,17 +724,28 @@
               </div>
 
               <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card">
-                  <strong>Daily effort</strong>
-                  <div class="muted small">Low to medium</div>
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
+                  <div>
+                    <strong>Daily effort</strong>
+                    <div class="muted small">Low to medium</div>
+                  </div>
                 </div>
-                <div class="card">
-                  <strong>Milk drinks</strong>
-                  <div class="muted small">Okay to good</div>
+
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-grinder"></use></svg>
+                  <div>
+                    <strong>Milk drinks</strong>
+                    <div class="muted small">Okay to good</div>
+                  </div>
                 </div>
-                <div class="card">
-                  <strong>Maintenance</strong>
-                  <div class="muted small">Basic routine</div>
+
+                <div class="card mini-kpi">
+                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-wrench"></use></svg>
+                  <div>
+                    <strong>Maintenance</strong>
+                    <div class="muted small">Basic routine</div>
+                  </div>
                 </div>
               </div>
 
@@ -957,11 +1013,11 @@
         </section>
 
         <!-- Affiliate disclosure -->
-<section class="section--tight" id="affiliate-disclosure">
-  <small class="muted">
-    Some links may be partner links. <a class="link-accent" href="/disclosure/">Details</a>.
-  </small>
-</section>
+        <section class="section--tight" id="affiliate-disclosure">
+          <small class="muted">
+            Some links may be partner links. <a class="link-accent" href="/disclosure/">Details</a>.
+          </small>
+        </section>
 
       </article>
     </div>
@@ -1007,6 +1063,40 @@
       </div>
     </div>
   </footer>
+
+  <!-- Icon sprite (inline SVG, 1x per page) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-book" viewBox="0 0 24 24">
+      <path d="M4 5.5C4 4.12 5.12 3 6.5 3H20v16.5c0 .83-.67 1.5-1.5 1.5H6.5A2.5 2.5 0 0 0 4 23V5.5z"/>
+      <path d="M6.5 5H18v14H6.5A4.5 4.5 0 0 0 4 19.5"/>
+    </symbol>
+
+    <symbol id="i-target" viewBox="0 0 24 24">
+      <path d="M12 2a10 10 0 1 0 10 10h-2A8 8 0 1 1 12 4V2z"/>
+      <path d="M12 7a5 5 0 1 0 5 5h-2a3 3 0 1 1-3-3V7z"/>
+      <path d="M22 2l-7 7 2 2 7-7V2z"/>
+    </symbol>
+
+    <symbol id="i-milk" viewBox="0 0 24 24">
+      <path d="M8 2h8l-1 6v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V8L8 2z"/>
+      <path d="M9 10h6"/>
+    </symbol>
+
+    <symbol id="i-grinder" viewBox="0 0 24 24">
+      <path d="M8 2h8v4H8V2z"/>
+      <path d="M7 8h10v12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V8z"/>
+      <path d="M10 12h4"/>
+    </symbol>
+
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="M12 2l1.6 6.1L20 10l-6.4 1.9L12 18l-1.6-6.1L4 10l6.4-1.9L12 2z"/>
+      <path d="M19 14l.9 3.3L23 18l-3.1.9L19 22l-.9-3.1L15 18l3.1-.7L19 14z"/>
+    </symbol>
+
+    <symbol id="i-wrench" viewBox="0 0 24 24">
+      <path d="M21 7a6 6 0 0 1-8.7 5.3L6.2 18.4a2 2 0 0 1-2.8 0 2 2 0 0 1 0-2.8l6.1-6.1A6 6 0 0 1 17 3l-3 3 4 4 3-3z"/>
+    </symbol>
+  </svg>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();

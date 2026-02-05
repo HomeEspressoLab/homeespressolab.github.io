@@ -23,10 +23,13 @@
 
   <!-- Preload (Hero image) -->
   <link rel="preload" as="image"
-      href="/assets/images/hero/beginners-espresso-hero-1600x900.webp"
-      imagesrcset="/assets/images/hero/beginners-espresso-hero-960x540.webp 960w, /assets/images/hero/beginners-espresso-hero-1600x900.webp 1600w, /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w"
-      imagesizes="(max-width: 980px) 100vw, 52vw"
-      fetchpriority="high" />
+        href="/assets/images/hero/beginners-espresso-hero-1600x900.webp"
+        imagesrcset="
+          /assets/images/hero/beginners-espresso-hero-960x540.webp 960w,
+          /assets/images/hero/beginners-espresso-hero-1600x900.webp 1600w,
+          /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w"
+        imagesizes="100vw"
+        fetchpriority="high" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/styles.css?v=1" />
@@ -61,7 +64,7 @@
   <meta name="twitter:description" content="Beginner-friendly espresso picks with clear trade-offs: daily workflow, milk drinks, cleaning, and what to buy first." />
   <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/beginners-espresso-machines-og-1200x630.webp" />
 
-  <!-- GA4 + Consent Mode v2 -->
+  <!-- GA4 + Consent Mode v2 (default consent BEFORE gtag.js) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
@@ -310,80 +313,58 @@
   </header>
 
   <main id="content">
-    <div class="container section--tight">
 
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span class="sep">/</span>
-        <span aria-current="page">Best Espresso Machines for Beginners</span>
-      </nav>
+    <!-- HERO (banner full-width like home) -->
+    <section class="hero hero--banner hero--full">
+      <div class="hero__wrap">
 
-      <!-- Hero -->
-      <section class="hero">
-        <div class="hero__wrap">
-          <div>
-            <p class="kicker">Beginner essentials + quick picks</p>
-            <h1 class="hero__title">Best Espresso Machines for Beginners (Canada, 2026)</h1>
-            <p class="hero__lead">
-              Most beginner regrets aren’t about talent. They’re about friction: too many steps, inconsistent grinding, annoying cleanup,
-              or a milk workflow that feels like a second job.
-              This page helps you pick the setup you’ll actually use daily.
-            </p>
+        <figure class="hero__media" aria-label="Beginner espresso setup">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/beginners-espresso-hero-960x540.webp 960w,
+                /assets/images/hero/beginners-espresso-hero-1600x900.webp 1600w,
+                /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w"
+              sizes="100vw" />
+            <img
+              src="/assets/images/hero/beginners-espresso-hero-1600x900.webp"
+              alt="A beginner-friendly home espresso setup on a clean countertop with an espresso machine and simple accessories."
+              width="2400"
+              height="1350"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high" />
+          </picture>
+        </figure>
 
-            <div class="hero__meta">
-              <span class="badge badge--best">Updated: 2026-02-05</span>
-              <span class="badge">Series: Beginner Essentials</span>
-              <span class="badge">Canada-friendly</span>
-              <span class="badge">No-hype trade-offs</span>
-            </div>
+        <div class="hero__content">
+          <p class="kicker">Beginner essentials + quick picks</p>
+          <h1 class="hero__title">Best Espresso Machines for Beginners (Canada, 2026)</h1>
+          <p class="hero__lead">
+            Most beginner regrets aren’t about talent. They’re about friction: too many steps, inconsistent grinding, annoying cleanup,
+            or a milk workflow that feels like a second job. This page helps you pick the setup you’ll actually use daily.
+          </p>
 
-            <div class="mt-6 cluster">
+          <div class="hero__meta">
+            <span class="badge badge--best">Updated: 2026-02-05</span>
+            <span class="badge">Series: Beginner Essentials</span>
+            <span class="badge">Canada-friendly</span>
+            <span class="badge">No-hype trade-offs</span>
+          </div>
+        </div>
+
+        <div class="hero__bar">
+          <div class="hero__actions">
+            <div class="cluster">
               <a class="btn btn--primary btn--lg" href="#quick-picks">Jump to picks</a>
               <a class="btn btn--ghost btn--lg" href="#start-here">Start here</a>
               <a class="btn btn--secondary btn--lg" href="/best-espresso-grinders/">Grinders that matter</a>
             </div>
-
-            <p class="small mt-4">
-              Reality check: “easy espresso” usually means capsules, a good automatic, or a semi-auto paired with a capable grinder.
-              If grinding is inconsistent, everything else becomes harder.
-            </p>
-
-            <div class="notice notice--tip mt-4">
-              <strong>Fast answer:</strong> If you want one-touch lattes, go
-              <a class="link-accent" href="/best-automatic-espresso-machine/">best automatic espresso machines</a>.
-              If you want real espresso learning, start with
-              <a class="link-accent" href="/best-espresso-grinder-under-300/">a capable grinder under $300</a>.
-            </div>
           </div>
 
-          <figure class="hero__media" aria-label="Beginner espresso setup">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="
-                  /assets/images/hero/beginners-espresso-hero-960x540.webp 960w,
-                  /assets/images/hero/beginners-espresso-hero-1600x900.webp 1600w,
-                  /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w
-                "
-                sizes="(max-width: 980px) 100vw, 52vw"
-              />
-              <img
-                src="/assets/images/hero/beginners-espresso-hero-1600x900.webp"
-                alt="A beginner-friendly home espresso setup on a clean countertop with an espresso machine and simple accessories."
-                width="2400"
-                height="1350"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </picture>
-          </figure>
-
           <aside class="hero__panel">
-            <h3 class="mb-2 icon-pill">
-              <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
-              Quick answer
-            </h3>
+            <h3 class="mb-2">Quick answer</h3>
             <p class="muted mb-4">
               Want the lowest friction daily lattes? Choose a solid automatic (and commit to milk cleaning).
               Want the best long-term platform? Choose a semi-auto and prioritize your grinder.
@@ -417,7 +398,17 @@
             </div>
           </aside>
         </div>
-      </section>
+
+      </div>
+    </section>
+
+    <div class="container section--tight">
+
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">/</span>
+        <span aria-current="page">Best Espresso Machines for Beginners</span>
+      </nav>
 
       <!-- Disclosure (global, clean) -->
       <div class="disclosure" id="amazon">
@@ -448,30 +439,21 @@
             If you’re brand new, these three guides remove most beginner frustration. They’re short, practical, and designed to make your daily routine repeatable.
           </p>
 
-          <div class="grid mt-6" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
+          <div class="grid grid-3 mt-6">
             <a class="card" href="/espresso-basics/" aria-label="Read espresso basics">
-              <h3 class="mb-2 card__title">
-                <svg class="icon icon--muted" aria-hidden="true"><use href="#i-book"></use></svg>
-                Espresso basics
-              </h3>
+              <h3 class="mb-2">Espresso basics</h3>
               <p class="muted mb-0">Dose, yield, ratios, and what actually matters when you start.</p>
               <p class="small mt-3"><strong>Read:</strong> Espresso basics</p>
             </a>
 
             <a class="card" href="/how-to-dial-in-espresso/" aria-label="Read how to dial in espresso">
-              <h3 class="mb-2 card__title">
-                <svg class="icon icon--muted" aria-hidden="true"><use href="#i-target"></use></svg>
-                Dial in espresso
-              </h3>
+              <h3 class="mb-2">Dial in espresso</h3>
               <p class="muted mb-0">A beginner-friendly workflow that avoids endless tweaking.</p>
               <p class="small mt-3"><strong>Read:</strong> How to dial in</p>
             </a>
 
             <a class="card" href="/how-to-steam-milk/" aria-label="Read how to steam milk">
-              <h3 class="mb-2 card__title">
-                <svg class="icon icon--muted" aria-hidden="true"><use href="#i-milk"></use></svg>
-                Steam milk
-              </h3>
+              <h3 class="mb-2">Steam milk</h3>
               <p class="muted mb-0">Milk drinks made easier, plus cleaning habits that keep taste fresh.</p>
               <p class="small mt-3"><strong>Read:</strong> Milk steaming</p>
             </a>
@@ -492,10 +474,10 @@
             Four beginner-friendly picks, each optimized for a different kind of routine. These are “least regret” choices, not spec trophies.
           </p>
 
-          <div class="grid mt-6" style="grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:18px;">
+          <div class="grid grid-2 mt-6">
 
             <!-- Pick 1 -->
-            <section class="card card--best" id="pick-overall" style="height:100%;">
+            <section class="card card--best" id="pick-overall">
               <div class="cluster">
                 <span class="badge badge--best">Least regret overall</span>
                 <span class="badge">Semi-auto + capable grinder</span>
@@ -526,29 +508,18 @@
                 </div>
               </div>
 
-              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
-                  <div>
-                    <strong>Daily effort</strong>
-                    <div class="muted small">Medium</div>
-                  </div>
+              <div class="grid grid-3 mt-4">
+                <div class="card">
+                  <strong>Daily effort</strong>
+                  <div class="muted small">Medium</div>
                 </div>
-
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-milk"></use></svg>
-                  <div>
-                    <strong>Milk drinks</strong>
-                    <div class="muted small">Good (with practice)</div>
-                  </div>
+                <div class="card">
+                  <strong>Milk drinks</strong>
+                  <div class="muted small">Good (with practice)</div>
                 </div>
-
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-wrench"></use></svg>
-                  <div>
-                    <strong>Maintenance</strong>
-                    <div class="muted small">Weekly basics</div>
-                  </div>
+                <div class="card">
+                  <strong>Maintenance</strong>
+                  <div class="muted small">Weekly basics</div>
                 </div>
               </div>
 
@@ -563,7 +534,7 @@
             </section>
 
             <!-- Pick 3 -->
-            <section class="card" id="pick-one-touch" style="height:100%;">
+            <section class="card" id="pick-one-touch">
               <div class="cluster">
                 <span class="badge">Lowest friction milk drinks</span>
                 <span class="badge">One-touch automatic</span>
@@ -593,29 +564,18 @@
                 </div>
               </div>
 
-              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
-                  <div>
-                    <strong>Daily effort</strong>
-                    <div class="muted small">Low</div>
-                  </div>
+              <div class="grid grid-3 mt-4">
+                <div class="card">
+                  <strong>Daily effort</strong>
+                  <div class="muted small">Low</div>
                 </div>
-
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-milk"></use></svg>
-                  <div>
-                    <strong>Milk drinks</strong>
-                    <div class="muted small">Very easy</div>
-                  </div>
+                <div class="card">
+                  <strong>Milk drinks</strong>
+                  <div class="muted small">Very easy</div>
                 </div>
-
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-wrench"></use></svg>
-                  <div>
-                    <strong>Maintenance</strong>
-                    <div class="muted small">Milk cleaning</div>
-                  </div>
+                <div class="card">
+                  <strong>Maintenance</strong>
+                  <div class="muted small">Milk cleaning</div>
                 </div>
               </div>
 
@@ -630,7 +590,7 @@
             </section>
 
             <!-- Pick 2 -->
-            <section class="card" id="pick-learn" style="height:100%;">
+            <section class="card" id="pick-learn">
               <div class="cluster">
                 <span class="badge">Best learning path</span>
                 <span class="badge">Semi-auto workflow</span>
@@ -660,29 +620,18 @@
                 </div>
               </div>
 
-              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-target"></use></svg>
-                  <div>
-                    <strong>Daily effort</strong>
-                    <div class="muted small">Medium to high</div>
-                  </div>
+              <div class="grid grid-3 mt-4">
+                <div class="card">
+                  <strong>Daily effort</strong>
+                  <div class="muted small">Medium to high</div>
                 </div>
-
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-milk"></use></svg>
-                  <div>
-                    <strong>Milk drinks</strong>
-                    <div class="muted small">Good (skill-based)</div>
-                  </div>
+                <div class="card">
+                  <strong>Milk drinks</strong>
+                  <div class="muted small">Good (skill-based)</div>
                 </div>
-
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-wrench"></use></svg>
-                  <div>
-                    <strong>Maintenance</strong>
-                    <div class="muted small">Routine matters</div>
-                  </div>
+                <div class="card">
+                  <strong>Maintenance</strong>
+                  <div class="muted small">Routine matters</div>
                 </div>
               </div>
 
@@ -693,7 +642,7 @@
             </section>
 
             <!-- Pick 4 -->
-            <section class="card" id="pick-under-500" style="height:100%;">
+            <section class="card" id="pick-under-500">
               <div class="cluster">
                 <span class="badge">Best budget entry</span>
                 <span class="badge">Under $500</span>
@@ -723,29 +672,18 @@
                 </div>
               </div>
 
-              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
-                  <div>
-                    <strong>Daily effort</strong>
-                    <div class="muted small">Low to medium</div>
-                  </div>
+              <div class="grid grid-3 mt-4">
+                <div class="card">
+                  <strong>Daily effort</strong>
+                  <div class="muted small">Low to medium</div>
                 </div>
-
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-grinder"></use></svg>
-                  <div>
-                    <strong>Milk drinks</strong>
-                    <div class="muted small">Okay to good</div>
-                  </div>
+                <div class="card">
+                  <strong>Milk drinks</strong>
+                  <div class="muted small">Okay to good</div>
                 </div>
-
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted" aria-hidden="true"><use href="#i-wrench"></use></svg>
-                  <div>
-                    <strong>Maintenance</strong>
-                    <div class="muted small">Basic routine</div>
-                  </div>
+                <div class="card">
+                  <strong>Maintenance</strong>
+                  <div class="muted small">Basic routine</div>
                 </div>
               </div>
 
@@ -829,7 +767,7 @@
         <section class="section--tight" id="how-to-choose">
           <h2><span class="h-accent">How to choose your first espresso machine</span></h2>
 
-          <div class="grid mt-6" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
+          <div class="grid grid-3 mt-6">
             <div class="card">
               <h3 class="mb-2">Capsules</h3>
               <p class="muted mb-0">Fast, consistent, minimal cleanup. Trade-off: ongoing capsule cost and less control.</p>
@@ -849,7 +787,7 @@
             </div>
           </div>
 
-          <div class="grid mt-4" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
+          <div class="grid grid-2 mt-4">
             <div class="card">
               <h3 class="mb-2">Do beginners need a grinder?</h3>
               <p class="muted mb-0">
@@ -898,7 +836,7 @@
           <h2><span class="h-accent">Real-life beginner setups</span></h2>
           <p class="muted max-65ch">Three practical setups built around typical routines. Pick the one you’ll actually use consistently.</p>
 
-          <div class="grid mt-6" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
+          <div class="grid grid-3 mt-6">
             <div class="card">
               <h3 class="mb-2">Ultra simple</h3>
               <p class="muted mb-4">Press button, get coffee, minimal cleanup. Great for busy mornings.</p>
@@ -1063,40 +1001,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Icon sprite (inline SVG, 1x per page) -->
-  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
-    <symbol id="i-book" viewBox="0 0 24 24">
-      <path d="M4 5.5C4 4.12 5.12 3 6.5 3H20v16.5c0 .83-.67 1.5-1.5 1.5H6.5A2.5 2.5 0 0 0 4 23V5.5z"/>
-      <path d="M6.5 5H18v14H6.5A4.5 4.5 0 0 0 4 19.5"/>
-    </symbol>
-
-    <symbol id="i-target" viewBox="0 0 24 24">
-      <path d="M12 2a10 10 0 1 0 10 10h-2A8 8 0 1 1 12 4V2z"/>
-      <path d="M12 7a5 5 0 1 0 5 5h-2a3 3 0 1 1-3-3V7z"/>
-      <path d="M22 2l-7 7 2 2 7-7V2z"/>
-    </symbol>
-
-    <symbol id="i-milk" viewBox="0 0 24 24">
-      <path d="M8 2h8l-1 6v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V8L8 2z"/>
-      <path d="M9 10h6"/>
-    </symbol>
-
-    <symbol id="i-grinder" viewBox="0 0 24 24">
-      <path d="M8 2h8v4H8V2z"/>
-      <path d="M7 8h10v12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V8z"/>
-      <path d="M10 12h4"/>
-    </symbol>
-
-    <symbol id="i-spark" viewBox="0 0 24 24">
-      <path d="M12 2l1.6 6.1L20 10l-6.4 1.9L12 18l-1.6-6.1L4 10l6.4-1.9L12 2z"/>
-      <path d="M19 14l.9 3.3L23 18l-3.1.9L19 22l-.9-3.1L15 18l3.1-.7L19 14z"/>
-    </symbol>
-
-    <symbol id="i-wrench" viewBox="0 0 24 24">
-      <path d="M21 7a6 6 0 0 1-8.7 5.3L6.2 18.4a2 2 0 0 1-2.8 0 2 2 0 0 1 0-2.8l6.1-6.1A6 6 0 0 1 17 3l-3 3 4 4 3-3z"/>
-    </symbol>
-  </svg>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();

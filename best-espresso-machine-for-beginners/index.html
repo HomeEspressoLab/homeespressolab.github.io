@@ -11,6 +11,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#0b0d14" />
+  <meta name="author" content="HomeEspressoLab Editorial Team" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://homeespressolab.github.io/best-espresso-machine-for-beginners/" />
@@ -20,28 +21,78 @@
   <link rel="alternate" href="https://homeespressolab.github.io/fr/meilleure-machine-espresso-pour-debutants/" hreflang="fr-CA" />
   <link rel="alternate" href="https://homeespressolab.github.io/best-espresso-machine-for-beginners/" hreflang="x-default" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/styles.css?v=2" />
+  <!-- Preload (Hero image) -->
+  <link rel="preload" as="image"
+        href="/assets/images/hero/beginners-espresso-hero-2400x1350.webp"
+        imagesrcset="/assets/images/hero/beginners-espresso-hero-960x540.webp 960w, /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w"
+        imagesizes="(max-width: 980px) 100vw, 52vw"
+        fetchpriority="high" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css?v=1" />
+
+  <!-- Favicons (root) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_CA" />
   <meta property="og:locale:alternate" content="fr_CA" />
   <meta property="og:site_name" content="HomeEspressoLab" />
-  <meta property="og:title" content="Best Espresso Machines for Beginners (Canada, 2026)" />
+  <meta property="og:title" content="Best Espresso Machines for Beginners (Canada, 2026) | HomeEspressoLab" />
   <meta property="og:description" content="Beginner-friendly espresso picks with clear trade-offs: daily workflow, milk drinks, cleaning, and what to buy first." />
   <meta property="og:url" content="https://homeespressolab.github.io/best-espresso-machine-for-beginners/" />
   <meta property="og:image" content="https://homeespressolab.github.io/assets/images/og/beginners-espresso-machines-og-1200x630.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-02-05" />
+  <meta property="article:modified_time" content="2026-02-05" />
+  <meta property="article:author" content="HomeEspressoLab Editorial Team" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Best Espresso Machines for Beginners (Canada, 2026)" />
+  <meta name="twitter:title" content="Best Espresso Machines for Beginners (Canada, 2026) | HomeEspressoLab" />
   <meta name="twitter:description" content="Beginner-friendly espresso picks with clear trade-offs: daily workflow, milk drinks, cleaning, and what to buy first." />
   <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/beginners-espresso-machines-og-1200x630.webp" />
 
-  <!-- JSON-LD: Organization + WebSite + Breadcrumb + WebPage + Article -->
+  <!-- GA4 + Consent Mode v2 (optional, matches your Under $500 pattern) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      personalization_storage: 'denied',
+      security_storage: 'granted',
+      wait_for_update: 1200
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G72603892F"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-G72603892F', {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
+  </script>
+
+  <!-- Site JS (defer) -->
+  <script defer src="/assets/js/consent.js"></script>
+  <script defer src="/assets/js/affiliate-clicks.js"></script>
+  <script defer src="/assets/js/nav.js?v=1"></script>
+
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -54,10 +105,19 @@
         "description":"Routine-first espresso gear guides with clear trade-offs and transparent affiliate disclosure.",
         "logo":{
           "@type":"ImageObject",
+          "@id":"https://homeespressolab.github.io/#logo",
           "url":"https://homeespressolab.github.io/assets/images/brand/homeespressolab-brandmark-1024.png",
           "width":1024,
           "height":1024
-        }
+        },
+        "sameAs":[]
+      },
+      {
+        "@type":"Person",
+        "@id":"https://homeespressolab.github.io/#editorial-team",
+        "name":"HomeEspressoLab Editorial Team",
+        "url":"https://homeespressolab.github.io/about/",
+        "worksFor":{"@id":"https://homeespressolab.github.io/#org"}
       },
       {
         "@type":"WebSite",
@@ -71,18 +131,8 @@
         "@type":"BreadcrumbList",
         "@id":"https://homeespressolab.github.io/best-espresso-machine-for-beginners/#breadcrumbs",
         "itemListElement":[
-          {
-            "@type":"ListItem",
-            "position":1,
-            "name":"Home",
-            "item":"https://homeespressolab.github.io/"
-          },
-          {
-            "@type":"ListItem",
-            "position":2,
-            "name":"Beginners",
-            "item":"https://homeespressolab.github.io/best-espresso-machine-for-beginners/"
-          }
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://homeespressolab.github.io/"},
+          {"@type":"ListItem","position":2,"name":"Best Espresso Machines for Beginners","item":"https://homeespressolab.github.io/best-espresso-machine-for-beginners/"}
         ]
       },
       {
@@ -95,11 +145,13 @@
         "publisher":{"@id":"https://homeespressolab.github.io/#org"},
         "breadcrumb":{"@id":"https://homeespressolab.github.io/best-espresso-machine-for-beginners/#breadcrumbs"},
         "inLanguage":"en-CA",
+        "datePublished":"2026-02-05",
+        "dateModified":"2026-02-05",
         "primaryImageOfPage":{
           "@type":"ImageObject",
-          "url":"https://homeespressolab.github.io/assets/images/hero/beginners-espresso-hero-2400x1350.webp",
-          "width":2400,
-          "height":1350
+          "url":"https://homeespressolab.github.io/assets/images/og/beginners-espresso-machines-og-1200x630.webp",
+          "width":1200,
+          "height":630
         }
       },
       {
@@ -107,17 +159,54 @@
         "@id":"https://homeespressolab.github.io/best-espresso-machine-for-beginners/#article",
         "headline":"Best Espresso Machines for Beginners (Canada, 2026)",
         "description":"Beginner-friendly espresso picks with clear trade-offs: daily workflow, milk drinks, cleaning, and what to buy first.",
-        "inLanguage":"en-CA",
-        "mainEntityOfPage":{"@id":"https://homeespressolab.github.io/best-espresso-machine-for-beginners/#webpage"},
-        "publisher":{"@id":"https://homeespressolab.github.io/#org"},
-        "author":{
-          "@type":"Organization",
-          "name":"HomeEspressoLab Editorial Team",
-          "url":"https://homeespressolab.github.io/about/"
+        "image":{
+          "@type":"ImageObject",
+          "url":"https://homeespressolab.github.io/assets/images/og/beginners-espresso-machines-og-1200x630.webp",
+          "width":1200,
+          "height":630
         },
         "datePublished":"2026-02-05",
         "dateModified":"2026-02-05",
-        "image":"https://homeespressolab.github.io/assets/images/hero/beginners-espresso-hero-2400x1350.webp"
+        "inLanguage":"en-CA",
+        "mainEntityOfPage":{"@id":"https://homeespressolab.github.io/best-espresso-machine-for-beginners/#webpage"},
+        "author":{"@id":"https://homeespressolab.github.io/#editorial-team"},
+        "publisher":{"@id":"https://homeespressolab.github.io/#org"},
+        "about":[
+          {"@type":"Thing","name":"Beginner espresso machines"},
+          {"@type":"Thing","name":"Home espresso in Canada"},
+          {"@type":"Thing","name":"Espresso grinders"}
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://homeespressolab.github.io/best-espresso-machine-for-beginners/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Is espresso hard for beginners?",
+            "acceptedAnswer":{"@type":"Answer","text":"It can feel hard if the workflow is too complex or grinding is inconsistent. Beginners improve quickly when the routine is repeatable: stable dose, consistent grind, and basic cleaning habits."}
+          },
+          {
+            "@type":"Question",
+            "name":"Do beginners need a grinder for espresso?",
+            "acceptedAnswer":{"@type":"Answer","text":"If you’re using a semi-automatic espresso machine, a capable grinder is usually the biggest factor for consistency. It reduces wasted shots and makes dialing-in repeatable."}
+          },
+          {
+            "@type":"Question",
+            "name":"Capsule vs espresso machine: what should I start with?",
+            "acceptedAnswer":{"@type":"Answer","text":"If you want the fastest routine with minimal cleanup, capsules are a strong beginner choice. If you want better control and the espresso craft, a semi-auto (with a grinder) is the best learning path."}
+          },
+          {
+            "@type":"Question",
+            "name":"How much should a beginner spend?",
+            "acceptedAnswer":{"@type":"Answer","text":"Spend based on your routine, not your ambition. If you want milk drinks daily with low effort, an automatic may be worth it. If you’re learning semi-auto, budget for a grinder because it drives consistency."}
+          },
+          {
+            "@type":"Question",
+            "name":"Is semi-automatic too hard?",
+            "acceptedAnswer":{"@type":"Answer","text":"Not if you enjoy small improvements over time. The first week is the hardest. After that, the workflow becomes routine. Semi-auto is most frustrating only when the grinder is weak or inconsistent."}
+          }
+        ]
       }
     ]
   }
@@ -125,12 +214,43 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Consent Banner -->
+  <div class="consent" id="consent" hidden>
+    <div class="consent__card" role="dialog" aria-modal="true" aria-label="Cookie consent">
+      <div class="consent__text">
+        <strong>Cookies</strong>
+        <p class="muted">
+          We use analytics to understand traffic and improve content. You can accept or refuse.
+        </p>
+        <p class="small">
+          See: <a class="link-accent" href="/privacy-policy/">Privacy Policy</a>
+        </p>
+      </div>
+
+      <div class="consent__actions">
+        <button class="btn btn--ghost btn--sm" type="button" data-consent="reject">Reject</button>
+        <button class="btn btn--secondary btn--sm" type="button" data-consent="custom">Customize</button>
+        <button class="btn btn--primary btn--sm" type="button" data-consent="accept">Accept</button>
+      </div>
+
+      <div class="consent__custom" id="consentCustom" hidden>
+        <label class="consent__toggle">
+          <input type="checkbox" id="toggleAnalytics" />
+          <span>Analytics</span>
+        </label>
+        <div class="mt-4 cluster">
+          <button class="btn btn--secondary btn--sm" type="button" data-consent="save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="site-header">
     <div class="container navbar">
-      <a class="brand" href="/" aria-label="Home HomeEspressoLab">
+      <a class="brand" href="/" aria-label="HomeEspressoLab home">
         <img
           class="brand__img"
           src="/assets/images/brand/homeespressolab-brandmark-1024.png"
@@ -144,204 +264,232 @@
       </a>
 
       <div class="navbar__right">
-        <!-- Desktop nav -->
-        <nav class="nav nav--desktop" aria-label="Primary">
-          <a class="nav__link" href="/best-espresso-machines/">Best Espresso Machines</a>
-          <a class="nav__link" href="/best-espresso-machine-for-beginners/" aria-current="page">Beginners</a>
-          <a class="nav__link" href="/best-espresso-machine-under-500/">Under $500</a>
-          <a class="nav__link" href="/best-espresso-grinders/">Grinders</a>
-          <a class="nav__link" href="/how-we-test/">How We Test</a>
-          <a class="nav__link" href="/reviews/">Reviews</a>
+        <nav class="nav nav--desktop" aria-label="Primary navigation">
+          <a href="/best-espresso-machines/">Best machines</a>
+          <a aria-current="page" href="/best-espresso-machine-for-beginners/">Beginners</a>
+          <a href="/best-espresso-machine-under-500/">Under $500</a>
+          <a href="/best-espresso-grinders/">Best grinders</a>
+          <a href="/how-we-test/">How we test</a>
+          <a href="/reviews/">Reviews</a>
         </nav>
 
-        <!-- Desktop language switch -->
-        <div class="lang-switch lang-switch--desktop cluster" aria-label="Language">
-          <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-for-beginners/" aria-current="page">EN</a>
-          <a class="btn btn--ghost btn--sm" href="/fr/meilleure-machine-espresso-pour-debutants/">FR</a>
+        <div class="lang-switch lang-switch--desktop" aria-label="Language switch">
+          <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-for-beginners/" hreflang="en-CA" lang="en-CA" aria-current="true">EN</a>
+          <a class="btn btn--ghost btn--sm" href="/fr/meilleure-machine-espresso-pour-debutants/" hreflang="fr-CA" lang="fr-CA">FR</a>
         </div>
 
-        <!-- Mobile menu button -->
-        <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false" data-menu-btn>
           <span class="menu-btn__icon" aria-hidden="true"></span>
           <span class="menu-btn__text">Menu</span>
         </button>
       </div>
     </div>
-  </header>
 
-  <!-- Mobile Drawer (required for nav.js) -->
-  <aside class="mobile-nav" id="mobileNav" hidden>
-    <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Site menu">
-      <div class="mobile-nav__top">
-        <strong>Menu</strong>
-        <button class="btn btn--ghost btn--sm mobile-nav__close" type="button" aria-label="Close menu">Close</button>
-      </div>
+    <div class="mobile-nav" id="mobileNav" hidden data-mobile-nav>
+      <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+        <div class="mobile-nav__top">
+          <strong>Menu</strong>
+          <button class="btn btn--ghost btn--sm" type="button" aria-label="Close menu" data-menu-close>Close</button>
+        </div>
 
-      <nav class="mobile-nav__links" aria-label="Mobile">
-        <a href="/best-espresso-machines/">Best Espresso Machines</a>
-        <a href="/best-espresso-machine-for-beginners/" aria-current="page">Beginners</a>
-        <a href="/best-espresso-machine-under-500/">Under $500</a>
-        <a href="/best-espresso-grinders/">Best Espresso Grinders</a>
-        <a href="/how-we-test/">How We Test</a>
-        <a href="/reviews/">Reviews</a>
-      </nav>
+        <nav class="mobile-nav__links" aria-label="Mobile navigation">
+          <a href="/best-espresso-machines/">Best machines</a>
+          <a aria-current="page" href="/best-espresso-machine-for-beginners/">Beginners</a>
+          <a href="/best-espresso-machine-under-500/">Under $500</a>
+          <a href="/best-espresso-grinders/">Best grinders</a>
+          <a href="/how-we-test/">How we test</a>
+          <a href="/reviews/">Reviews</a>
+        </nav>
 
-      <div class="mobile-nav__lang" aria-label="Language">
-        <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-for-beginners/" aria-current="page">EN</a>
-        <a class="btn btn--ghost btn--sm" href="/fr/meilleure-machine-espresso-pour-debutants/">FR</a>
+        <div class="mobile-nav__lang" aria-label="Language switch">
+          <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-for-beginners/" hreflang="en-CA" lang="en-CA" aria-current="true">EN</a>
+          <a class="btn btn--ghost btn--sm" href="/fr/meilleure-machine-espresso-pour-debutants/" hreflang="fr-CA" lang="fr-CA">FR</a>
+        </div>
       </div>
     </div>
-  </aside>
+  </header>
 
-  <main id="main">
-    <!-- Breadcrumbs -->
-    <section class="section--tight">
-      <div class="container">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep" aria-hidden="true">›</span>
-          <span aria-current="page">Beginners</span>
-        </nav>
-      </div>
-    </section>
+  <main id="content">
+    <div class="container section--tight">
 
-    <!-- Hero -->
-    <section class="section--tight">
-      <div class="container">
-        <div class="card card--best">
-          <p class="kicker">Beginners (Canada, 2026)</p>
-          <h1>Best Espresso Machines for Beginners</h1>
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">/</span>
+        <span aria-current="page">Best Espresso Machines for Beginners</span>
+      </nav>
 
-          <p class="muted max-65ch">
-            Most “beginner mistakes” aren’t about talent, they’re about buying a setup that adds friction: too many steps, inconsistent grinding,
-            annoying cleanup, or a milk workflow that feels like a second job.
-          </p>
-          <p class="muted max-65ch">
-            This guide focuses on what actually changes your day-to-day: routine speed, learning curve, milk drinks, and maintenance you’ll realistically do.
-            The goal is simple: fewer regrets, better coffee, faster.
-          </p>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero__wrap">
+          <div>
+            <p class="kicker">Beginner essentials + quick picks</p>
+            <h1 class="hero__title">Best Espresso Machines for Beginners (Canada, 2026)</h1>
+            <p class="hero__lead">
+              Most beginner regrets aren’t about talent. They’re about friction: too many steps, inconsistent grinding, annoying cleanup,
+              or a milk workflow that feels like a second job.
+              This page helps you pick the setup you’ll actually use daily.
+            </p>
 
-          <!-- Editorial note (E-E-A-T) -->
-          <div class="notice notice--tip mt-4" role="note" aria-label="Editorial note">
-            <strong>Updated:</strong> February 2026 ·
-            <strong>Series:</strong> Beginner Essentials ·
-            <a class="link-accent" href="/how-we-test/">How we test</a> ·
-            <a class="link-accent" href="/about/">About</a>
+            <div class="hero__meta">
+              <span class="badge badge--best">Updated: 2026-02-05</span>
+              <span class="badge">Series: Beginner Essentials</span>
+              <span class="badge">Canada-friendly</span>
+              <span class="badge">No-hype trade-offs</span>
+            </div>
+
+            <div class="mt-6 cluster">
+              <a class="btn btn--primary btn--lg" href="#quick-picks">Jump to picks</a>
+              <a class="btn btn--ghost btn--lg" href="#start-here">Start here</a>
+              <a class="btn btn--secondary btn--lg" href="/best-espresso-grinders/">Grinders that matter</a>
+            </div>
+
+            <p class="small mt-4">
+              Reality check: “easy espresso” usually means capsules, a good automatic, or a semi-auto paired with a capable grinder.
+              If grinding is inconsistent, everything else becomes harder.
+            </p>
+
+            <div class="notice notice--tip mt-4">
+              <strong>Fast answer:</strong> If you want one-touch lattes, go
+              <a class="link-accent" href="/best-automatic-espresso-machine/">best automatic espresso machines</a>.
+              If you want real espresso learning, start with
+              <a class="link-accent" href="/best-espresso-grinder-under-300/">a capable grinder under $300</a>.
+            </div>
           </div>
 
-          <figure class="figure mt-4">
+          <figure class="hero__media" aria-label="Beginner espresso setup">
             <picture>
-              <source srcset="/assets/images/hero/beginners-espresso-hero-960x540.webp" media="(max-width: 860px)" type="image/webp" />
-              <source srcset="/assets/images/hero/beginners-espresso-hero-2400x1350.webp" type="image/webp" />
+              <source
+                type="image/webp"
+                srcset="/assets/images/hero/beginners-espresso-hero-960x540.webp 960w, /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w"
+                sizes="(max-width: 980px) 100vw, 52vw"
+              />
               <img
                 src="/assets/images/hero/beginners-espresso-hero-2400x1350.webp"
-                width="2400" height="1350"
-                loading="eager"
-                fetchpriority="high"
                 alt="A beginner-friendly home espresso setup on a clean countertop with an espresso machine and simple accessories."
+                width="2400"
+                height="1350"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
               />
             </picture>
           </figure>
 
-          <div class="cluster mt-4">
-            <a class="btn btn--primary btn--sm" href="#quick-picks">Jump to Quick Picks</a>
-            <a class="btn btn--ghost btn--sm" href="#start-here">Start here</a>
-            <a class="btn btn--ghost btn--sm" href="#how-to-choose">How to choose</a>
-          </div>
+          <aside class="hero__panel">
+            <h3 class="mb-2">Quick answer</h3>
+            <p class="muted mb-4">
+              Want the lowest friction daily lattes? Choose a solid automatic (and commit to milk cleaning).
+              Want the best long-term platform? Choose a semi-auto and prioritize your grinder.
+            </p>
 
-          <div class="notice notice--info mt-4">
-            <strong>Reality check:</strong> “Easy espresso” usually means either capsules, a good automatic, or a semi-auto paired with a capable grinder.
-            If grinding is inconsistent, everything else becomes harder.
-          </div>
+            <div class="stack--sm">
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>Least regret overall</strong></span>
+                <a class="btn btn--link" href="#pick-overall">Jump</a>
+              </div>
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>Lowest friction milk</strong></span>
+                <a class="btn btn--link" href="#pick-one-touch">Jump</a>
+              </div>
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>Best learning path</strong></span>
+                <a class="btn btn--link" href="#pick-learn">Jump</a>
+              </div>
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>Best budget entry</strong></span>
+                <a class="btn btn--link" href="#pick-under-500">Jump</a>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <h4 class="mb-2">Credibility</h4>
+              <p class="small muted mb-0">
+                Written by <a class="link-accent" href="/about/">HomeEspressoLab Editorial Team</a>.
+                Method: <a class="link-accent" href="/how-we-test/">How we test</a>.
+              </p>
+            </div>
+          </aside>
         </div>
+      </section>
+
+      <!-- Disclosure (global, clean) -->
+      <div class="disclosure" id="amazon">
+        <strong>Disclosure:</strong> Some links are affiliate links. If you buy through them, HomeEspressoLab may earn a commission at no extra cost to you.
+        Details: <a class="link-accent" href="/disclosure/">/disclosure/</a>.
       </div>
-    </section>
 
-    <!-- Content -->
-    <section class="section">
-      <div class="container stack">
+      <!-- On this page -->
+      <nav class="disclosure mt-4" aria-label="On this page">
+        <strong>On this page</strong>
+        <div class="mt-3 cluster" style="flex-wrap:wrap">
+          <a class="btn btn--ghost btn--sm" href="#start-here">Start here</a>
+          <a class="btn btn--ghost btn--sm" href="#quick-picks">Quick picks</a>
+          <a class="btn btn--ghost btn--sm" href="#comparison">Comparison table</a>
+          <a class="btn btn--ghost btn--sm" href="#how-to-choose">How to choose</a>
+          <a class="btn btn--ghost btn--sm" href="#mistakes">Avoid regrets</a>
+          <a class="btn btn--ghost btn--sm" href="#setups">Real-life setups</a>
+          <a class="btn btn--ghost btn--sm" href="#faq">FAQ</a>
+        </div>
+      </nav>
 
-        <!-- Start Here (Beginner Essentials hub links) -->
-        <section class="panel p-6" id="start-here">
+      <article class="stack mt-6">
+
+        <!-- Start here -->
+        <section id="start-here" class="section--tight">
           <h2><span class="h-accent">Start here (Beginner essentials)</span></h2>
           <p class="muted max-65ch">
             If you’re brand new, these three guides remove most beginner frustration. They’re short, practical, and designed to make your daily routine repeatable.
           </p>
 
-          <div class="grid grid-3 mt-6">
-            <div class="card">
+          <div class="grid mt-6" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
+            <a class="card" href="/espresso-basics/" aria-label="Read espresso basics">
               <h3 class="mb-2">Espresso basics</h3>
               <p class="muted mb-0">Dose, yield, ratios, and what actually matters when you start.</p>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/espresso-basics/">Read espresso basics</a>
-              </div>
-            </div>
+              <p class="small mt-3"><strong>Read:</strong> Espresso basics</p>
+            </a>
 
-            <div class="card">
+            <a class="card" href="/how-to-dial-in-espresso/" aria-label="Read how to dial in espresso">
               <h3 class="mb-2">Dial in espresso</h3>
-              <p class="muted mb-0">A beginner-friendly dialing-in workflow that avoids endless tweaking.</p>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/how-to-dial-in-espresso/">How to dial in</a>
-              </div>
-            </div>
+              <p class="muted mb-0">A beginner-friendly workflow that avoids endless tweaking.</p>
+              <p class="small mt-3"><strong>Read:</strong> How to dial in</p>
+            </a>
 
-            <div class="card">
+            <a class="card" href="/how-to-steam-milk/" aria-label="Read how to steam milk">
               <h3 class="mb-2">Steam milk</h3>
               <p class="muted mb-0">Milk drinks made easier, plus cleaning habits that keep taste fresh.</p>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/how-to-steam-milk/">Learn milk steaming</a>
-              </div>
-            </div>
+              <p class="small mt-3"><strong>Read:</strong> Milk steaming</p>
+            </a>
           </div>
 
-          <div class="notice notice--tip mt-6">
-            <strong>Quick decision:</strong> If you want one-touch lattes, jump to <a class="link-accent" href="/best-automatic-espresso-machine/">best automatic espresso machines</a>.
-            If you want to learn espresso, start with <a class="link-accent" href="/best-espresso-grinder-under-300/">a capable grinder under $300</a>.
+          <div class="notice notice--info mt-6">
+            <strong>Quick decision:</strong> If you want one-touch lattes, go
+            <a class="link-accent" href="/best-automatic-espresso-machine/">automatic</a>.
+            If you want to learn espresso, start with
+            <a class="link-accent" href="/best-espresso-grinder-under-300/">a capable grinder under $300</a>.
           </div>
         </section>
 
         <!-- Quick Picks -->
-        <section class="panel p-6" id="quick-picks">
-          <h2><span class="h-accent">Quick Picks</span></h2>
+        <section class="section--tight" id="quick-picks">
+          <h2><span class="h-accent">Quick picks</span></h2>
           <p class="muted max-65ch">
             Four beginner-friendly picks, each optimized for a different kind of routine. These are “least regret” choices, not spec trophies.
           </p>
 
-          <!-- Mini summary (scan-friendly) -->
-          <div class="grid grid-2 mt-6" aria-label="Quick summary">
-            <div class="card">
-              <strong>Least regret overall</strong>
-              <div class="muted small">Semi-auto + capable grinder</div>
-            </div>
-            <div class="card">
-              <strong>Lowest friction milk drinks</strong>
-              <div class="muted small">One-touch automatic</div>
-            </div>
-            <div class="card">
-              <strong>Best learning path</strong>
-              <div class="muted small">Semi-auto workflow + dial-in basics</div>
-            </div>
-            <div class="card">
-              <strong>Best budget entry</strong>
-              <div class="muted small">Under $500, prioritize grind consistency</div>
-            </div>
-          </div>
+          <div class="grid mt-6" style="grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:18px;">
 
-          <div class="grid grid-2 mt-6">
             <!-- Pick 1 -->
-            <article class="card card--best" id="pick-overall">
-              <p class="kicker">Best Overall (least regret)</p>
-              <h3 class="mt-0 mb-2">A dependable semi-auto + a capable grinder</h3>
+            <section class="card card--best" id="pick-overall" style="height:100%;">
+              <div class="cluster">
+                <span class="badge badge--best">Least regret overall</span>
+                <span class="badge">Semi-auto + capable grinder</span>
+              </div>
+
+              <h3 class="mt-4 mb-2">A dependable semi-auto + a capable grinder</h3>
               <p class="muted mb-4">
                 The best long-term value for beginners who want real espresso and don’t mind learning the basics.
                 Consistent grinding is the difference between “random” and “repeatable.”
               </p>
-
-              <div class="notice notice--tip mb-4">
-                <strong>Start smart:</strong> Learn the basics once, then repeat daily.
-                <a class="link-accent" href="/how-to-dial-in-espresso/">Dial-in guide</a> ·
-                <a class="link-accent" href="/best-espresso-grinder-under-300/">Grinders under $300</a>
-              </div>
 
               <div class="procon">
                 <div class="pros">
@@ -362,7 +510,7 @@
                 </div>
               </div>
 
-              <div class="grid grid-3 mt-4">
+              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
                 <div class="card">
                   <strong>Daily effort</strong>
                   <div class="muted small">Medium</div>
@@ -378,76 +526,26 @@
               </div>
 
               <div class="cluster mt-4">
-                <a class="btn btn--primary btn--sm" href="#comparison">Compare picks</a>
-                <a class="btn btn--ghost btn--sm" href="/best-espresso-grinders/">See grinder guide</a>
+                <a class="btn btn--primary w-100" href="#comparison">Compare picks</a>
+                <a class="btn btn--ghost w-100" href="/best-espresso-grinder-under-300/">Grinders under $300</a>
               </div>
-            </article>
 
-            <!-- Pick 2 -->
-            <article class="card" id="pick-learn">
-              <p class="kicker">Best to learn espresso</p>
-              <h3 class="mt-0 mb-2">Beginner-friendly semi-auto workflow</h3>
-              <p class="muted mb-4">
-                For people who want to learn dialing-in and enjoy the craft. Expect a learning curve, but also the best “skill payoff.”
+              <p class="small mt-4 muted">
+                Start smart: <a class="link-accent" href="/how-to-dial-in-espresso/">dial-in guide</a> • <a class="link-accent" href="/espresso-basics/">espresso basics</a>
               </p>
-
-              <div class="notice notice--info mb-4">
-                <strong>Beginner win:</strong> Keep it simple: stable dose, consistent grind, basic cleaning.
-                Start with <a class="link-accent" href="/espresso-basics/">espresso basics</a>.
-              </div>
-
-              <div class="procon">
-                <div class="pros">
-                  <h4 class="mb-2">Best for</h4>
-                  <ul>
-                    <li>Hands-on learning</li>
-                    <li>Improving shot quality over time</li>
-                    <li>People who don’t mind a few “practice shots”</li>
-                  </ul>
-                </div>
-                <div class="cons">
-                  <h4 class="mb-2">Not ideal if</h4>
-                  <ul>
-                    <li>You want consistent results with zero effort</li>
-                    <li>You don’t want to buy or use a grinder</li>
-                    <li>You want automatic milk drinks</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="grid grid-3 mt-4">
-                <div class="card">
-                  <strong>Daily effort</strong>
-                  <div class="muted small">Medium to high</div>
-                </div>
-                <div class="card">
-                  <strong>Milk drinks</strong>
-                  <div class="muted small">Good (skill-based)</div>
-                </div>
-                <div class="card">
-                  <strong>Maintenance</strong>
-                  <div class="muted small">Routine matters</div>
-                </div>
-              </div>
-
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-semi-automatic-espresso-machine/">Best semi-automatic</a>
-                <a class="btn btn--ghost btn--sm" href="/how-we-test/">How we evaluate</a>
-              </div>
-            </article>
+            </section>
 
             <!-- Pick 3 -->
-            <article class="card" id="pick-one-touch">
-              <p class="kicker">Best one-touch / automatic</p>
-              <h3 class="mt-0 mb-2">Low-friction milk drinks</h3>
+            <section class="card" id="pick-one-touch" style="height:100%;">
+              <div class="cluster">
+                <span class="badge">Lowest friction milk drinks</span>
+                <span class="badge">One-touch automatic</span>
+              </div>
+
+              <h3 class="mt-4 mb-2">Low-friction milk drinks</h3>
               <p class="muted mb-4">
                 If you want lattes and cappuccinos with fewer steps, an automatic can be the “best beginner machine” by lifestyle, not by specs.
               </p>
-
-              <div class="notice notice--tip mb-4">
-                <strong>Don’t skip this:</strong> Milk systems need consistent cleaning.
-                See <a class="link-accent" href="/how-to-steam-milk/">how to steam milk (and clean)</a>.
-              </div>
 
               <div class="procon">
                 <div class="pros">
@@ -468,7 +566,7 @@
                 </div>
               </div>
 
-              <div class="grid grid-3 mt-4">
+              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
                 <div class="card">
                   <strong>Daily effort</strong>
                   <div class="muted small">Low</div>
@@ -484,23 +582,78 @@
               </div>
 
               <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-automatic-espresso-machine/">Best automatic machines</a>
-                <a class="btn btn--ghost btn--sm" href="#mistakes">Avoid regrets</a>
+                <a class="btn btn--secondary w-100" href="/best-automatic-espresso-machine/">Best automatics</a>
+                <a class="btn btn--ghost w-100" href="/how-to-steam-milk/">Milk workflow</a>
               </div>
-            </article>
 
-            <!-- Pick 4 -->
-            <article class="card" id="pick-under-500">
-              <p class="kicker">Best under $500</p>
-              <h3 class="mt-0 mb-2">Strong value, fewer regrets</h3>
+              <div class="notice notice--tip mt-4">
+                <strong>Don’t skip this:</strong> milk systems need consistent cleaning, or taste gets flat fast.
+              </div>
+            </section>
+
+            <!-- Pick 2 -->
+            <section class="card" id="pick-learn" style="height:100%;">
+              <div class="cluster">
+                <span class="badge">Best learning path</span>
+                <span class="badge">Semi-auto workflow</span>
+              </div>
+
+              <h3 class="mt-4 mb-2">Beginner-friendly semi-auto workflow</h3>
               <p class="muted mb-4">
-                The goal under $500 is not perfection. It’s “least regrets”: reasonable workflow, realistic milk performance, and maintenance you’ll actually do.
+                For people who want to learn dialing-in and enjoy the craft. Expect a learning curve, but also the best “skill payoff.”
               </p>
 
-              <div class="notice notice--info mb-4">
-                <strong>Budget truth:</strong> Under $500 works best when you keep the workflow simple and don’t cheap out on grind consistency.
-                Start with <a class="link-accent" href="/best-espresso-machine-under-500/">under $500 picks</a>.
+              <div class="procon">
+                <div class="pros">
+                  <h4 class="mb-2">Best for</h4>
+                  <ul>
+                    <li>Hands-on learning</li>
+                    <li>Improving shot quality over time</li>
+                    <li>People who don’t mind a few “practice shots”</li>
+                  </ul>
+                </div>
+                <div class="cons">
+                  <h4 class="mb-2">Not ideal if</h4>
+                  <ul>
+                    <li>You want consistent results with zero effort</li>
+                    <li>You don’t want to buy or use a grinder</li>
+                    <li>You want automatic milk drinks</li>
+                  </ul>
+                </div>
               </div>
+
+              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
+                <div class="card">
+                  <strong>Daily effort</strong>
+                  <div class="muted small">Medium to high</div>
+                </div>
+                <div class="card">
+                  <strong>Milk drinks</strong>
+                  <div class="muted small">Good (skill-based)</div>
+                </div>
+                <div class="card">
+                  <strong>Maintenance</strong>
+                  <div class="muted small">Routine matters</div>
+                </div>
+              </div>
+
+              <div class="cluster mt-4">
+                <a class="btn btn--secondary w-100" href="/how-to-dial-in-espresso/">Dial-in workflow</a>
+                <a class="btn btn--ghost w-100" href="/how-we-test/">How we test</a>
+              </div>
+            </section>
+
+            <!-- Pick 4 -->
+            <section class="card" id="pick-under-500" style="height:100%;">
+              <div class="cluster">
+                <span class="badge">Best budget entry</span>
+                <span class="badge">Under $500</span>
+              </div>
+
+              <h3 class="mt-4 mb-2">Strong value, fewer regrets</h3>
+              <p class="muted mb-4">
+                Under $500, the goal is not perfection. It’s “least regrets”: reasonable workflow, realistic milk performance, and maintenance you’ll actually do.
+              </p>
 
               <div class="procon">
                 <div class="pros">
@@ -521,7 +674,7 @@
                 </div>
               </div>
 
-              <div class="grid grid-3 mt-4">
+              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
                 <div class="card">
                   <strong>Daily effort</strong>
                   <div class="muted small">Low to medium</div>
@@ -537,82 +690,25 @@
               </div>
 
               <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-espresso-machine-under-500/">See under $500 picks</a>
-                <a class="btn btn--ghost btn--sm" href="/best-espresso-grinder-under-300/">Pair a grinder</a>
+                <a class="btn btn--secondary w-100" href="/best-espresso-machine-under-500/">Under $500 picks</a>
+                <a class="btn btn--ghost w-100" href="/best-espresso-grinder-under-300/">Grinder under $300</a>
               </div>
-            </article>
-          </div>
+            </section>
 
-          <div class="disclosure mt-6" id="amazon">
-            <strong>Disclosure:</strong> Some links are affiliate links. If you buy through them, HomeEspressoLab may earn a commission at no extra cost to you.
-            Details: <a class="link-accent" href="/disclosure/">/disclosure/</a>.
-          </div>
-        </section>
-
-        <!-- Starter Kits (conversion + clarity) -->
-        <section class="panel p-6" id="starter-kits">
-          <h2><span class="h-accent">Starter kits (pick your path)</span></h2>
-          <p class="muted max-65ch">
-            Three practical starter kits built around real routines. These are “least regret” combos that stay simple as you improve.
-          </p>
-
-          <div class="grid grid-3 mt-6">
-            <div class="card">
-              <h3 class="mb-2">Ultra simple</h3>
-              <p class="muted mb-4">Fastest daily routine. Great if your morning patience is limited.</p>
-              <ul>
-                <li>Capsules or one-touch automatic</li>
-                <li>Milk drinks: easiest</li>
-                <li>Trade-off: less espresso control</li>
-              </ul>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-automatic-espresso-machine/">Best automatics</a>
-                <a class="btn btn--ghost btn--sm" href="/how-to-steam-milk/">Milk workflow</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="mb-2">Learning kit</h3>
-              <p class="muted mb-4">Best for building skill and improving shot quality over time.</p>
-              <ul>
-                <li>Semi-auto espresso machine</li>
-                <li>Capable grinder (budget here matters)</li>
-                <li>Scale + tamper (small upgrades, big consistency)</li>
-              </ul>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-espresso-grinder-under-300/">Grinders under $300</a>
-                <a class="btn btn--ghost btn--sm" href="/best-espresso-scale/">Best espresso scale</a>
-                <a class="btn btn--ghost btn--sm" href="/best-espresso-tamper/">Best tamper</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="mb-2">Milk-first kit</h3>
-              <p class="muted mb-4">Optimized for cappuccinos and lattes with fewer frustrations.</p>
-              <ul>
-                <li>Automatic or semi-auto with strong milk workflow</li>
-                <li>Prioritize cleaning ease</li>
-                <li>Trade-off: milk maintenance</li>
-              </ul>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-automatic-espresso-machine/">Best milk automatics</a>
-                <a class="btn btn--ghost btn--sm" href="/how-to-steam-milk/">Steam + clean</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="notice notice--info mt-6">
-            <strong>Hidden costs beginners forget:</strong> grinder (semi-auto), scale (consistency), cleaning tabs, and a small brush.
-            See <a class="link-accent" href="/best-espresso-accessories/">best espresso accessories</a>.
           </div>
         </section>
 
         <!-- Comparison Table -->
-        <section class="panel p-6" id="comparison">
+        <section class="section--tight" id="comparison">
           <h2><span class="h-accent">Comparison table</span></h2>
           <p class="muted max-65ch">
             Beginner-friendly doesn’t mean “the easiest machine.” It means the best fit for your routine and the fewest daily pain points.
           </p>
+
+          <div class="notice notice--info mt-4">
+            <strong>Shortcut:</strong> Fastest routine = capsules or a solid automatic.
+            Best skill payoff = semi-auto with a capable grinder.
+          </div>
 
           <div class="table-wrap mt-6" role="region" aria-label="Beginner espresso machine comparison table" tabindex="0">
             <table class="table">
@@ -667,52 +763,33 @@
               </tbody>
             </table>
           </div>
-
-          <div class="notice notice--tip mt-6">
-            <strong>Shortcut:</strong> If you want the fastest routine, go capsules or a solid automatic.
-            If you want the best skill payoff, go semi-auto with a capable grinder.
-          </div>
         </section>
 
         <!-- How to choose -->
-        <section class="panel p-6" id="how-to-choose">
+        <section class="section--tight" id="how-to-choose">
           <h2><span class="h-accent">How to choose your first espresso machine</span></h2>
 
-          <div class="grid grid-3 mt-6">
+          <div class="grid mt-6" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
             <div class="card">
               <h3 class="mb-2">Capsules</h3>
-              <p class="muted mb-0">
-                Fast, consistent, minimal cleanup. Trade-off: ongoing capsule cost and less control.
-              </p>
-              <div class="cluster mt-4">
-                <a class="btn btn--ghost btn--sm" href="/best-espresso-machines/#capsule-picks">See capsule picks</a>
-              </div>
+              <p class="muted mb-0">Fast, consistent, minimal cleanup. Trade-off: ongoing capsule cost and less control.</p>
+              <p class="small mt-3"><a class="link-accent" href="/best-espresso-machines/#capsule-picks">See capsule picks</a></p>
             </div>
 
             <div class="card">
               <h3 class="mb-2">Semi-automatic</h3>
-              <p class="muted mb-0">
-                Best learning path and control. Needs a grinder for consistent results. Trade-off: more steps.
-              </p>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-semi-automatic-espresso-machine/">Best semi-automatic</a>
-                <a class="btn btn--ghost btn--sm" href="/how-to-dial-in-espresso/">Dial-in guide</a>
-              </div>
+              <p class="muted mb-0">Best learning path and control. Needs a grinder for consistent results. Trade-off: more steps.</p>
+              <p class="small mt-3"><a class="link-accent" href="/how-to-dial-in-espresso/">Dial-in guide</a></p>
             </div>
 
             <div class="card">
               <h3 class="mb-2">Automatic</h3>
-              <p class="muted mb-0">
-                Low friction for milk drinks. Trade-off: more internal cleaning and less espresso control.
-              </p>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-automatic-espresso-machine/">Best automatics</a>
-                <a class="btn btn--ghost btn--sm" href="/how-to-steam-milk/">Milk workflow</a>
-              </div>
+              <p class="muted mb-0">Low friction for milk drinks. Trade-off: internal cleaning and less espresso control.</p>
+              <p class="small mt-3"><a class="link-accent" href="/best-automatic-espresso-machine/">Best automatics</a></p>
             </div>
           </div>
 
-          <div class="grid grid-2 mt-6">
+          <div class="grid mt-4" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
             <div class="card">
               <h3 class="mb-2">Do beginners need a grinder?</h3>
               <p class="muted mb-0">
@@ -732,63 +809,21 @@
                 Choose based on your morning patience level, not on “steam wand specs.”
               </p>
               <div class="cluster mt-4">
-                <a class="btn btn--ghost btn--sm" href="/how-to-steam-milk/">Learn milk workflow</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- If you already own... (high differentiation) -->
-        <section class="panel p-6" id="already-own">
-          <h2><span class="h-accent">If you already own something (quick fixes)</span></h2>
-          <p class="muted max-65ch">
-            A lot of “beginner problems” are really setup problems. Here’s what to do based on what you already have.
-          </p>
-
-          <div class="grid grid-3 mt-6">
-            <div class="card">
-              <h3 class="mb-2">Pre-ground coffee</h3>
-              <p class="muted mb-0">
-                Espresso becomes inconsistent fast. If you switch one thing, switch to a grinder first.
-              </p>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-espresso-grinder-under-300/">Get a grinder under $300</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="mb-2">A cheap grinder</h3>
-              <p class="muted mb-0">
-                If grind jumps around, you’ll chase settings all day. Consistency beats “more features.”
-              </p>
-              <div class="cluster mt-4">
-                <a class="btn btn--ghost btn--sm" href="/how-to-dial-in-espresso/">Dial-in (simple)</a>
-                <a class="btn btn--secondary btn--sm" href="/best-espresso-grinder-under-300/">Upgrade grinder</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="mb-2">Milk drinks daily</h3>
-              <p class="muted mb-0">
-                Choose for cleaning ease, not just steam power. Milk routines should feel repeatable.
-              </p>
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary btn--sm" href="/best-automatic-espresso-machine/">Best automatics</a>
-                <a class="btn btn--ghost btn--sm" href="/how-to-steam-milk/">Steam + clean</a>
+                <a class="btn btn--ghost btn--sm" href="/how-to-steam-milk/">Steam milk + clean</a>
               </div>
             </div>
           </div>
         </section>
 
         <!-- Mistakes -->
-        <section class="panel p-6" id="mistakes">
+        <section class="section--tight" id="mistakes">
           <h2><span class="h-accent">Beginner mistakes to avoid</span></h2>
 
           <ul class="mt-6">
             <li><strong>Buying too advanced:</strong> a complicated workflow becomes a “weekend hobby” instead of a daily routine.</li>
             <li><strong>Underestimating the grinder:</strong> inconsistent grind leads to wasted shots and constant frustration.</li>
             <li><strong>Chasing bars and specs:</strong> better coffee usually comes from consistency and routine, not a longer spec sheet.</li>
-            <li><strong>Ignoring cleaning:</strong> old oils and stale residue will flatten taste no matter how expensive the machine is.</li>
+            <li><strong>Ignoring cleaning:</strong> old oils and residue flatten taste no matter how expensive the machine is.</li>
             <li><strong>Over-optimizing early:</strong> learn a stable baseline first (dose, grind, yield), then improve.</li>
           </ul>
 
@@ -799,13 +834,11 @@
         </section>
 
         <!-- Real-life setups -->
-        <section class="panel p-6" id="setups">
+        <section class="section--tight" id="setups">
           <h2><span class="h-accent">Real-life beginner setups</span></h2>
-          <p class="muted max-65ch">
-            Three practical setups built around typical routines. Pick the one you’ll actually use consistently.
-          </p>
+          <p class="muted max-65ch">Three practical setups built around typical routines. Pick the one you’ll actually use consistently.</p>
 
-          <div class="grid grid-3 mt-6">
+          <div class="grid mt-6" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
             <div class="card">
               <h3 class="mb-2">Ultra simple</h3>
               <p class="muted mb-4">Press button, get coffee, minimal cleanup. Great for busy mornings.</p>
@@ -851,7 +884,7 @@
         </section>
 
         <!-- FAQ -->
-        <section class="panel p-6" id="faq">
+        <section class="section--tight" id="faq">
           <h2><span class="h-accent">FAQ</span></h2>
 
           <div class="faq mt-6">
@@ -859,7 +892,7 @@
               <summary>Is espresso hard for beginners?</summary>
               <div class="answer">
                 It can feel hard if the workflow is too complex or grinding is inconsistent. Beginners improve quickly when the routine is repeatable:
-                stable dose, consistent grind, and basic cleaning habits. Start with <a class="link-accent" href="/espresso-basics/">espresso basics</a>.
+                stable dose, consistent grind, and basic cleaning habits.
               </div>
             </details>
 
@@ -867,7 +900,7 @@
               <summary>Do beginners need a grinder for espresso?</summary>
               <div class="answer">
                 If you’re using a semi-automatic espresso machine, a capable grinder is usually the biggest factor for consistency.
-                It reduces wasted shots and makes dialing-in repeatable. See <a class="link-accent" href="/best-espresso-grinder-under-300/">grinders under $300</a>.
+                It reduces wasted shots and makes dialing-in repeatable.
               </div>
             </details>
 
@@ -875,7 +908,7 @@
               <summary>Capsule vs espresso machine: what should I start with?</summary>
               <div class="answer">
                 If you want the fastest routine with minimal cleanup, capsules are a strong beginner choice.
-                If you want better control and the “espresso craft,” a semi-auto (with a grinder) is the best learning path.
+                If you want better control and the espresso craft, a semi-auto (with a grinder) is the best learning path.
               </div>
             </details>
 
@@ -894,14 +927,6 @@
                 Semi-auto is most frustrating only when the grinder is weak or inconsistent.
               </div>
             </details>
-
-            <details>
-              <summary>What should I learn first as a beginner?</summary>
-              <div class="answer">
-                Learn one repeatable baseline: dose, grind, yield, and a simple cleanup routine. Start with <a class="link-accent" href="/espresso-basics/">espresso basics</a>,
-                then use <a class="link-accent" href="/how-to-dial-in-espresso/">the dial-in guide</a>.
-              </div>
-            </details>
           </div>
 
           <div class="notice notice--tip mt-6">
@@ -910,39 +935,25 @@
           </div>
         </section>
 
-        <!-- Final recommendation -->
-        <section class="cta" id="final">
-          <div class="stack--sm">
-            <h2 class="mt-0 mb-2">Final recommendation</h2>
-            <p class="muted mb-0">
-              Choose based on friction level. The “best” beginner machine is the one you’ll keep using daily.
-            </p>
-          </div>
-
-          <div class="grid grid-3 mt-6">
-            <div class="card">
-              <h3 class="mb-2">Least friction</h3>
-              <p class="muted mb-0">Go capsules or a good automatic. You’ll get consistent drinks with fewer steps.</p>
+        <!-- Final CTA -->
+        <section class="section--tight">
+          <div class="cta">
+            <div>
+              <h3 class="mb-2">Final recommendation</h3>
+              <p class="muted mb-0">
+                Choose based on friction level. The “best” beginner machine is the one you’ll keep using daily.
+              </p>
+              <p class="small mt-3 mb-0">
+                Written by <a class="link-accent" href="/about/">HomeEspressoLab Editorial Team</a> • Method:
+                <a class="link-accent" href="/how-we-test/">How we test</a> • Updated: <strong>2026-02-05</strong>
+              </p>
             </div>
-            <div class="card">
-              <h3 class="mb-2">Best learning path</h3>
-              <p class="muted mb-0">Go semi-auto with a capable grinder. Consistency beats features.</p>
-            </div>
-            <div class="card">
-              <h3 class="mb-2">Milk drinks first</h3>
-              <p class="muted mb-0">Prioritize easy milk workflow and cleaning. One-touch can be a lifestyle win.</p>
-            </div>
-          </div>
-
-          <div class="cluster mt-6">
             <a class="btn btn--primary btn--lg" href="/best-espresso-machines/">See our top picks</a>
-            <a class="btn btn--secondary btn--lg" href="/best-espresso-machine-under-500/">Under $500 picks</a>
-            <a class="btn btn--ghost btn--lg" href="/best-espresso-grinder-under-300/">Grinders under $300</a>
           </div>
         </section>
 
         <!-- Affiliate disclosure -->
-        <section class="panel p-6" id="affiliate-disclosure">
+        <section class="section--tight" id="affiliate-disclosure">
           <h2><span class="h-accent">Affiliate disclosure</span></h2>
           <p class="muted max-65ch">
             HomeEspressoLab participates in the Amazon Services LLC Associates Program (and may participate in other affiliate programs).
@@ -954,8 +965,8 @@
           </p>
         </section>
 
-      </div>
-    </section>
+      </article>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -987,17 +998,13 @@
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
         <a href="/reviews/">Reviews</a>
-        <a href="/how-we-test/">How We Test</a>
+        <a href="/how-we-test/">How we test</a>
         <a href="/disclosure/">Disclosure</a>
         <a href="/privacy-policy/">Privacy Policy</a>
-        <a href="/best-espresso-machines/">Best Machines</a>
+        <a href="/best-espresso-machines/">Best machines</a>
         <a href="/best-espresso-machine-for-beginners/" aria-current="page">Beginners</a>
         <a href="/best-espresso-machine-under-500/">Under $500</a>
-        <a href="/best-espresso-grinders/">Best Grinders</a>
-        <a href="/best-espresso-grinder-under-300/">Grinders under $300</a>
-        <a href="/espresso-basics/">Espresso basics</a>
-        <a href="/how-to-dial-in-espresso/">Dial in espresso</a>
-        <a href="/how-to-steam-milk/">Steam milk</a>
+        <a href="/best-espresso-grinders/">Best grinders</a>
         <a href="/fr/meilleure-machine-espresso-pour-debutants/" hreflang="fr-CA" lang="fr-CA">Français</a>
       </div>
     </div>
@@ -1006,8 +1013,5 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-
-  <!-- Mobile drawer script -->
-  <script src="/assets/js/nav.js?v=1" defer></script>
 </body>
 </html>

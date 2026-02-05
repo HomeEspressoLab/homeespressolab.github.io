@@ -106,7 +106,7 @@
           <a class="btn btn--ghost btn--sm" href="/fr/a-propos/">FR</a>
         </div>
 
-        <!-- Mobile menu button (optional if you use your drawer JS) -->
+        <!-- Mobile menu button -->
         <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
           <span class="menu-btn__icon" aria-hidden="true"></span>
           <span class="menu-btn__text">Menu</span>
@@ -114,6 +114,30 @@
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer (required for nav.js) -->
+  <aside class="mobile-nav" id="mobileNav" hidden>
+    <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="mobile-nav__top">
+        <strong>Menu</strong>
+        <button class="btn btn--ghost btn--sm mobile-nav__close" type="button" aria-label="Close menu">Close</button>
+      </div>
+
+      <nav class="mobile-nav__links" aria-label="Mobile">
+        <a href="/best-espresso-machines/">Best Espresso Machines</a>
+        <a href="/best-espresso-machine-under-500/">Best Under $500</a>
+        <a href="/best-espresso-grinders/">Best Espresso Grinders</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="/how-we-test/">How We Test</a>
+        <a href="/about/" aria-current="page">About</a>
+      </nav>
+
+      <div class="mobile-nav__lang" aria-label="Language">
+        <a class="btn btn--ghost btn--sm" href="/about/" aria-current="page">EN</a>
+        <a class="btn btn--ghost btn--sm" href="/fr/a-propos/">FR</a>
+      </div>
+    </div>
+  </aside>
 
   <main id="main">
     <!-- Breadcrumbs -->
@@ -127,16 +151,30 @@
       </div>
     </section>
 
-    <!-- Hero -->
+    <!-- Hero (image + copy) -->
     <section class="section--tight">
       <div class="container">
         <div class="card card--best">
           <p class="kicker">About</p>
           <h1>About HomeEspressoLab</h1>
+
           <p class="muted max-65ch">
             HomeEspressoLab is a routine-first espresso gear guide. We focus on what actually changes your day-to-day:
             workflow, learning curve, cleaning, and value, with clear trade-offs instead of spec marketing.
           </p>
+
+          <figure class="figure mt-4">
+            <picture>
+              <source srcset="/assets/images/hero/about-hero-960x540.webp" media="(max-width: 860px)" type="image/webp" />
+              <source srcset="/assets/images/hero/about-hero-2400x1350.webp" type="image/webp" />
+              <img
+                src="/assets/images/hero/about-hero-2400x1350.webp"
+                width="2400" height="1350"
+                loading="eager"
+                alt="Home espresso setup with espresso machine, grinder, and a clean modern counter."
+              />
+            </picture>
+          </figure>
 
           <div class="cluster mt-4">
             <a class="btn btn--primary btn--sm" href="/best-espresso-machines/">Start with our top picks</a>
@@ -292,23 +330,10 @@
   </footer>
 
   <script>
-    // Year in footer
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
-  <!-- Optional: mobile menu JS hook (if you use a drawer) -->
-  <script>
-    (function () {
-      const btn = document.querySelector('.menu-btn');
-      // If you already have your own mobile drawer script, remove this block.
-      if (!btn) return;
-      btn.addEventListener('click', function () {
-        // Placeholder: connect to your mobile nav if implemented.
-        // Example: document.getElementById('mobileNav').hidden = false;
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-      });
-    })();
-  </script>
+  <!-- Your real mobile drawer script -->
+  <script src="/assets/js/nav.js?v=1" defer></script>
 </body>
 </html>

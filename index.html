@@ -256,96 +256,94 @@
 
   <main id="content">
 
-      <!-- HERO (banner: full-width image + overlay text + bottom bar) -->
-<section class="hero hero--banner hero--full">
-  <div class="hero__wrap">
+    <!-- HERO (banner: full-width image + overlay text + bottom bar) -->
+    <section class="hero hero--banner hero--full">
+      <div class="hero__wrap">
 
-    <!-- Full-width image (background/banner) -->
-    <figure class="hero__media" aria-label="Home espresso setup with crema">
-      <picture>
-        <source
-          type="image/webp"
-          srcset="
-            /assets/images/hero/home-espresso-hero-768x432.webp 768w,
-            /assets/images/hero/home-espresso-hero-960x540.webp 960w,
-            /assets/images/hero/home-espresso-hero-1200x630.webp 1200w,
-            /assets/images/hero/home-espresso-hero-1600x840.webp 1600w,
-            /assets/images/hero/home-espresso-hero-2400x1260.webp 2400w"
-          sizes="100vw" />
-        <img
-          src="/assets/images/hero/home-espresso-hero-1600x840.webp"
-          alt="A premium home espresso setup with a fresh espresso crema on a dark countertop."
-          width="2400"
-          height="1260"
-          loading="eager"
-          decoding="async"
-          fetchpriority="high" />
-      </picture>
-    </figure>
+        <!-- Full-width image (background/banner) -->
+        <figure class="hero__media" aria-label="Home espresso setup with crema">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/home-espresso-hero-768x432.webp 768w,
+                /assets/images/hero/home-espresso-hero-960x540.webp 960w,
+                /assets/images/hero/home-espresso-hero-1200x630.webp 1200w,
+                /assets/images/hero/home-espresso-hero-1600x840.webp 1600w,
+                /assets/images/hero/home-espresso-hero-2400x1260.webp 2400w"
+              sizes="100vw" />
+            <img
+              src="/assets/images/hero/home-espresso-hero-1600x840.webp"
+              alt="A premium home espresso setup with a fresh espresso crema on a dark countertop."
+              width="2400"
+              height="1260"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high" />
+          </picture>
+        </figure>
 
-    <!-- Overlay content on top of image (left side) -->
-    <div class="hero__content">
-      <p class="kicker">Guides + comparisons</p>
+        <!-- Overlay content on top of image (left side) -->
+        <div class="hero__content">
+          <p class="kicker">Guides + comparisons</p>
 
-      <h1 class="hero__title">Home Espresso Guides (Canada)</h1>
+          <h1 class="hero__title">Home Espresso Guides (Canada)</h1>
 
-      <p class="hero__lead">
-        Quick picks, clean comparison tables, and honest trade-offs for semi-automatic, automatic, and capsule espresso.
-        Built for real home use, not cafés.
-      </p>
+          <p class="hero__lead">
+            Quick picks, clean comparison tables, and honest trade-offs for semi-automatic, automatic, and capsule espresso.
+            Built for real home use, not cafés.
+          </p>
 
-      <div class="hero__meta">
-        <span class="badge badge--best">Updated 2026</span>
-        <span class="badge">Canada-friendly picks</span>
-        <span class="badge">Clear trade-offs</span>
-      </div>
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="hero__bar">
-      <div class="hero__actions">
-        <div class="cluster">
-          <a class="btn btn--primary btn--lg" href="/best-espresso-machines/">Best Espresso Machines</a>
-          <a class="btn btn--ghost btn--lg" href="/best-espresso-grinders/">Best Espresso Grinders</a>
-          <a class="btn btn--secondary btn--lg" href="/how-we-test/">How We Test</a>
-        </div>
-
-        <p class="hero__tip">
-          Fast rule: most bad espresso comes from inconsistent grinding, not the machine.
-        </p>
-      </div>
-
-      <aside class="hero__panel">
-        <h3 class="mb-2">Start here</h3>
-        <p class="muted mb-4">Pick your profile, then compare with confidence.</p>
-
-        <div class="stack--sm">
-          <div class="cluster cluster--between">
-            <span class="pill"><strong>Best machines</strong></span>
-            <a class="btn btn--link" href="/best-espresso-machines/">Go</a>
-          </div>
-          <div class="cluster cluster--between">
-            <span class="pill"><strong>Beginners</strong></span>
-            <a class="btn btn--link" href="/best-espresso-machine-for-beginners/">Go</a>
-          </div>
-          <div class="cluster cluster--between">
-            <span class="pill"><strong>Under $500</strong></span>
-            <a class="btn btn--link" href="/best-espresso-machine-under-500/">Go</a>
-          </div>
-          <div class="cluster cluster--between">
-            <span class="pill"><strong>Best grinders</strong></span>
-            <a class="btn btn--link" href="/best-espresso-grinders/">Go</a>
-          </div>
-          <div class="cluster cluster--between">
-            <span class="pill"><strong>How we test</strong></span>
-            <a class="btn btn--link" href="/how-we-test/">Go</a>
+          <div class="hero__meta">
+            <span class="badge badge--best">Updated 2026</span>
+            <span class="badge">Canada-friendly picks</span>
+            <span class="badge">Clear trade-offs</span>
           </div>
         </div>
-      </aside>
-    </div>
 
-  </div>
-</section>
+        <!-- Bottom bar -->
+        <div class="hero__bar">
+          <div class="hero__actions">
+            <div class="cluster">
+              <a class="btn btn--primary btn--lg" href="/best-espresso-machines/">Best Espresso Machines</a>
+              <a class="btn btn--ghost btn--lg" href="/best-espresso-grinders/">Best Espresso Grinders</a>
+              <a class="btn btn--secondary btn--lg" href="/how-we-test/">How We Test</a>
+            </div>
+            <!-- REMOVED: hero__tip (Fast rule) -->
+          </div>
+
+          <aside class="hero__panel">
+            <h3 class="mb-2">Start here</h3>
+            <p class="muted mb-4">Pick your profile, then compare with confidence.</p>
+
+            <div class="stack--sm">
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>Best machines</strong></span>
+                <a class="btn btn--link" href="/best-espresso-machines/">Go</a>
+              </div>
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>Beginners</strong></span>
+                <a class="btn btn--link" href="/best-espresso-machine-for-beginners/">Go</a>
+              </div>
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>Under $500</strong></span>
+                <a class="btn btn--link" href="/best-espresso-machine-under-500/">Go</a>
+              </div>
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>Best grinders</strong></span>
+                <a class="btn btn--link" href="/best-espresso-grinders/">Go</a>
+              </div>
+              <div class="cluster cluster--between">
+                <span class="pill"><strong>How we test</strong></span>
+                <a class="btn btn--link" href="/how-we-test/">Go</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+
     <div class="container section--tight">
 
       <div class="disclosure" id="amazon">
@@ -408,6 +406,17 @@
             The “best” machine is the one you’ll actually enjoy using daily. Choose by friction level and drink style.
           </p>
 
+          <!-- Image #1 (1200x630) -->
+          <figure class="mt-6 card" aria-label="Espresso machine types comparison">
+            <img
+              src="/assets/images/og/espresso-machine-types-comparison.webp"
+              alt="Comparison of capsule, semi-automatic, and automatic espresso machines for home use"
+              width="1200"
+              height="630"
+              loading="lazy"
+              decoding="async" />
+          </figure>
+
           <div class="grid grid-2 mt-6">
             <div class="card">
               <h3 class="mb-2">I want simple & fast</h3>
@@ -446,6 +455,17 @@
           <p class="muted max-65ch">
             We optimize for what matters at home: repeatable results, daily usability, and realistic maintenance.
           </p>
+
+          <!-- Image #2 (1200x630) -->
+          <figure class="mt-6 card" aria-label="Home espresso testing workflow">
+            <img
+              src="/assets/images/og/home-espresso-testing-workflow.webp"
+              alt="Home espresso testing setup with grinder, scale, and espresso machine"
+              width="1200"
+              height="630"
+              loading="lazy"
+              decoding="async" />
+          </figure>
 
           <div class="grid grid-3 mt-6">
             <div class="card">
@@ -510,6 +530,17 @@
             <div>
               <h3 class="mb-2">Want fewer regrets?</h3>
               <p class="muted mb-0">Most “bad espresso” is inconsistent grinding. A strong grinder improves almost any setup.</p>
+
+              <!-- Image #3 (800x500) -->
+              <figure class="mt-6" aria-label="Grind consistency comparison">
+                <img
+                  src="/assets/images/hero/espresso-grind-consistency-comparison.webp"
+                  alt="Comparison of consistent vs inconsistent espresso grind size"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async" />
+              </figure>
             </div>
             <a class="btn btn--primary btn--lg" href="/best-espresso-grinders/">See the best espresso grinders</a>
           </div>

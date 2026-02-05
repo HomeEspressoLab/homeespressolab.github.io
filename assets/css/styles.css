@@ -1630,6 +1630,7 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   position: relative;
   width: 100%;
   max-width: 980px;            /* match ton design (tables/consent) */
+  margin-inline: auto;         /* ✅ centre le bloc */
   aspect-ratio: 16 / 9;        /* responsive sans hack */
   border-radius: var(--r-xl);  /* cohérent avec tes cards */
   overflow: hidden;
@@ -1646,4 +1647,5 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   border: 0;
   display: block;
 }
+
 

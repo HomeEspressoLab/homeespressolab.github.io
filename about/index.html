@@ -12,6 +12,7 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#0b0d14" />
 
+  <!-- Canonical -->
   <link rel="canonical" href="https://homeespressolab.github.io/about/" />
 
   <!-- Hreflang -->
@@ -23,7 +24,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css?v=1" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_CA" />
   <meta property="og:locale:alternate" content="fr_CA" />
   <meta property="og:site_name" content="HomeEspressoLab" />
@@ -39,6 +40,8 @@
   <meta name="twitter:title" content="About HomeEspressoLab" />
   <meta name="twitter:description" content="Routine-first espresso gear guidance with clear trade-offs, transparent methodology, and honest affiliate disclosure." />
   <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/about-og-1200x630.webp" />
+  <!-- Optional: add your handle if you have one -->
+  <!-- <meta name="twitter:site" content="@HomeEspressoLab" /> -->
 
   <!-- JSON-LD: Organization + WebSite + WebPage -->
   <script type="application/ld+json">
@@ -50,6 +53,7 @@
         "@id": "https://homeespressolab.github.io/#org",
         "name": "HomeEspressoLab",
         "url": "https://homeespressolab.github.io/",
+        "description": "Routine-first espresso gear guides with clear trade-offs and transparent affiliate disclosure.",
         "logo": {
           "@type": "ImageObject",
           "url": "https://homeespressolab.github.io/assets/images/logo-512.png",
@@ -70,8 +74,15 @@
         "@id": "https://homeespressolab.github.io/about/#webpage",
         "url": "https://homeespressolab.github.io/about/",
         "name": "About HomeEspressoLab",
+        "description": "What HomeEspressoLab is, who it’s for, and how we evaluate espresso gear using routine-first guidance and clear trade-offs.",
         "isPartOf": { "@id": "https://homeespressolab.github.io/#website" },
         "about": { "@id": "https://homeespressolab.github.io/#org" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://homeespressolab.github.io/assets/images/hero/about-hero-2400x1350.webp",
+          "width": 2400,
+          "height": 1350
+        },
         "inLanguage": "en-CA"
       }
     ]
@@ -98,6 +109,7 @@
           <a class="nav__link" href="/best-espresso-grinders/">Grinders</a>
           <a class="nav__link" href="/reviews/">Reviews</a>
           <a class="nav__link" href="/how-we-test/">How We Test</a>
+          <a class="nav__link" href="/about/" aria-current="page">About</a>
         </nav>
 
         <!-- Desktop language switch -->
@@ -125,7 +137,7 @@
 
       <nav class="mobile-nav__links" aria-label="Mobile">
         <a href="/best-espresso-machines/">Best Espresso Machines</a>
-        <a href="/best-espresso-machine-under-500/">Best Under $500</a>
+        <a href="/best-espresso-machine-under-500/">Under $500</a>
         <a href="/best-espresso-grinders/">Best Espresso Grinders</a>
         <a href="/reviews/">Reviews</a>
         <a href="/how-we-test/">How We Test</a>
@@ -171,6 +183,7 @@
                 src="/assets/images/hero/about-hero-2400x1350.webp"
                 width="2400" height="1350"
                 loading="eager"
+                fetchpriority="high"
                 alt="Home espresso setup with espresso machine, grinder, and a clean modern counter."
               />
             </picture>
@@ -267,7 +280,7 @@
         <section class="panel p-6" id="affiliate-disclosure">
           <h2><span class="h-accent">Affiliate disclosure</span></h2>
           <p class="muted max-65ch">
-            HomeEspressoLab participates in the Amazon Services LLC Associates Program (and may participate in other affiliate programs).
+            HomeEspressoLab participates in the Amazon Associates program (and may participate in other affiliate programs).
             If you click an affiliate link and make a purchase, we may earn a commission at no extra cost to you.
           </p>
           <p class="muted max-65ch">
@@ -288,6 +301,17 @@
           </p>
         </section>
 
+        <section class="panel p-6" id="contact">
+          <h2><span class="h-accent">Corrections & contact</span></h2>
+          <p class="muted max-65ch">
+            Found something outdated or unclear? We aim to keep our guides practical and current.
+            If you spot an issue, please reach out via our <a class="link-accent" href="/contact/">Contact</a> page.
+          </p>
+          <p class="muted max-65ch">
+            We also welcome feedback on what you want next, like grinder guides, milk drinks, or beginner routines.
+          </p>
+        </section>
+
         <section class="cta">
           <div class="stack--sm">
             <h2 class="mt-0 mb-2">Helpful starting points</h2>
@@ -297,7 +321,7 @@
           </div>
           <div class="cluster">
             <a class="btn btn--primary btn--sm" href="/best-espresso-machines/">Best Espresso Machines</a>
-            <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-under-500/">Best Under $500</a>
+            <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-under-500/">Under $500</a>
             <a class="btn btn--ghost btn--sm" href="/reviews/">Reviews</a>
             <a class="btn btn--ghost btn--sm" href="/how-we-test/">How We Test</a>
           </div>

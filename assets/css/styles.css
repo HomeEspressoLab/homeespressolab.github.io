@@ -1625,3 +1625,25 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   backdrop-filter: blur(10px);
 }
 
+/* ---------- Video (YouTube embed) ---------- */
+.video-wrap{
+  position: relative;
+  width: 100%;
+  max-width: 980px;            /* match ton design (tables/consent) */
+  aspect-ratio: 16 / 9;        /* responsive sans hack */
+  border-radius: var(--r-xl);  /* cohérent avec tes cards */
+  overflow: hidden;
+  border: 1px solid var(--line2);
+  background: rgba(255,255,255,.02);
+  box-shadow: var(--shadow2);
+}
+
+.video-wrap iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+

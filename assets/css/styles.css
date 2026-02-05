@@ -1,6 +1,7 @@
 /* =========================================================
    HomeEspressoLab — Discord-ish Editorial CSS (UPDATED)
    Goals: clean, fast, accessible, mega-menu fixed
+   + SVG icon fix + homepage hero banner fixes
    ========================================================= */
 
 /* ---------- Design Tokens ---------- */
@@ -1158,7 +1159,6 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 
 /* =========================================================
    Mobile Menu (Drawer) — HomeEspressoLab
-   Paste at END of styles.css
    ========================================================= */
 
 /* Desktop defaults */
@@ -1176,7 +1176,7 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    margin-left: auto; /* pousse le bouton à droite */
+    margin-left: auto;
     padding: 10px 12px;
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,.10);
@@ -1223,7 +1223,7 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   right: 0;
   height: 100%;
   width: min(86vw, 360px);
-  background: rgba(15, 17, 26, .96);
+  background: rgba(10, 12, 20, .98);
   border-left: 1px solid rgba(255,255,255,.10);
   padding: 16px;
   display: flex;
@@ -1247,15 +1247,28 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 .mobile-nav__links a{
   padding: 12px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
   text-decoration: none;
-  color: inherit;
+  color: rgba(255,255,255,.94) !important;
+  font-weight: 700;
+  letter-spacing: .2px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.35);
+}
+.mobile-nav__links a:hover{
+  background: rgba(255,255,255,.08);
+  border-color: rgba(167,139,250,.22);
+  text-decoration: none;
+}
+.mobile-nav__links a:focus-visible{
+  outline: none;
+  box-shadow: var(--ring);
 }
 
 .mobile-nav__links a[aria-current="page"]{
-  border-color: rgba(168, 85, 247, .45);
-  background: rgba(168, 85, 247, .12);
+  color: #ffffff !important;
+  background: rgba(139, 92, 246, .18) !important;
+  border-color: rgba(139, 92, 246, .55) !important;
 }
 
 .mobile-nav__lang{
@@ -1265,189 +1278,69 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   padding-top: 10px;
   border-top: 1px solid rgba(255,255,255,.08);
 }
-
-/* =========================================================
-   Mobile Menu — readability boost (drop-in override)
-   Put AFTER your current Mobile Menu styles
-   ========================================================= */
-
-@media (max-width: 980px){
-
-  /* Panel a tiny bit darker for contrast */
-  .mobile-nav__panel{
-    background: rgba(10, 12, 20, .98);
-  }
-
-  /* Make sure links are always bright */
-  .mobile-nav__links a{
-    color: rgba(255,255,255,.94) !important;
-    font-weight: 700;
-    letter-spacing: .2px;
-    text-shadow: 0 1px 0 rgba(0,0,0,.35);
-
-    /* Slightly stronger card contrast */
-    background: rgba(255,255,255,.05);
-    border-color: rgba(255,255,255,.12);
-  }
-
-  /* Hover/focus for accessibility + clarity */
-  .mobile-nav__links a:hover{
-    background: rgba(255,255,255,.08);
-    border-color: rgba(167,139,250,.22);
-  }
-  .mobile-nav__links a:focus-visible{
-    outline: none;
-    box-shadow: var(--ring);
-  }
-
-  /* Active page: keep the purple, but FORCE bright text */
-  .mobile-nav__links a[aria-current="page"]{
-    color: #ffffff !important;
-    background: rgba(139, 92, 246, .18) !important;
-    border-color: rgba(139, 92, 246, .55) !important;
-  }
-
-  /* Optional: if you also have a close button or top text */
-  .mobile-nav__top,
-  .mobile-nav__top *{
-    color: rgba(255,255,255,.92);
-  }
+.mobile-nav__top,
+.mobile-nav__top *{
+  color: rgba(255,255,255,.92);
 }
 
-/* ---------- Hero (Homepage layout like screenshot) ---------- */
-
-.hero{
-  padding: var(--s-9) 0 var(--s-7);
-}
-
-/* The hero "card" wrapper */
-.hero__wrap{
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.03), transparent 55%),
-    rgba(17,23,40,.55);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: var(--r-xl);
-  box-shadow: 0 22px 60px rgba(0,0,0,.45);
-  padding: clamp(16px, 2.2vw, 26px);
-
-  display: grid;
-  gap: var(--s-6);
-  align-items: center;
-}
-
-/* Desktop split: text left, image right */
-@media (min-width: 860px){
-  .hero__wrap{
-    grid-template-columns: 1.05fr 1.15fr;
-    gap: var(--s-7);
-  }
-}
-
-/* Optional if you use this class in HTML (recommended) */
-.hero__copy{ min-width: 0; }
-
-.hero__title{
-  margin-bottom: var(--s-3);
-}
-
-.hero__lead{
-  color: var(--muted);
-  font-size: var(--text-md);
-  line-height: var(--lh-snug);
-  max-width: 60ch;
-}
-
-/* Right image block */
-.hero__media{
+/* ---------- Video (YouTube embed) ---------- */
+.video-wrap{
   position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
   border-radius: var(--r-xl);
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid var(--line2);
   background: rgba(255,255,255,.02);
-  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+  box-shadow: var(--shadow2);
 }
-
-/* Force 16:9 look like your screenshot */
-.hero__media img{
+.video-wrap iframe{
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
-/* The magic: dark overlay + violet glow on the LEFT side of the image */
-.hero__media::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(900px 520px at 22% 55%, rgba(124,58,237,.22), transparent 60%),
-    linear-gradient(90deg, rgba(8,10,16,.82) 0%, rgba(8,10,16,.50) 42%, rgba(8,10,16,0) 74%);
-  pointer-events:none;
-}
+/* =========================================================
+   Detailed picks cards — better CTA placement
+   ========================================================= */
 
-/* Badges row spacing */
-.hero__meta{
+.card--detail{
   display:flex;
-  flex-wrap:wrap;
-  gap: var(--s-2);
-  margin-top: var(--s-4);
+  flex-direction:column;
 }
 
-/* Bottom bar: CTAs left + Start here panel right */
-.hero__bar{
-  grid-column: 1 / -1;
-  display: grid;
-  gap: var(--s-5);
+.card--detail .card__footer{
   margin-top: var(--s-5);
-}
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line2);
 
-@media (min-width: 860px){
-  .hero__bar{
-    grid-template-columns: 1fr 360px;
-    align-items: start;
-  }
-}
-
-.hero__actions{
-  padding: var(--s-5);
-  border-radius: var(--r-xl);
-  border: 1px solid rgba(255,255,255,.08);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.03), transparent 65%),
-    rgba(15,19,32,.45);
-}
-
-/* Make CTA buttons look like your screenshot row */
-.hero__actions .cluster{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
   gap: var(--s-3);
+  flex-wrap:wrap;
 }
-
-.hero__tip{
-  margin-top: var(--s-4);
-  margin-bottom: 0;
+.card--detail .card__footer .btn{
+  width: auto;
+  min-width: 240px;
 }
-
-/* Start here panel: slightly tighter + same card feel */
-.hero__panel{
-  padding: var(--s-5);
-  border-radius: var(--r-xl);
-  border: 1px solid rgba(167,139,250,.22);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.03), transparent 60%),
-    rgba(17,23,40,.58);
-  box-shadow: var(--shadow1);
-}
-
-/* Mobile: stack cleanly */
-@media (max-width: 859px){
-  .hero__bar{ margin-top: var(--s-4); }
-  .hero__actions{ padding: var(--s-5); }
+@media (max-width: 640px){
+  .card--detail .card__footer{
+    justify-content: stretch;
+  }
+  .card--detail .card__footer .btn{
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 /* =========================================================
    HERO Banner Override (FULL WIDTH) — UPDATED (no overlap)
-   Put at VERY END of styles.css
    ========================================================= */
 
 .hero.hero--banner{
@@ -1480,6 +1373,7 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   border-radius: 0;
   box-shadow: none;
   background: transparent;
+  position: relative;
 }
 
 .hero.hero--banner .hero__media img{
@@ -1500,10 +1394,11 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   z-index: 1;
 }
 
-/* Overlay text centered in container width */
+/* Overlay content (ONLY over image height) */
 .hero.hero--banner .hero__content{
   position: absolute;
-  inset: 0;
+  inset: 0 0 auto 0;
+  height: clamp(320px, 46vw, 520px);
   z-index: 2;
   display: grid;
   align-content: center;
@@ -1513,26 +1408,18 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   margin-inline: auto;
 }
 
-/* =========================================================
-   Bottom bar (FIXED): no negative margin, clean spacing
-   ========================================================= */
+/* Bottom bar: no overlap */
 .hero.hero--banner .hero__bar{
   position: relative;
   z-index: 3;
-
-  /* ✅ remove overlap */
   margin-top: 0;
-
-  /* ✅ create real space below image */
   padding: var(--s-5) var(--gutter) var(--s-7);
-
   max-width: var(--container);
   margin-inline: auto;
 
   display: grid;
   gap: var(--s-5);
 }
-
 @media (min-width: 860px){
   .hero.hero--banner .hero__bar{
     grid-template-columns: 1fr 360px;
@@ -1540,41 +1427,28 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   }
 }
 
-/* Mobile: move text under image */
+/* Mobile: content under image */
 @media (max-width: 720px){
   .hero.hero--banner .hero__content{
     position: static;
+    height: auto;
     padding: var(--s-5) var(--gutter) 0;
-    background: transparent;
   }
-
-  /* keep spacing consistent on mobile too */
   .hero.hero--banner .hero__bar{
-    margin-top: 0;
     padding-top: var(--s-4);
   }
 }
 
-/* =========================================================
-   HERO — Perfect placement for buttons + "Fast rule" note
-   ========================================================= */
-
-/* Keep full-width helper */
-.hero--full{
-  width: 100%;
-  max-width: none;
-  margin-inline: 0;
-}
-
-/* Left block (buttons + note) = stacked, predictable spacing */
+/* Buttons + note spacing (banner or regular hero) */
 .hero__actions{
   display: flex;
   flex-direction: column;
-  gap: 0;
   min-width: 0;
+  background: rgba(15, 19, 32, .78);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--r-xl);
 }
-
-/* Button row */
 .hero__actions .cluster{
   display: flex;
   flex-wrap: wrap;
@@ -1582,10 +1456,8 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   align-items: center;
   margin: 0;
 }
-
-/* The note is clearly BELOW the buttons */
 .hero__tip{
-  margin: 22px 0 0;       /* ✅ pushes it lower (desktop) */
+  margin: 22px 0 0;
   padding: 12px 0 0;
   max-width: 62ch;
 
@@ -1597,146 +1469,32 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   border: none;
   border-top: 1px solid rgba(255,255,255,.08);
 }
-
 .hero__tip::before{
   content: "•";
   color: var(--violet2);
   margin-right: 8px;
 }
-
-/* Mobile: more breathing room */
 @media (max-width: 720px){
-  .hero__actions .cluster{
-    gap: 10px;
-  }
-  .hero__tip{
-    margin-top: 18px;
-    padding-top: 12px;
-  }
+  .hero__actions .cluster{ gap: 10px; }
+  .hero__tip{ margin-top: 18px; padding-top: 12px; }
 }
 
 /* =========================================================
-   HERO Banner — stop content bleeding behind bottom bar
-   Put at VERY END of styles.css
+   ICONS (SVG inline) — IMPORTANT FIX
+   - prevents "I" looking icons due to global stroke rules
    ========================================================= */
 
-/* Limit the overlay content to the IMAGE height only */
-.hero.hero--banner .hero__content{
-  inset: 0 0 auto 0; /* top right bottom left */
-  height: clamp(320px, 46vw, 520px); /* same as your image height */
-}
-
-/* Make the actions panel slightly more opaque to hide anything behind */
-.hero__actions{
-  background: rgba(15, 19, 32, .78) !important;
-  backdrop-filter: blur(10px);
-}
-
-/* ---------- Video (YouTube embed) ---------- */
-.video-wrap{
-  position: relative;
-  width: 100%;
-  max-width: 980px;            /* match ton design (tables/consent) */
-  margin-inline: auto;         /* ✅ centre le bloc */
-  aspect-ratio: 16 / 9;        /* responsive sans hack */
-  border-radius: var(--r-xl);  /* cohérent avec tes cards */
-  overflow: hidden;
-  border: 1px solid var(--line2);
-  background: rgba(255,255,255,.02);
-  box-shadow: var(--shadow2);
-}
-
-.video-wrap iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* =========================================================
-   Detailed picks cards — better CTA placement
-   Paste at END of styles.css
-   ========================================================= */
-
-.card--detail{
-  display: flex;
-  flex-direction: column;
-}
-
-/* Footer CTA area inside the card */
-.card--detail .card__footer{
-  margin-top: var(--s-5);
-  padding-top: var(--s-4);
-  border-top: 1px solid var(--line2);
-
-  display: flex;
-  gap: var(--s-3);
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-/* Make the Amazon button NOT look like a full-width banner */
-.card--detail .card__footer .btn--primary{
-  width: auto;                 /* overrides your .w-100 usage */
-  min-width: 220px;
-}
-
-/* Optional: a soft right-aligned hint (price/affiliate note) */
-.card--detail .card__footer .cta-note{
-  margin-left: auto;
-  color: var(--muted);
-  font-size: var(--text-sm);
-}
-
-/* =========================================================
-   Detailed picks cards — better CTA placement
-   Paste at END of styles.css
-   ========================================================= */
-
-.card--detail{
-  display:flex;
-  flex-direction:column;
-}
-
-.card--detail .card__footer{
-  margin-top: var(--s-5);
-  padding-top: var(--s-4);
-  border-top: 1px solid var(--line2);
-
-  display:flex;
-  align-items:center;
-  justify-content:flex-end; /* bouton aligné à droite (desktop) */
-  gap: var(--s-3);
-  flex-wrap:wrap;
-}
-
-/* Bouton: pas full width, style "CTA propre" */
-.card--detail .card__footer .btn{
-  width: auto;
-  min-width: 240px;
-}
-
-/* Mobile: bouton pleine largeur (clean) */
-@media (max-width: 640px){
-  .card--detail .card__footer{
-    justify-content: stretch;
-  }
-  .card--detail .card__footer .btn{
-    width: 100%;
-    min-width: 0;
-  }
-}
-
-/* =============== Icons (SVG inline) =============== */
 .icon{
   width: 1.05em;
   height: 1.05em;
   display: inline-block;
   vertical-align: -0.15em;
-  fill: currentColor;
+  flex: 0 0 auto;
+
+  /* Force fill icons to behave */
+  fill: currentColor !important;
+  stroke: none !important;
+
   opacity: .95;
 }
 
@@ -1759,4 +1517,3 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   align-items:center;
   gap:.6rem;
 }
-

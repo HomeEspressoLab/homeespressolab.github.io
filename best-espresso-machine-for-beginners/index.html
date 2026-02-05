@@ -23,10 +23,10 @@
 
   <!-- Preload (Hero image) -->
   <link rel="preload" as="image"
-        href="/assets/images/hero/beginners-espresso-hero-2400x1350.webp"
-        imagesrcset="/assets/images/hero/beginners-espresso-hero-960x540.webp 960w, /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w"
-        imagesizes="(max-width: 980px) 100vw, 52vw"
-        fetchpriority="high" />
+      href="/assets/images/hero/beginners-espresso-hero-1600x900.webp"
+      imagesrcset="/assets/images/hero/beginners-espresso-hero-960x540.webp 960w, /assets/images/hero/beginners-espresso-hero-1600x900.webp 1600w, /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w"
+      imagesizes="(max-width: 980px) 100vw, 52vw"
+      fetchpriority="high" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/styles.css?v=1" />
@@ -358,21 +358,25 @@
 
           <figure class="hero__media" aria-label="Beginner espresso setup">
             <picture>
-              <source
-                type="image/webp"
-                srcset="/assets/images/hero/beginners-espresso-hero-960x540.webp 960w, /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w"
-                sizes="(max-width: 980px) 100vw, 52vw"
-              />
-              <img
-                src="/assets/images/hero/beginners-espresso-hero-2400x1350.webp"
-                alt="A beginner-friendly home espresso setup on a clean countertop with an espresso machine and simple accessories."
-                width="2400"
-                height="1350"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </picture>
+  <source
+    type="image/webp"
+    srcset="
+      /assets/images/hero/beginners-espresso-hero-960x540.webp 960w,
+      /assets/images/hero/beginners-espresso-hero-1600x900.webp 1600w,
+      /assets/images/hero/beginners-espresso-hero-2400x1350.webp 2400w
+    "
+    sizes="(max-width: 980px) 100vw, 52vw"
+  />
+  <img
+    src="/assets/images/hero/beginners-espresso-hero-1600x900.webp"
+    alt="A beginner-friendly home espresso setup on a clean countertop with an espresso machine and simple accessories."
+    width="2400"
+    height="1350"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+  />
+</picture>
           </figure>
 
           <aside class="hero__panel">

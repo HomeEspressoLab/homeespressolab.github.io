@@ -1722,3 +1722,34 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
     min-width: 0;
   }
 }
+
+/* =============== Icons (SVG inline) =============== */
+.icon{
+  width: 1.05em;
+  height: 1.05em;
+  display: inline-block;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  opacity: .95;
+}
+
+.icon--muted{ opacity: .75; }
+
+.icon-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.card__title{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.mini-kpi{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+}
+

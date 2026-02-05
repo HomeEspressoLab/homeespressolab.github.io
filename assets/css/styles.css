@@ -1648,4 +1648,39 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   display: block;
 }
 
+/* =========================================================
+   Detailed picks cards — better CTA placement
+   Paste at END of styles.css
+   ========================================================= */
+
+.card--detail{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer CTA area inside the card */
+.card--detail .card__footer{
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line2);
+
+  display: flex;
+  gap: var(--s-3);
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Make the Amazon button NOT look like a full-width banner */
+.card--detail .card__footer .btn--primary{
+  width: auto;                 /* overrides your .w-100 usage */
+  min-width: 220px;
+}
+
+/* Optional: a soft right-aligned hint (price/affiliate note) */
+.card--detail .card__footer .cta-note{
+  margin-left: auto;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
 

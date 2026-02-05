@@ -145,7 +145,14 @@ body{
 /* Improve anchor jump with sticky header */
 :target{ scroll-margin-top: calc(var(--headerH) + 18px); }
 
-img, svg, video{
+img, video{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SVG: ok en block sauf les petites icônes inline */
+svg:not(.icon){
   max-width: 100%;
   height: auto;
   display: block;

@@ -353,29 +353,46 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer__grid">
-      <div class="stack--sm">
-        <p class="kicker">HomeEspressoLab</p>
-        <p class="muted max-65ch">
-          Guides espresso axés sur la routine avec des compromis clairs.
-          Pas de hype, pas de chasse aux specs, juste des choix pratiques pour la maison.
-        </p>
-        <p class="copyright">© <span id="y"></span> HomeEspressoLab</p>
+  <div class="container footer__grid">
+    <div>
+      <div class="cluster">
+        <img
+          class="brand__img"
+          src="/assets/images/brand/homeespressolab-brandmark-1024.png"
+          alt="HomeEspressoLab"
+          width="24"
+          height="24"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <strong>HomeEspressoLab</strong>
+          <div class="muted small">Guides espresso à la maison. Compromis clairs, décisions plus simples.</div>
+        </div>
       </div>
 
-      <div class="footer__links">
-        <a href="/best-espresso-machines/">Meilleures machines à espresso</a>
-        <a href="/reviews/">Avis</a>
-        <a href="/how-we-test/">Comment nous testons</a>
-        <a href="/disclosure/">Divulgation</a>
-        <a href="/privacy-policy/">Politique de confidentialité</a>
-        <a href="/about/">English</a>
-        <a href="/about/" aria-current="page">À propos</a>
-      </div>
+      <p class="copyright">
+        © <span id="y"></span> HomeEspressoLab. Contenu informatif seulement. Certaines pages contiennent des liens d’affiliation.
+      </p>
     </div>
-  </footer>
+
+    <div class="footer__links" aria-label="Liens du site">
+      <a href="/about/">À propos</a>
+      <a href="/contact/">Contact</a>
+      <a href="/reviews/">Avis</a>
+      <a href="/how-we-test/">Comment nous testons</a>
+      <a href="/disclosure/">Divulgation</a>
+      <a href="/privacy-policy/">Politique de confidentialité</a>
+      <a href="/best-espresso-machines/">Meilleures machines</a>
+      <a href="/best-espresso-machine-for-beginners/">Débutants</a>
+      <a href="/best-espresso-machine-under-500/">Moins de 500 $</a>
+      <a href="/best-espresso-grinders/">Meilleurs moulins</a>
+      <a href="/fr/" hreflang="fr-CA" lang="fr-CA">Français</a>
+      <a href="/about/">English</a>
+    </div>
+  </div>
+</footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();

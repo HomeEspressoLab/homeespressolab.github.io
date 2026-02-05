@@ -96,8 +96,16 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container navbar">
-      <a class="brand" href="/" aria-label="HomeEspressoLab home">
-        <span class="brand__logo" aria-hidden="true"></span>
+      <a class="brand" href="/" aria-label="Home HomeEspressoLab">
+        <img
+          class="brand__img"
+          src="/assets/images/brand/homeespressolab-brandmark-1024.png"
+          alt="HomeEspressoLab"
+          width="28"
+          height="28"
+          loading="eager"
+          decoding="async"
+        />
         <span class="brand__name">HomeEspressoLab</span>
       </a>
 
@@ -107,7 +115,6 @@
           <a class="nav__link" href="/best-espresso-machines/">Best Espresso Machines</a>
           <a class="nav__link" href="/best-espresso-machine-under-500/">Under $500</a>
           <a class="nav__link" href="/best-espresso-grinders/">Grinders</a>
-          <a class="nav__link" href="/reviews/">Reviews</a>
           <a class="nav__link" href="/how-we-test/">How We Test</a>
           <a class="nav__link" href="/about/" aria-current="page">About</a>
         </nav>
@@ -139,7 +146,6 @@
         <a href="/best-espresso-machines/">Best Espresso Machines</a>
         <a href="/best-espresso-machine-under-500/">Under $500</a>
         <a href="/best-espresso-grinders/">Best Espresso Grinders</a>
-        <a href="/reviews/">Reviews</a>
         <a href="/how-we-test/">How We Test</a>
         <a href="/about/" aria-current="page">About</a>
       </nav>
@@ -323,7 +329,6 @@
           <div class="cluster">
             <a class="btn btn--primary btn--sm" href="/best-espresso-machines/">Best Espresso Machines</a>
             <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-under-500/">Under $500</a>
-            <a class="btn btn--ghost btn--sm" href="/reviews/">Reviews</a>
             <a class="btn btn--ghost btn--sm" href="/how-we-test/">How We Test</a>
           </div>
         </section>
@@ -332,24 +337,43 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer__grid">
-      <div class="stack--sm">
-        <p class="kicker">HomeEspressoLab</p>
-        <p class="muted max-65ch">
-          Routine-first espresso guides with clear trade-offs. No hype, no spec-chasing, just practical picks for home.
+      <div>
+        <div class="cluster">
+          <img
+            class="brand__img"
+            src="/assets/images/brand/homeespressolab-brandmark-1024.png"
+            alt="HomeEspressoLab"
+            width="24"
+            height="24"
+            loading="lazy"
+            decoding="async"
+          />
+          <div>
+            <strong>HomeEspressoLab</strong>
+            <div class="muted small">Home espresso guides and reviews. Clear trade-offs, easier decisions.</div>
+          </div>
+        </div>
+
+        <p class="copyright">
+          © <span id="y"></span> HomeEspressoLab. Informational content only. Some pages contain affiliate links.
         </p>
-        <p class="copyright">© <span id="y"></span> HomeEspressoLab</p>
       </div>
 
-      <div class="footer__links">
-        <a href="/best-espresso-machines/">Best Espresso Machines</a>
+      <div class="footer__links" aria-label="Site links">
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/contact/">Contact</a>
         <a href="/reviews/">Reviews</a>
         <a href="/how-we-test/">How We Test</a>
         <a href="/disclosure/">Disclosure</a>
         <a href="/privacy-policy/">Privacy Policy</a>
-        <a href="/about/" aria-current="page">About</a>
+        <a href="/best-espresso-machines/">Best Machines</a>
+        <a href="/best-espresso-machine-for-beginners/">Beginners</a>
+        <a href="/best-espresso-machine-under-500/">Under $500</a>
+        <a href="/best-espresso-grinders/">Best Grinders</a>
+        <a href="/fr/a-propos/" hreflang="fr-CA" lang="fr-CA">Français</a>
+        <a href="/about/">English</a>
       </div>
     </div>
   </footer>

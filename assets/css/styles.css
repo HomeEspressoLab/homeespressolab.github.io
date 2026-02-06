@@ -1526,17 +1526,28 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   gap: .6rem;
 }
 
+/* KPI tiles: center icon + text */
 .mini-kpi{
-  display:flex;
-  align-items:center;
-  gap:.6rem;
+  display: flex;
+  flex-direction: column;     /* empile icône puis texte */
+  align-items: center;        /* centre horizontal */
+  justify-content: center;    /* centre vertical */
+  text-align: center;
+  gap: .35rem;
+  padding: 16px 14px;
 }
 
+/* icon size in KPI tile */
 .mini-kpi .icon{
-  width: 22px;
-  height: 22px;
-  flex: 0 0 22px;
-  margin-top: 1px;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 0;
+}
+
+/* ensure text block doesn't shift */
+.mini-kpi > div{
+  margin: 0;
 }
 
 /* Optional: slightly bigger on small screens */

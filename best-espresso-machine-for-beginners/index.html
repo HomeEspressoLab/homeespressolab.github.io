@@ -381,9 +381,9 @@
 
           <aside class="hero__panel">
             <h3 class="mb-2 icon-pill">
-              <svg class="icon icon--muted" aria-hidden="true"><use href="#i-spark"></use></svg>
-              Quick answer
-            </h3>
+  <svg class="icon icon--muted icon--stroke" aria-hidden="true"><use href="#i-spark"></use></svg>
+  Quick answer
+</h3>
             <p class="muted mb-4">
               Want the lowest friction daily lattes? Choose a solid automatic (and commit to milk cleaning).
               Want the best long-term platform? Choose a semi-auto and prioritize your grinder.
@@ -959,23 +959,29 @@
      style="position:absolute;width:0;height:0;overflow:hidden"
      aria-hidden="true" focusable="false">
 
-  <!-- Espresso basics — open book + coffee bean -->
-  <symbol id="i-espresso-basics" viewBox="0 0 24 24">
-    <!-- book left -->
+  <!-- Spark / Quick answer -->
+  <symbol id="i-spark" viewBox="0 0 24 24">
+    <path d="M12 3l1.4 5.2L19 10l-5.6 1.8L12 17l-1.4-5.2L5 10l5.6-1.8L12 3z"
+          fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linejoin="round"/>
+    <path d="M19.2 14.2l.6 2.2 2.2.6-2.2.6-.6 2.2-.6-2.2-2.2-.6 2.2-.6.6-2.2z"
+          fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Espresso basics (keep id i-book so your existing HTML works) -->
+  <symbol id="i-book" viewBox="0 0 24 24">
     <path d="M4.5 6.2c2.2-1 4.8-1 7 0v13.5c-2.2-1-4.8-1-7 0V6.2z"
           fill="none" stroke="currentColor" stroke-width="1.8"
           stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- book right -->
     <path d="M19.5 6.2c-2.2-1-4.8-1-7 0v13.5c2.2-1 4.8-1 7 0V6.2z"
           fill="none" stroke="currentColor" stroke-width="1.8"
           stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- page lines -->
     <path d="M7.2 9.1h2.6M7.2 11.6h2.6"
           fill="none" stroke="currentColor" stroke-width="1.8"
           stroke-linecap="round"/>
-    <!-- coffee bean -->
-    <path d="M16.8 15.2c1.1 1.1 1.1 2.9 0 4c-1.1 1.1-2.9 1.1-4 0
-             c-1.1-1.1-1.1-2.9 0-4c1.1-1.1 2.9-1.1 4 0z"
+    <!-- small coffee bean -->
+    <path d="M16.7 15.1c1.1 1.1 1.1 2.9 0 4s-2.9 1.1-4 0-1.1-2.9 0-4 2.9-1.1 4 0z"
           fill="none" stroke="currentColor" stroke-width="1.8"
           stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M14.7 14.9c-.3 1.3.1 2.7 1.1 3.6"
@@ -1021,16 +1027,23 @@
           stroke-linecap="round"/>
   </symbol>
 
-  <!-- Maintenance — sponge + bubbles -->
+  <!-- Maintenance — PRO: soap bottle + bubbles (clean look, not emoji) -->
   <symbol id="i-clean" viewBox="0 0 24 24">
-    <!-- sponge -->
-    <path d="M4 14.5l6-6h8.5a2 2 0 0 1 2 2V16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-1.5z"
+    <!-- bottle -->
+    <path d="M10 3h4M11 3v2h2V3"
           fill="none" stroke="currentColor" stroke-width="1.8"
           stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9 7h6a2 2 0 0 1 2 2v10a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V9a2 2 0 0 1 2-2z"
+          fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- pump -->
+    <path d="M14 5h3M17 5v2"
+          fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round"/>
     <!-- bubbles -->
-    <circle cx="17.5" cy="6.5" r="1.5"
+    <circle cx="6.6" cy="8.2" r="1.2"
             fill="none" stroke="currentColor" stroke-width="1.8"/>
-    <circle cx="14.5" cy="4.5" r="1"
+    <circle cx="4.6" cy="10.4" r="0.9"
             fill="none" stroke="currentColor" stroke-width="1.8"/>
   </symbol>
 

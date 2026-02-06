@@ -268,64 +268,65 @@
 
   <!-- Header -->
   <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="/" aria-label="Accueil HomeEspressoLab">
-        <img
-          class="brand__img"
-          src="/assets/images/brand/homeespressolab-brandmark-1024.png"
-          alt="HomeEspressoLab"
-          width="28"
-          height="28"
-          loading="eager"
-          decoding="async"
-        />
-        <span class="brand__name">HomeEspressoLab</span>
-      </a>
+  <div class="container navbar">
+    <a class="brand" href="/" aria-label="Accueil HomeEspressoLab">
+      <img
+        class="brand__img"
+        src="/assets/images/brand/homeespressolab-brandmark-1024.png"
+        alt="HomeEspressoLab"
+        width="28"
+        height="28"
+        loading="eager"
+        decoding="async"
+      />
+      <span class="brand__name">HomeEspressoLab</span>
+    </a>
+
+    <div class="navbar__right">
+      <nav class="nav nav--desktop" aria-label="Navigation principale">
+        <a href="/fr/meilleures-machines-espresso/">Meilleures machines</a>
+        <a aria-current="page" href="/fr/meilleure-machine-espresso-pour-debutants/">Débutants</a>
+        <a href="/fr/meilleure-machine-espresso-moins-de-500/">Moins de 500 $</a>
+        <a href="/fr/meilleurs-moulins-espresso/">Meilleurs moulins</a>
+        <a href="/fr/notre-methode/">Notre méthode</a>
+        <a href="/fr/avis/">Avis</a>
+      </nav>
+
+      <div class="lang-switch lang-switch--desktop" aria-label="Changement de langue">
+        <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-for-beginners/" hreflang="en-CA" lang="en-CA">EN</a>
+        <a class="btn btn--ghost btn--sm" href="/fr/meilleure-machine-espresso-pour-debutants/" hreflang="fr-CA" lang="fr-CA" aria-current="true">FR</a>
+      </div>
+
+      <button class="menu-btn" type="button" aria-label="Ouvrir le menu" aria-controls="mobileNav" aria-expanded="false" data-menu-btn>
+        <span class="menu-btn__icon" aria-hidden="true"></span>
+        <span class="menu-btn__text">Menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav" hidden data-mobile-nav>
+    <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Menu mobile">
+      <div class="mobile-nav__top">
+        <strong>Menu</strong>
+        <button class="btn btn--ghost btn--sm" type="button" aria-label="Fermer le menu" data-menu-close>Fermer</button>
+      </div>
 
       <nav class="mobile-nav__links" aria-label="Navigation mobile">
-  <a href="/fr/meilleures-machines-espresso/">Meilleures machines</a>
-  <a aria-current="page" href="/fr/meilleure-machine-espresso-pour-debutants/">Débutants</a>
-  <a href="/fr/meilleure-machine-espresso-moins-de-500/">Moins de 500 $</a>
-  <a href="/fr/meilleurs-moulins-espresso/">Meilleurs moulins</a>
-  <a href="/fr/notre-methode/">Notre méthode</a>
-  <a href="/fr/avis/">Avis</a>
-</nav>
+        <a href="/fr/meilleures-machines-espresso/">Meilleures machines</a>
+        <a aria-current="page" href="/fr/meilleure-machine-espresso-pour-debutants/">Débutants</a>
+        <a href="/fr/meilleure-machine-espresso-moins-de-500/">Moins de 500 $</a>
+        <a href="/fr/meilleurs-moulins-espresso/">Meilleurs moulins</a>
+        <a href="/fr/notre-methode/">Notre méthode</a>
+        <a href="/fr/avis/">Avis</a>
+      </nav>
 
-        <div class="lang-switch lang-switch--desktop" aria-label="Changement de langue">
-  <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-for-beginners/" hreflang="en-CA" lang="en-CA">EN</a>
-  <a class="btn btn--ghost btn--sm" href="/fr/meilleure-machine-espresso-pour-debutants/" hreflang="fr-CA" lang="fr-CA" aria-current="true">FR</a>
-</div>
-
-        <button class="menu-btn" type="button" aria-label="Ouvrir le menu" aria-controls="mobileNav" aria-expanded="false" data-menu-btn>
-          <span class="menu-btn__icon" aria-hidden="true"></span>
-          <span class="menu-btn__text">Menu</span>
-        </button>
+      <div class="mobile-nav__lang" aria-label="Changement de langue">
+        <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-for-beginners/" hreflang="en-CA" lang="en-CA">EN</a>
+        <a class="btn btn--ghost btn--sm" href="/fr/meilleure-machine-espresso-pour-debutants/" hreflang="fr-CA" lang="fr-CA" aria-current="true">FR</a>
       </div>
     </div>
-
-    <div class="mobile-nav" id="mobileNav" hidden data-mobile-nav>
-      <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Menu mobile">
-        <div class="mobile-nav__top">
-          <strong>Menu</strong>
-          <button class="btn btn--ghost btn--sm" type="button" aria-label="Fermer le menu" data-menu-close>Fermer</button>
-        </div>
-
-        <nav class="mobile-nav__links" aria-label="Navigation mobile">
-          <a href="/best-espresso-machines/">Meilleures machines</a>
-          <a aria-current="page" href="/best-espresso-machine-for-beginners/">Débutants</a>
-          <a href="/best-espresso-machine-under-500/">Moins de 500 $</a>
-          <a href="/best-espresso-grinders/">Meilleurs moulins</a>
-          <a href="/how-we-test/">Notre méthode</a>
-          <a href="/reviews/">Avis</a>
-        </nav>
-
-        <div class="mobile-nav__lang" aria-label="Changement de langue">
-  <a class="btn btn--ghost btn--sm" href="/best-espresso-machine-for-beginners/" hreflang="en-CA" lang="en-CA">EN</a>
-  <a class="btn btn--ghost btn--sm" href="/fr/meilleure-machine-espresso-pour-debutants/" hreflang="fr-CA" lang="fr-CA" aria-current="true">FR</a>
-</div>
-      </div>
-    </div>
-  </header>
+  </div>
+</header>
 
   <main id="content">
     <div class="container section--tight">
@@ -692,43 +693,46 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">Semi-auto + moulin (global)</th>
-                  <td>Moyen</td>
-                  <td>Moyen</td>
-                  <td>Bien (pratique)</td>
-                  <td>Bases hebdomadaires</td>
-                  <td>Acheter un moulin trop faible, courir après des « réglages » au lieu de la constance</td>
-                  <td><a class="link-accent" href="/how-to-dial-in-espresso/">Bases d’ajustement</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Semi-auto (apprentissage)</th>
-                  <td>Moyen–Élevé</td>
-                  <td>Élevée au début</td>
-                  <td>Bien (selon la technique)</td>
-                  <td>La routine compte</td>
-                  <td>S’attendre à des résultats instantanés, négliger l’entretien</td>
-                  <td><a class="link-accent" href="/espresso-basics/">Bases de l’espresso</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Automatique (un bouton)</th>
-                  <td>Faible</td>
-                  <td>Faible</td>
-                  <td>Très facile</td>
-                  <td>Nettoyage du lait</td>
-                  <td>Nettoyer trop rarement le système lait, s’attendre à un contrôle style café</td>
-                  <td><a class="link-accent" href="/how-to-steam-milk/">Routine lait</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Moins de 500 $</th>
-                  <td>Faible–Moyen</td>
-                  <td>Faible–Moyen</td>
-                  <td>Correct–Bien</td>
-                  <td>Routine de base</td>
-                  <td>Croire qu’une « machine moins chère » bat un « meilleur moulin »</td>
-                  <td><a class="link-accent" href="/best-espresso-grinder-under-300/">Moulin sous 300 $</a></td>
-                </tr>
-              </tbody>
+  <tr>
+    <th scope="row">Semi-auto + moulin (meilleur global)</th>
+    <td>Moyen</td>
+    <td>Moyen</td>
+    <td>Bien (avec pratique)</td>
+    <td>Bases hebdomadaires</td>
+    <td>Prendre un moulin trop faible; changer 10 réglages au lieu de stabiliser la routine</td>
+    <td><a class="link-accent" href="/fr/ajuster-espresso/">Routine d’ajustement</a></td>
+  </tr>
+
+  <tr>
+    <th scope="row">Semi-auto (parcours d’apprentissage)</th>
+    <td>Moyen–Élevé</td>
+    <td>Élevée au début</td>
+    <td>Bien (selon la technique)</td>
+    <td>La routine compte</td>
+    <td>S’attendre à des résultats instantanés; négliger le nettoyage et la constance</td>
+    <td><a class="link-accent" href="/fr/bases-espresso/">Bases de l’espresso</a></td>
+  </tr>
+
+  <tr>
+    <th scope="row">Automatique (un bouton)</th>
+    <td>Faible</td>
+    <td>Faible</td>
+    <td>Très facile</td>
+    <td>Nettoyage du lait</td>
+    <td>Nettoyer le lait trop rarement; s’attendre à un contrôle “style café”</td>
+    <td><a class="link-accent" href="/fr/mousser-le-lait/">Routine lait</a></td>
+  </tr>
+
+  <tr>
+    <th scope="row">Moins de 500 $ (entrée budget)</th>
+    <td>Faible–Moyen</td>
+    <td>Faible–Moyen</td>
+    <td>Correct–Bien</td>
+    <td>Routine de base</td>
+    <td>Payer plus pour la machine et sous-investir dans le moulin (shots inconstants)</td>
+    <td><a class="link-accent" href="/fr/meilleur-moulin-espresso-moins-de-300/">Moulin sous 300&nbsp;$</a></td>
+  </tr>
+</tbody>
             </table>
           </div>
         </section>

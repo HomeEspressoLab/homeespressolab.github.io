@@ -23,8 +23,8 @@
 
   <!-- Preload (Hero image) -->
   <link rel="preload" as="image"
-    href="/assets/images/hero/espresso-grinders-hero-1600x900.webp"
-    imagesrcset="/assets/images/hero/espresso-grinders-hero-960x540.webp 960w, /assets/images/hero/espresso-grinders-hero-1600x900.webp 1600w, /assets/images/hero/espresso-grinders-hero-2400x1350.webp 2400w"
+    href="/assets/images/hero/best-espresso-grinders-hero-1600x900.webp"
+    imagesrcset="/assets/images/hero/best-espresso-grinders-hero-960x540.webp 960w, /assets/images/hero/best-espresso-grinders-hero-1600x900.webp 1600w, /assets/images/hero/best-espresso-grinders-hero-2400x1350.webp 2400w"
     imagesizes="(max-width: 980px) 100vw, 52vw"
     fetchpriority="high" />
 
@@ -367,6 +367,31 @@
           </div>
 
           <aside class="hero__panel">
+            <!-- HERO IMAGE (responsive, LCP-friendly) -->
+            <figure class="mb-4" style="margin:0;">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    /assets/images/hero/best-espresso-grinders-hero-960x540.webp 960w,
+                    /assets/images/hero/best-espresso-grinders-hero-1600x900.webp 1600w,
+                    /assets/images/hero/best-espresso-grinders-hero-2400x1350.webp 2400w
+                  "
+                  sizes="(max-width: 980px) 100vw, 52vw"
+                />
+                <img
+                  src="/assets/images/hero/best-espresso-grinders-hero-1600x900.webp"
+                  width="1600"
+                  height="900"
+                  alt="Best espresso grinders for home espresso in Canada: consistent shots, less waste, better daily workflow"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  style="width:100%;height:auto;border-radius:16px;"
+                />
+              </picture>
+            </figure>
+
             <h3 class="mb-2 icon-pill">
               <svg class="icon icon--muted icon--stroke" aria-hidden="true"><use href="#i-spark"></use></svg>
               Quick answer

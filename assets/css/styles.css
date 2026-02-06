@@ -1480,8 +1480,9 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 }
 
 /* =========================================================
-   ICONS (SVG inline) — IMPORTANT FIX
-   - prevents "I" looking icons due to global stroke rules
+   ICONS (SVG inline) — UPDATED (safe for fill + outline icons)
+   - avoids "I" looking icons caused by global stroke rules
+   - DOES NOT break outline icons (stroke-based)
    ========================================================= */
 
 .icon{
@@ -1491,11 +1492,24 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   vertical-align: -0.15em;
   flex: 0 0 auto;
 
-  /* Force fill icons to behave */
+  /* Default: safe base for both styles */
+  fill: currentColor;
+  opacity: .95;
+}
+
+/* Use this class for "solid/fill" icons only */
+.icon--fill{
   fill: currentColor !important;
   stroke: none !important;
+}
 
-  opacity: .95;
+/* Use this class for outline icons (stroke-based) */
+.icon--stroke{
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .icon--muted{ opacity: .75; }
@@ -1517,3 +1531,20 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   align-items:center;
   gap:.6rem;
 }
+
+.mini-kpi .icon{
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  margin-top: 1px;
+}
+
+/* Optional: slightly bigger on small screens */
+@media (max-width: 560px){
+  .mini-kpi .icon{
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+  }
+}
+

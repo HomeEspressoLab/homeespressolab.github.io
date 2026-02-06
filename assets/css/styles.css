@@ -1482,7 +1482,7 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 /* =========================================================
    ICONS (SVG inline) — UPDATED (safe for fill + outline icons)
    - avoids "I" looking icons caused by global stroke rules
-   - DOES NOT break outline icons (stroke-based)
+   - keeps outline icons crisp + consistent
    ========================================================= */
 
 .icon{
@@ -1491,20 +1491,33 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
   display: inline-block;
   vertical-align: -0.15em;
   flex: 0 0 auto;
-
-  /* Default: safe base for both styles */
-  fill: currentColor;
   opacity: .95;
+
+  /* Neutral base: don't force fill by default */
+  fill: none;
+  stroke: none;
 }
 
-/* Use this class for "solid/fill" icons only */
+/* Solid/fill icons only */
 .icon--fill{
   fill: currentColor !important;
   stroke: none !important;
 }
+.icon--fill *{
+  fill: currentColor !important;
+  stroke: none !important;
+}
 
-/* Use this class for outline icons (stroke-based) */
+/* Outline/stroke icons */
 .icon--stroke{
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* IMPORTANT: apply to the symbol paths too (use clones content) */
+.icon--stroke *{
   fill: none !important;
   stroke: currentColor !important;
   stroke-width: 1.8;
@@ -1529,9 +1542,9 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 /* KPI tiles: center icon + text */
 .mini-kpi{
   display: flex;
-  flex-direction: column;     /* empile icône puis texte */
-  align-items: center;        /* centre horizontal */
-  justify-content: center;    /* centre vertical */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   gap: .35rem;
   padding: 16px 14px;
@@ -1546,11 +1559,8 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
 }
 
 /* ensure text block doesn't shift */
-.mini-kpi > div{
-  margin: 0;
-}
+.mini-kpi > div{ margin: 0; }
 
-/* Optional: slightly bigger on small screens */
 @media (max-width: 560px){
   .mini-kpi .icon{
     width: 24px;
@@ -1558,4 +1568,3 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
     flex: 0 0 24px;
   }
 }
-

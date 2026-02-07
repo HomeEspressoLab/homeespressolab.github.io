@@ -402,23 +402,27 @@
             </p>
 
             <div class="stack--sm">
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>Best value (most people)</strong></span>
-                <a class="btn btn--link" href="#pick-value">Go</a>
-              </div>
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>Best under $300</strong></span>
-                <a class="btn btn--link" href="#pick-under-300">Go</a>
-              </div>
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>Best single-dose workflow</strong></span>
-                <a class="btn btn--link" href="#pick-single-dose">Go</a>
-              </div>
-              <div class="cluster cluster--between">
-                <span class="pill"><strong>Best “set-and-forget” hopper</strong></span>
-                <a class="btn btn--link" href="#pick-hopper">Go</a>
-              </div>
-            </div>
+  <div class="cluster cluster--between">
+    <span class="pill"><strong>Best value</strong></span>
+    <a class="btn btn--link" href="#g-breville">Go</a>
+  </div>
+  <div class="cluster cluster--between">
+    <span class="pill"><strong>Espresso-focused</strong></span>
+    <a class="btn btn--link" href="#g-sette">Go</a>
+  </div>
+  <div class="cluster cluster--between">
+    <span class="pill"><strong>Quiet build</strong></span>
+    <a class="btn btn--link" href="#g-crono">Go</a>
+  </div>
+  <div class="cluster cluster--between">
+    <span class="pill"><strong>Filter-first home</strong></span>
+    <a class="btn btn--link" href="#g-virtuoso">Go</a>
+  </div>
+  <div class="cluster cluster--between">
+    <span class="pill"><strong>Budget pick</strong></span>
+    <a class="btn btn--link" href="#g-bellucci">Go</a>
+  </div>
+</div>
 
             <div class="mt-6">
               <h4 class="mb-2">Credibility</h4>
@@ -472,193 +476,296 @@
 
         <!-- Quick Picks -->
         <section class="section--tight" id="quick-picks">
-          <h2><span class="h-accent">Quick picks</span></h2>
-          <p class="muted max-65ch">
-            Four picks for four workflows. These are “least regret” choices, not spec trophies.
-            If you’re unsure, start with the best value pick, then optimize based on your routine.
+  <h2><span class="h-accent">Quick picks</span></h2>
+  <p class="muted max-65ch">
+    Five Canada-ready grinders, shown with clear trade-offs. Pick the one that matches your routine first,
+    then worry about fine details. (Images are optimized: 320px + 800px WebP.)
+  </p>
+
+  <div class="grid mt-6" style="grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:18px;">
+
+    <!-- 1) Breville -->
+    <section class="card card--best" id="g-breville" style="height:100%;">
+      <div class="cluster">
+        <span class="badge badge--best">Best value (most people)</span>
+        <span class="badge">Easy daily workflow</span>
+      </div>
+
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
+        <img
+          src="/assets/images/grinders/breville-smart-grinder-pro-800.webp"
+          srcset="
+            /assets/images/grinders/breville-smart-grinder-pro-320.webp 320w,
+            /assets/images/grinders/breville-smart-grinder-pro-800.webp 800w
+          "
+          sizes="(max-width: 980px) 120px, 160px"
+          width="160"
+          height="160"
+          alt="Breville Smart Grinder Pro (BCG820BSS) espresso grinder Canada"
+          loading="lazy"
+          decoding="async"
+          style="width:160px;height:auto;border-radius:14px;"
+        />
+        <div>
+          <h3 class="mb-2">Breville Smart Grinder Pro (BCG820BSS)</h3>
+          <p class="muted mb-0">
+            A “least-regret” first real grinder: consistent enough for learning espresso and calm day-to-day use.
           </p>
+        </div>
+      </div>
 
-          <div class="grid mt-6" style="grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:18px;">
+      <div class="procon mt-4">
+        <div class="pros">
+          <h4 class="mb-2">Best for</h4>
+          <ul>
+            <li>Daily espresso + milk drinks</li>
+            <li>Beginners learning dial-in</li>
+            <li>Convenient timed workflow</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4 class="mb-2">Trade-offs</h4>
+          <ul>
+            <li>Not the tightest “micro” control vs higher-end flats</li>
+            <li>Not a true single-dose workflow</li>
+          </ul>
+        </div>
+      </div>
 
-            <!-- Pick 1: Best value -->
-            <section class="card card--best" id="pick-value" style="height:100%;">
-              <div class="cluster">
-                <span class="badge badge--best">Best value (most people)</span>
-                <span class="badge">Balanced workflow</span>
-              </div>
+      <div class="cluster mt-4">
+        <a class="btn btn--primary w-100"
+           href="https://www.amazon.ca/dp/B00OXGXW8O/?tag=kitchengearla-20"
+           target="_blank" rel="nofollow sponsored noopener">Check price on Amazon.ca</a>
+        <a class="btn btn--ghost w-100" href="#comparison-products">Compare products</a>
+      </div>
+    </section>
 
-              <h3 class="mt-4 mb-2">A capable espresso grinder that won’t fight you</h3>
-              <p class="muted mb-4">
-                The ideal first “real” grinder is consistent, easy to dial in, and doesn’t make daily use annoying.
-                You’ll get fewer sour/bitter swings and waste less coffee while learning.
-              </p>
+    <!-- 2) Baratza Sette 270 -->
+    <section class="card" id="g-sette" style="height:100%;">
+      <div class="cluster">
+        <span class="badge">Espresso-focused</span>
+        <span class="badge">Fast dialing in</span>
+      </div>
 
-              <div class="procon">
-                <div class="pros">
-                  <h4 class="mb-2">Ideal for</h4>
-                  <ul>
-                    <li>Daily espresso + milk drinks</li>
-                    <li>Learning without chaos</li>
-                    <li>People who want repeatable results</li>
-                  </ul>
-                </div>
-                <div class="cons">
-                  <h4 class="mb-2">Less ideal if</h4>
-                  <ul>
-                    <li>You switch beans constantly and want zero retention</li>
-                    <li>You want ultra-fine micro-adjust steps for competition style</li>
-                    <li>You hate any tinkering</li>
-                  </ul>
-                </div>
-              </div>
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
+        <img
+          src="/assets/images/grinders/baratza-sette-270-800.webp"
+          srcset="
+            /assets/images/grinders/baratza-sette-270-320.webp 320w,
+            /assets/images/grinders/baratza-sette-270-800.webp 800w
+          "
+          sizes="(max-width: 980px) 120px, 160px"
+          width="160"
+          height="160"
+          alt="Baratza Sette 270 espresso grinder Canada"
+          loading="lazy"
+          decoding="async"
+          style="width:160px;height:auto;border-radius:14px;"
+        />
+        <div>
+          <h3 class="mb-2">Baratza Sette 270</h3>
+          <p class="muted mb-0">
+            A strong pick when espresso is the priority and you want quick changes while dialing in.
+          </p>
+        </div>
+      </div>
 
-              <div class="grid mt-4" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted icon--stroke" aria-hidden="true"><use href="#i-spark"></use></svg>
-                  <div><strong>Dial-in ease</strong><div class="muted small">High</div></div>
-                </div>
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted icon--stroke" aria-hidden="true"><use href="#i-grinder"></use></svg>
-                  <div><strong>Consistency</strong><div class="muted small">High</div></div>
-                </div>
-                <div class="card mini-kpi">
-                  <svg class="icon icon--muted icon--stroke" aria-hidden="true"><use href="#i-clean"></use></svg>
-                  <div><strong>Mess factor</strong><div class="muted small">Low–Med</div></div>
-                </div>
-              </div>
+      <div class="procon mt-4">
+        <div class="pros">
+          <h4 class="mb-2">Best for</h4>
+          <ul>
+            <li>Non-pressurized baskets</li>
+            <li>Espresso learning curve</li>
+            <li>Fast grind workflow</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4 class="mb-2">Trade-offs</h4>
+          <ul>
+            <li>Often louder than “Mignon” style grinders</li>
+            <li>Not built around single-dose rituals</li>
+          </ul>
+        </div>
+      </div>
 
-              <div class="cluster mt-4">
-                <a class="btn btn--primary w-100" href="#comparison">Compare picks</a>
-                <a class="btn btn--ghost w-100" href="#how-to-choose">How to choose</a>
-              </div>
+      <div class="cluster mt-4">
+        <a class="btn btn--secondary w-100"
+           href="https://www.amazon.ca/dp/B01G82WVZ0/?tag=kitchengearla-20"
+           target="_blank" rel="nofollow sponsored noopener">Check price on Amazon.ca</a>
+        <a class="btn btn--ghost w-100" href="#dialing-in">Dial-in checklist</a>
+      </div>
+    </section>
 
-              <p class="small mt-4 muted">
-                Pairing help:
-                <a class="link-accent" href="/best-espresso-machine-for-beginners/">best machines for beginners</a> •
-                <a class="link-accent" href="/how-to-dial-in-espresso/">dial-in routine</a>
-              </p>
-            </section>
+    <!-- 3) Eureka Mignon Crono Brew -->
+    <section class="card" id="g-crono" style="height:100%;">
+      <div class="cluster">
+        <span class="badge">Quiet build</span>
+        <span class="badge">Italian “daily driver”</span>
+      </div>
 
-            <!-- Pick 2: Under $300 -->
-            <section class="card" id="pick-under-300" style="height:100%;">
-              <div class="cluster">
-                <span class="badge">Best under $300</span>
-                <span class="badge">First “real” espresso</span>
-              </div>
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
+        <img
+          src="/assets/images/grinders/eureka-mignon-crono-brew-800.webp"
+          srcset="
+            /assets/images/grinders/eureka-mignon-crono-brew-320.webp 320w,
+            /assets/images/grinders/eureka-mignon-crono-brew-800.webp 800w
+          "
+          sizes="(max-width: 980px) 120px, 160px"
+          width="160"
+          height="160"
+          alt="Eureka Mignon Crono Brew grinder Canada"
+          loading="lazy"
+          decoding="async"
+          style="width:160px;height:auto;border-radius:14px;"
+        />
+        <div>
+          <h3 class="mb-2">Eureka Mignon Crono Brew</h3>
+          <p class="muted mb-0">
+            Compact, sturdy, and calmer in the kitchen. Great if you value build quality and routine.
+          </p>
+        </div>
+      </div>
 
-              <h3 class="mt-4 mb-2">The budget ceiling that actually works</h3>
-              <p class="muted mb-4">
-                Under $300 is where espresso grinders start to feel “capable” instead of “luck-based”.
-                This pick is about minimizing beginner frustration without overspending.
-              </p>
+      <div class="procon mt-4">
+        <div class="pros">
+          <h4 class="mb-2">Best for</h4>
+          <ul>
+            <li>Quieter household routine</li>
+            <li>Set-and-repeat workflow</li>
+            <li>Durable build</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4 class="mb-2">Trade-offs</h4>
+          <ul>
+            <li>Not designed as a “switch beans 3x/day” system</li>
+            <li>Feature set depends on the exact variant</li>
+          </ul>
+        </div>
+      </div>
 
-              <div class="procon">
-                <div class="pros">
-                  <h4 class="mb-2">Ideal for</h4>
-                  <ul>
-                    <li>Beginners upgrading from pre-ground</li>
-                    <li>Entry-level semi-auto machines</li>
-                    <li>People who want fewer wasted shots</li>
-                  </ul>
-                </div>
-                <div class="cons">
-                  <h4 class="mb-2">Less ideal if</h4>
-                  <ul>
-                    <li>You want premium build + silent grinding</li>
-                    <li>You demand super fine micro-steps</li>
-                    <li>You switch beans multiple times a day</li>
-                  </ul>
-                </div>
-              </div>
+      <div class="cluster mt-4">
+        <a class="btn btn--secondary w-100"
+           href="https://www.amazon.ca/dp/B0DDR6ZNBV/?tag=kitchengearla-20"
+           target="_blank" rel="nofollow sponsored noopener">Check price on Amazon.ca</a>
+        <a class="btn btn--ghost w-100" href="#how-to-choose">Choose by routine</a>
+      </div>
+    </section>
 
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary w-100" href="/best-espresso-grinder-under-300/">See under $300 list</a>
-                <a class="btn btn--ghost w-100" href="/best-espresso-machine-under-500/">Pair with under $500</a>
-              </div>
+    <!-- 4) Baratza Virtuoso+ -->
+    <section class="card" id="g-virtuoso" style="height:100%;">
+      <div class="cluster">
+        <span class="badge">Filter-first home</span>
+        <span class="badge">Versatile</span>
+      </div>
 
-              <div class="notice notice--tip mt-4">
-                <strong>Beginner move:</strong> Buy the grinder first, then choose the espresso machine that fits your routine.
-              </div>
-            </section>
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
+        <img
+          src="/assets/images/grinders/baratza-virtuoso-plus-800.webp"
+          srcset="
+            /assets/images/grinders/baratza-virtuoso-plus-320.webp 320w,
+            /assets/images/grinders/baratza-virtuoso-plus-800.webp 800w
+          "
+          sizes="(max-width: 980px) 120px, 160px"
+          width="160"
+          height="160"
+          alt="Baratza Virtuoso+ coffee grinder Canada"
+          loading="lazy"
+          decoding="async"
+          style="width:160px;height:auto;border-radius:14px;"
+        />
+        <div>
+          <h3 class="mb-2">Baratza Virtuoso+</h3>
+          <p class="muted mb-0">
+            Excellent for filter, AeroPress, moka, and a great household grinder when espresso isn’t the only goal.
+          </p>
+        </div>
+      </div>
 
-            <!-- Pick 3: Single-dose -->
-            <section class="card" id="pick-single-dose" style="height:100%;">
-              <div class="cluster">
-                <span class="badge">Best single-dose workflow</span>
-                <span class="badge">Switch beans often</span>
-              </div>
+      <div class="procon mt-4">
+        <div class="pros">
+          <h4 class="mb-2">Best for</h4>
+          <ul>
+            <li>Filter coffee consistency</li>
+            <li>Multiple brew methods</li>
+            <li>Simple, proven workflow</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4 class="mb-2">Trade-offs</h4>
+          <ul>
+            <li>Not a “true espresso specialist”</li>
+            <li>Better for pressurized baskets than demanding espresso setups</li>
+          </ul>
+        </div>
+      </div>
 
-              <h3 class="mt-4 mb-2">Freshness + flexibility without drama</h3>
-              <p class="muted mb-4">
-                Single-dose is perfect if you like trying different coffees or you want the freshest routine.
-                The goal is consistent output with low retention, without turning your counter into a science lab.
-              </p>
+      <div class="cluster mt-4">
+        <a class="btn btn--secondary w-100"
+           href="https://www.amazon.ca/dp/B07QMY8GLX/?tag=kitchengearla-20"
+           target="_blank" rel="nofollow sponsored noopener">Check price on Amazon.ca</a>
+        <a class="btn btn--ghost w-100" href="/espresso-basics/">Espresso basics</a>
+      </div>
+    </section>
 
-              <div class="procon">
-                <div class="pros">
-                  <h4 class="mb-2">Ideal for</h4>
-                  <ul>
-                    <li>People who rotate beans</li>
-                    <li>Chasing flavor clarity</li>
-                    <li>Keeping coffee fresh</li>
-                  </ul>
-                </div>
-                <div class="cons">
-                  <h4 class="mb-2">Less ideal if</h4>
-                  <ul>
-                    <li>You want the fastest “button-to-cup” mornings</li>
-                    <li>You dislike weighing beans</li>
-                    <li>You want a full hopper always ready</li>
-                  </ul>
-                </div>
-              </div>
+    <!-- 5) Bellucci Casa Mill -->
+    <section class="card" id="g-bellucci" style="height:100%;">
+      <div class="cluster">
+        <span class="badge">Budget pick</span>
+        <span class="badge">Lots of steps</span>
+      </div>
 
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary w-100" href="#comparison">Compare workflow</a>
-                <a class="btn btn--ghost w-100" href="#dialing-in">Dial-in checklist</a>
-              </div>
-            </section>
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
+        <img
+          src="/assets/images/grinders/bellucci-casa-mill-800.webp"
+          srcset="
+            /assets/images/grinders/bellucci-casa-mill-320.webp 320w,
+            /assets/images/grinders/bellucci-casa-mill-800.webp 800w
+          "
+          sizes="(max-width: 980px) 120px, 160px"
+          width="160"
+          height="160"
+          alt="Bellucci Casa Mill coffee grinder Canada"
+          loading="lazy"
+          decoding="async"
+          style="width:160px;height:auto;border-radius:14px;"
+        />
+        <div>
+          <h3 class="mb-2">Bellucci Casa Mill</h3>
+          <p class="muted mb-0">
+            A budget-friendly option if you want a modern interface and flexible settings without jumping to premium pricing.
+          </p>
+        </div>
+      </div>
 
-            <!-- Pick 4: Hopper -->
-            <section class="card" id="pick-hopper" style="height:100%;">
-              <div class="cluster">
-                <span class="badge">Best “set-and-forget” hopper</span>
-                <span class="badge">Speed routine</span>
-              </div>
+      <div class="procon mt-4">
+        <div class="pros">
+          <h4 class="mb-2">Best for</h4>
+          <ul>
+            <li>Budget setups</li>
+            <li>Everyday coffee + occasional espresso</li>
+            <li>People who want lots of adjustment options</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4 class="mb-2">Trade-offs</h4>
+          <ul>
+            <li>Not the same “long-term tank” build as higher-end grinders</li>
+            <li>Results depend more on puck prep and routine</li>
+          </ul>
+        </div>
+      </div>
 
-              <h3 class="mt-4 mb-2">The easiest daily routine</h3>
-              <p class="muted mb-4">
-                If you make the same drink every day, hopper grinders can be the calmest workflow:
-                fill once, dial in, then repeat. This pick prioritizes convenience without sacrificing espresso capability.
-              </p>
+      <div class="cluster mt-4">
+        <a class="btn btn--secondary w-100"
+           href="https://www.amazon.ca/dp/B0DDQ9PWM3/?tag=kitchengearla-20"
+           target="_blank" rel="nofollow sponsored noopener">Check price on Amazon.ca</a>
+        <a class="btn btn--ghost w-100" href="#dialing-in">Reduce wasted shots</a>
+      </div>
+    </section>
 
-              <div class="procon">
-                <div class="pros">
-                  <h4 class="mb-2">Ideal for</h4>
-                  <ul>
-                    <li>Busy mornings</li>
-                    <li>One main coffee at a time</li>
-                    <li>People who want less weighing and fuss</li>
-                  </ul>
-                </div>
-                <div class="cons">
-                  <h4 class="mb-2">Less ideal if</h4>
-                  <ul>
-                    <li>You switch beans frequently</li>
-                    <li>You want ultra-low retention</li>
-                    <li>You obsess over single-dose rituals</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="cluster mt-4">
-                <a class="btn btn--secondary w-100" href="/best-espresso-machine-for-beginners/">Best beginner machines</a>
-                <a class="btn btn--ghost w-100" href="#how-to-choose">Choose by routine</a>
-              </div>
-            </section>
-
-          </div>
-        </section>
+  </div>
+</section>
 
         <!-- Comparison Table -->
         <section class="section--tight" id="comparison">
@@ -725,6 +832,93 @@
             </table>
           </div>
         </section>
+
+        <section class="section--tight" id="comparison-products">
+  <h2><span class="h-accent">Products (Canada)</span></h2>
+  <p class="muted max-65ch">
+    A simple product view: who it’s for, where it fits, and a quick link to Amazon.ca.
+  </p>
+
+  <div class="table-wrap mt-6" role="region" aria-label="Product table for espresso grinders" tabindex="0">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Grinder</th>
+          <th scope="col">Best for</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <div class="cluster">
+              <img src="/assets/images/grinders/breville-smart-grinder-pro-320.webp" width="48" height="48"
+                   alt="Breville Smart Grinder Pro" loading="lazy" decoding="async" style="border-radius:10px;">
+              <span>Breville Smart Grinder Pro</span>
+            </div>
+          </th>
+          <td>Best value daily espresso</td>
+          <td>Great first real grinder for learning routine + timed workflow.</td>
+          <td><a class="link-accent" href="https://www.amazon.ca/dp/B00OXGXW8O/?tag=kitchengearla-20" target="_blank" rel="nofollow sponsored noopener">Amazon.ca</a></td>
+        </tr>
+
+        <tr>
+          <th scope="row">
+            <div class="cluster">
+              <img src="/assets/images/grinders/baratza-sette-270-320.webp" width="48" height="48"
+                   alt="Baratza Sette 270" loading="lazy" decoding="async" style="border-radius:10px;">
+              <span>Baratza Sette 270</span>
+            </div>
+          </th>
+          <td>Espresso-focused dial-in</td>
+          <td>Fast grind workflow, strong pick when espresso is priority.</td>
+          <td><a class="link-accent" href="https://www.amazon.ca/dp/B01G82WVZ0/?tag=kitchengearla-20" target="_blank" rel="nofollow sponsored noopener">Amazon.ca</a></td>
+        </tr>
+
+        <tr>
+          <th scope="row">
+            <div class="cluster">
+              <img src="/assets/images/grinders/eureka-mignon-crono-brew-320.webp" width="48" height="48"
+                   alt="Eureka Mignon Crono Brew" loading="lazy" decoding="async" style="border-radius:10px;">
+              <span>Eureka Mignon Crono Brew</span>
+            </div>
+          </th>
+          <td>Quiet build + routine</td>
+          <td>Compact “daily driver”, calmer kitchen experience.</td>
+          <td><a class="link-accent" href="https://www.amazon.ca/dp/B0DDR6ZNBV/?tag=kitchengearla-20" target="_blank" rel="nofollow sponsored noopener">Amazon.ca</a></td>
+        </tr>
+
+        <tr>
+          <th scope="row">
+            <div class="cluster">
+              <img src="/assets/images/grinders/baratza-virtuoso-plus-320.webp" width="48" height="48"
+                   alt="Baratza Virtuoso+" loading="lazy" decoding="async" style="border-radius:10px;">
+              <span>Baratza Virtuoso+</span>
+            </div>
+          </th>
+          <td>Filter-first home</td>
+          <td>Excellent for filter/AeroPress/moka; espresso is secondary.</td>
+          <td><a class="link-accent" href="https://www.amazon.ca/dp/B07QMY8GLX/?tag=kitchengearla-20" target="_blank" rel="nofollow sponsored noopener">Amazon.ca</a></td>
+        </tr>
+
+        <tr>
+          <th scope="row">
+            <div class="cluster">
+              <img src="/assets/images/grinders/bellucci-casa-mill-320.webp" width="48" height="48"
+                   alt="Bellucci Casa Mill" loading="lazy" decoding="async" style="border-radius:10px;">
+              <span>Bellucci Casa Mill</span>
+            </div>
+          </th>
+          <td>Budget pick</td>
+          <td>Good value if you want modern controls + flexible settings.</td>
+          <td><a class="link-accent" href="https://www.amazon.ca/dp/B0DDQ9PWM3/?tag=kitchengearla-20" target="_blank" rel="nofollow sponsored noopener">Amazon.ca</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 
         <!-- How to choose -->
         <section class="section--tight" id="how-to-choose">

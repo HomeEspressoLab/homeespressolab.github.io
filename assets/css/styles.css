@@ -1587,3 +1587,32 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
     grid-template-columns: 1fr !important;
   }
 }
+
+/* =========================================================
+   FIX: KPI tiles (Daily effort / Milk drinks / Maintenance)
+   Mobile = 1 row (no wrap) + horizontal scroll
+   ========================================================= */
+@media (max-width: 720px){
+
+  /* Le conteneur qui wrap tes 3 mini-kpi */
+  .hero__meta{
+    flex-wrap: nowrap;              /* <-- 1 seule rangée */
+    overflow-x: auto;               /* <-- scroll si ça dépasse */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;  /* optionnel mais smooth */
+  }
+
+  /* Chaque tuile */
+  .hero__meta .mini-kpi{
+    flex: 0 0 auto;                 /* ne pas rétrécir au point de casser */
+    min-width: 150px;               /* ajuste 140-180 selon ton texte */
+    scroll-snap-align: start;
+  }
+
+  /* Empêche le texte d’exploser en 2 lignes */
+  .hero__meta .mini-kpi strong,
+  .hero__meta .mini-kpi .kpi-title{
+    white-space: nowrap;
+  }
+}

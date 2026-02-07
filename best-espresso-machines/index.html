@@ -474,38 +474,42 @@
 
       <article class="stack mt-6">
 
-        <section id="quick-picks" class="section--tight">
+        <!-- Quick Picks -->
+<section class="section--tight" id="quick-picks">
   <h2><span class="h-accent">Quick picks</span></h2>
   <p class="muted max-65ch">
-    These are “ready-to-buy” picks based on real home use: stability, workflow, maintenance friction,
-    and repeatable results. Specs matter less than daily routine.
+    Ready-to-buy picks based on real home use: stability, workflow, maintenance friction, and repeatable results.
+    Specs matter less than daily routine.
   </p>
 
-  <!-- NOTE: keep your 2-row layout via CSS (grid-3 becomes 2 columns on desktop) -->
-  <div class="grid grid-2 mt-6">
+  <div class="grid mt-6" style="grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:18px;">
 
-    <!-- Best overall -->
-    <div class="card card--best" id="pick-overall">
+    <!-- 1) Best overall -->
+    <section class="card card--best" id="pick-overall" style="height:100%;">
       <div class="cluster">
         <span class="badge badge--best">Best overall</span>
         <span class="badge">Semi-auto</span>
       </div>
 
-      <div class="mt-4">
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
         <img
           src="/assets/images/machines/breville-barista-express-bes870xl-espresso-machine.webp"
-          alt="Breville Barista Express (BES870XL)"
-          width="800"
-          height="800"
+          width="160"
+          height="160"
+          alt="Breville Barista Express (BES870XL) espresso machine"
           loading="lazy"
           decoding="async"
-          style="width:92px;height:92px;object-fit:contain;border-radius:14px;display:block;" />
+          style="width:160px;height:auto;border-radius:14px;object-fit:contain;"
+        />
+        <div>
+          <h3 class="mb-2">Breville Barista Express (BES870XL)</h3>
+          <p class="muted mb-0">
+            The classic “low-regret” balance: built-in grinder, strong community workflow, great learning curve.
+          </p>
+        </div>
       </div>
 
-      <h3 class="mt-4 mb-2">Breville Barista Express (BES870XL)</h3>
-      <p class="muted mb-4">The classic “low-regret” balance: built-in grinder, strong community workflow, great learning curve.</p>
-
-      <div class="procon">
+      <div class="procon mt-4">
         <div class="pros">
           <h4 class="mb-2">Pros</h4>
           <ul>
@@ -524,36 +528,41 @@
       </div>
 
       <p class="small mt-4"><strong>Best for:</strong> most people who want real espresso + cappuccinos without going full hobby-mode.</p>
+
       <div class="cluster mt-4">
         <a class="btn btn--primary w-100"
-           href="https://www.amazon.ca/-/fr/Barista-Express-BES870XL-de-Breville/dp/B00CH9QWOU?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.nx6SWks6PEWDpHDtTqT-n5T0YywBfzyR3hGeDysS1YmGjqs2v1ZGHkgqq0hf55VLXZzFZMNuqKx-QoSZImLBaqBV9Fh4zfBrIHyEJ2yN6nj5I6tfL9vNj1jPUs_MHPp0ayWRtpVXtycyGg2nRy90Tj0TN-55OeTpIAnbiAQCl2BgckvE3oWfKk3G85TrN6CeQVRLQyFDC-nPs9hTmCl_VNxJ9vIi71S3bhNdQGEyA5M.9WixOWOotOVeEWe4YgOfOEuL8iTskYVuRKh2g22yDhE&dib_tag=se&keywords=Breville%2BBarista%2BExpress%2B%28semi-automatic%2Bw%2F%2Bgrinder%29&qid=1770143576&s=kitchen-substore&sr=1-2&th=1&linkCode=ll2&tag=kitchengearla-20&linkId=5e53ec2613895734286c3a93c0ce33d0&ref_=as_li_ss_tl"
+           href="https://www.amazon.ca/-/fr/Barista-Express-BES870XL-de-Breville/dp/B00CH9QWOU?linkCode=ll2&tag=kitchengearla-20"
            target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>
-        <a class="btn btn--ghost w-100" href="#details-picks">Details</a>
+        <a class="btn btn--ghost w-100" href="#comparison-table">Compare products</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Under $500 -->
-    <div class="card" id="pick-under-500">
+    <!-- 2) Under $500 -->
+    <section class="card" id="pick-under-500" style="height:100%;">
       <div class="cluster">
         <span class="badge">Under $500</span>
         <span class="badge">Capsule</span>
       </div>
 
-      <div class="mt-4">
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
         <img
           src="/assets/images/machines/nespresso-delonghi-inissia-aeroccino-espresso-machine.webp"
-          alt="Nespresso Inissia + Aeroccino"
-          width="800"
-          height="800"
+          width="160"
+          height="160"
+          alt="Nespresso Inissia + Aeroccino capsule espresso machine"
           loading="lazy"
           decoding="async"
-          style="width:92px;height:92px;object-fit:contain;border-radius:14px;display:block;" />
+          style="width:160px;height:auto;border-radius:14px;object-fit:contain;"
+        />
+        <div>
+          <h3 class="mb-2">Nespresso Inissia + Aeroccino</h3>
+          <p class="muted mb-0">
+            If you want “fast, simple, consistent,” capsule wins. Great for busy mornings and small counters.
+          </p>
+        </div>
       </div>
 
-      <h3 class="mt-4 mb-2">Nespresso Inissia + Aeroccino</h3>
-      <p class="muted mb-4">If you want “fast, simple, consistent,” capsule wins. Great for busy mornings and small counters.</p>
-
-      <div class="procon">
+      <div class="procon mt-4">
         <div class="pros">
           <h4 class="mb-2">Pros</h4>
           <ul>
@@ -572,36 +581,41 @@
       </div>
 
       <p class="small mt-4"><strong>Best for:</strong> convenience-first espresso-style drinks and occasional lattes.</p>
+
       <div class="cluster mt-4">
         <a class="btn btn--secondary w-100"
-           href="https://www.amazon.ca/-/fr/Nespresso-DeLonghi-Inissia-Machine-Aeroccino/dp/B01MZ2XQKP?dib=eyJ2IjoiMSJ9.TYEF0bYHKPewE43HhkaNgC7Hs_ilXcSIdCl3sq7t3DSZavQQmNpEvulaH0tiBYR-AqysRFDcqzzBFyoaScIa6LFG33PtWBpasLJmb-SQwAlMhCuzycF9xf-QBZLVGVWSOAhPopFQ2Q3XrkPe8lRNhPJH51TzbkIUw7IUAGDObFVhqlIzvLCUdwxbL2rRxoPbP5kgIScMk_disq1Ymzi6jk8snmwFRW0ne69xZgrD7_hd8Obi1Fbt4ikI4Gl2eJdNnWaQvR0QquFoGr7OFFZ5-Q2spI5t34yC9_CTCgDx050.nuTn6YizUubb4dIth1ad3jdM9b41QC4cjXCL_nKBqC4&dib_tag=se&keywords=nespresso%2Binissia&qid=1770144412&sr=8-11&th=1&linkCode=ll2&tag=kitchengearla-20&linkId=88f41f25fe0e45bd0ede0d83b6c080ba&ref_=as_li_ss_tl"
+           href="https://www.amazon.ca/-/fr/Nespresso-DeLonghi-Inissia-Machine-Aeroccino/dp/B01MZ2XQKP?linkCode=ll2&tag=kitchengearla-20"
            target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>
         <a class="btn btn--ghost w-100" href="#capsule-picks">More capsule picks</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Beginners -->
-    <div class="card" id="pick-beginners">
+    <!-- 3) Beginners -->
+    <section class="card" id="pick-beginners" style="height:100%;">
       <div class="cluster">
         <span class="badge">Beginners</span>
         <span class="badge">Assisted workflow</span>
       </div>
 
-      <div class="mt-4">
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
         <img
           src="/assets/images/machines/breville-barista-express-impress-bes876btr-espresso-machine-truffle.webp"
-          alt="Breville Barista Express Impress (BES876BTR)"
-          width="800"
-          height="800"
+          width="160"
+          height="160"
+          alt="Breville Barista Express Impress (BES876BTR) espresso machine"
           loading="lazy"
           decoding="async"
-          style="width:92px;height:92px;object-fit:contain;border-radius:14px;display:block;" />
+          style="width:160px;height:auto;border-radius:14px;object-fit:contain;"
+        />
+        <div>
+          <h3 class="mb-2">Breville Barista Express Impress (BES876BTR)</h3>
+          <p class="muted mb-0">
+            Assisted tamping helps reduce early frustration. Great if you want to learn without the chaos.
+          </p>
+        </div>
       </div>
 
-      <h3 class="mt-4 mb-2">Breville Barista Express Impress (BES876BTR)</h3>
-      <p class="muted mb-4">Assisted tamping helps reduce early frustration. Great if you want to learn without the chaos.</p>
-
-      <div class="procon">
+      <div class="procon mt-4">
         <div class="pros">
           <h4 class="mb-2">Pros</h4>
           <ul>
@@ -620,36 +634,41 @@
       </div>
 
       <p class="small mt-4"><strong>Best for:</strong> beginners who want real espresso with fewer beginner mistakes.</p>
+
       <div class="cluster mt-4">
         <a class="btn btn--secondary w-100"
-           href="https://www.amazon.ca/-/fr/Breville-expresso-tamponnage-cappuccino-BES876BTR/dp/B0CGKDZGC7?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.nx6SWks6PEWDpHDtTqT-n5T0YywBfzyR3hGeDysS1YmGjqs2v1ZGHkgqq0hf55VLXZzFZMNuqKx-QoSZImLBaqBV9Fh4zfBrIHyEJ2yN6nj5I6tfL9vNj1jPUs_MHPp0ayWRtpVXtycyGg2nRy90Tj0TN-55OeTpIAnbiAQCl2BgckvE3oWfKk3G85TrN6CeQVRLQyFDC-nPs9hTmCl_VNxJ9vIi71S3bhNdQGEyA5M.9WixOWOotOVeEWe4YgOfOEuL8iTskYVuRKh2g22yDhE&dib_tag=se&keywords=Breville%2BBarista%2BExpress%2B%28semi-automatic%2Bw%2F%2Bgrinder%29&qid=1770143679&s=kitchen-substore&sr=1-2&th=1&linkCode=ll2&tag=kitchengearla-20&linkId=6bb44941360dc671cefc566afb0810a9&ref_=as_li_ss_tl"
+           href="https://www.amazon.ca/-/fr/Breville-expresso-tamponnage-cappuccino-BES876BTR/dp/B0CGKDZGC7?linkCode=ll2&tag=kitchengearla-20"
            target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>
         <a class="btn btn--ghost w-100" href="/best-espresso-machine-for-beginners/">Beginner guide</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Automatic -->
-    <div class="card" id="pick-automatic">
+    <!-- 4) Best automatic -->
+    <section class="card" id="pick-automatic" style="height:100%;">
       <div class="cluster">
         <span class="badge">Best automatic</span>
         <span class="badge">Latte convenience</span>
       </div>
 
-      <div class="mt-4">
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
         <img
           src="/assets/images/machines/delonghi-dinamica-plus-espresso-machine.webp"
-          alt="De’Longhi Dinamica Plus"
-          width="800"
-          height="800"
+          width="160"
+          height="160"
+          alt="De’Longhi Dinamica Plus automatic espresso machine"
           loading="lazy"
           decoding="async"
-          style="width:92px;height:92px;object-fit:contain;border-radius:14px;display:block;" />
+          style="width:160px;height:auto;border-radius:14px;object-fit:contain;"
+        />
+        <div>
+          <h3 class="mb-2">De’Longhi Dinamica Plus</h3>
+          <p class="muted mb-0">
+            For people who want “press a button, get coffee.” Excellent for consistent daily milk drinks.
+          </p>
+        </div>
       </div>
 
-      <h3 class="mt-4 mb-2">De’Longhi Dinamica Plus</h3>
-      <p class="muted mb-4">For people who want “press a button, get coffee.” Excellent for consistent daily milk drinks.</p>
-
-      <div class="procon">
+      <div class="procon mt-4">
         <div class="pros">
           <h4 class="mb-2">Pros</h4>
           <ul>
@@ -668,36 +687,41 @@
       </div>
 
       <p class="small mt-4"><strong>Best for:</strong> convenience-first lattes and consistent coffee with minimal learning curve.</p>
+
       <div class="cluster mt-4">
         <a class="btn btn--secondary w-100"
-           href="https://www.amazon.ca/automatique-compatible-applications-technologie-LatteCrema/dp/B08TGCTT6C?dib=eyJ2IjoiMSJ9.KvHae_sK2m2TK_E5BM1JGOufrpGGZCME3pHjgHJJKgbqRvF7pPTVf0R4LzbbmrdzCdmz96XaekndB5RRVQskwgn8zoQrfJLHb3pAGpYPpXbRniEOtT7NX4koSt21yOIzEF3NZ8AN-0MT7m0AFEXOBVZHtop-IQZtknYMuBCT7laDG2zAWcOu_r6dzP3qfu9YzsCmpuIdGTFqwBRZ7yTAqg19QijOKnGoylyLIkxK1ctd6rTU8TqndTcspj3_6KTeUY-J0q8FAqIGivwft_TnJlJrVubK_ocyPG9h6HVgl5U.US974ztNXiE6uL8kC5VUfR74WakW1vBR4_iViaZIL9c&dib_tag=se&keywords=delonghi%2Bdinamica%2Bplus%2Bespresso&qid=1770144075&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=kitchengearla-20&linkId=3b83513e00c35ee04b6cf653d1f19af4&ref_=as_li_ss_tl"
+           href="https://www.amazon.ca/automatique-compatible-applications-technologie-LatteCrema/dp/B08TGCTT6C?linkCode=ll2&tag=kitchengearla-20"
            target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>
         <a class="btn btn--ghost w-100" href="#automatic-alternatives">Automatic alternatives</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Enthusiasts -->
-    <div class="card" id="pick-enthusiasts">
+    <!-- 5) Enthusiasts -->
+    <section class="card" id="pick-enthusiasts" style="height:100%;">
       <div class="cluster">
         <span class="badge">Enthusiasts</span>
         <span class="badge">Manual control</span>
       </div>
 
-      <div class="mt-4">
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
         <img
           src="/assets/images/machines/gaggia-classic-evo-pro-ri9380-49-espresso-machine.webp"
-          alt="Gaggia Classic Evo Pro"
-          width="800"
-          height="800"
+          width="160"
+          height="160"
+          alt="Gaggia Classic Evo Pro RI9380/49 espresso machine"
           loading="lazy"
           decoding="async"
-          style="width:92px;height:92px;object-fit:contain;border-radius:14px;display:block;" />
+          style="width:160px;height:auto;border-radius:14px;object-fit:contain;"
+        />
+        <div>
+          <h3 class="mb-2">Gaggia Classic Evo Pro</h3>
+          <p class="muted mb-0">
+            A classic platform for learning and upgrading. Great if you enjoy control and routine.
+          </p>
+        </div>
       </div>
 
-      <h3 class="mt-4 mb-2">Gaggia Classic Evo Pro</h3>
-      <p class="muted mb-4">A classic platform for learning and upgrading. Great if you enjoy control and routine.</p>
-
-      <div class="procon">
+      <div class="procon mt-4">
         <div class="pros">
           <h4 class="mb-2">Pros</h4>
           <ul>
@@ -716,146 +740,65 @@
       </div>
 
       <p class="small mt-4"><strong>Best for:</strong> people who want to improve, tweak, and get better over time.</p>
+
       <div class="cluster mt-4">
         <a class="btn btn--secondary w-100"
-           href="https://www.amazon.ca/-/fr/Gaggia-expresso-RI9380-49-tonnerre/dp/B086H458MP?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2M51ONTMFHVKW&dib=eyJ2IjoiMSJ9.K1bfVKAvcbmolRXrHm6xdlqQpa4Br5ISi3L9j06PYQ_rMCgp4jLRf3fpBha97hT1rFlbThxo6mpiiqRD0qccYvDUL6at6lDPsTk7FsNxFEITuX-gsegsasqsnCkuYegJ7DAs6-bdPrhSGXJ3d-caSLFKhEnYkYQCjcGswuW17MkBrDAWl8XeacRsCp-a2ijSrND5uzNSjwx8_pT5NmKjHGmigHeC4rHhoR_M4wwXuHUkJptR9ciTWR20g7fEE7eWcZANeINPQ8Kkdr-xmCGN1fY0vgjGs95wFWPggIweAJs.tW-QF_sI8TmyZNEqiu4_rJ4l_CQaKR2AYe_Nn2DE_k0&dib_tag=se&keywords=Gaggia%2BClassic%2BPro%2BEspresso%2BMachine&qid=1770143774&sprefix=gaggia%2Bclassic%2Bpro%2Bespresso%2Bmachine%2Caps%2C269&sr=8-11&th=1&linkCode=ll2&tag=kitchengearla-20&linkId=06d5d44ebffa1f61ec039ee82f750cef&ref_=as_li_ss_tl"
+           href="https://www.amazon.ca/-/fr/Gaggia-expresso-RI9380-49-tonnerre/dp/B086H458MP?linkCode=ll2&tag=kitchengearla-20"
            target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>
         <a class="btn btn--ghost w-100" href="/best-espresso-grinders/">Pair with a grinder</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Capsule (compact + milk) -->
-    <div class="card" id="pick-capsule">
-      <div class="cluster">
-        <span class="badge">Best capsule</span>
-        <span class="badge">Compact + milk</span>
-      </div>
-
-      <div class="mt-4">
-        <img
-          src="/assets/images/machines/nespresso-delonghi-essenza-mini-aeroccino-espresso-machine.webp"
-          alt="Nespresso Essenza Mini + Aeroccino"
-          width="800"
-          height="800"
-          loading="lazy"
-          decoding="async"
-          style="width:92px;height:92px;object-fit:contain;border-radius:14px;display:block;" />
-      </div>
-
-      <h3 class="mt-4 mb-2">Nespresso Essenza Mini + Aeroccino</h3>
-      <p class="muted mb-4">Compact, fast, and consistent. A great “small counter, big convenience” setup.</p>
-
-      <div class="notice notice--tip mt-4">
-        <strong>Tip:</strong> Capsule is the best “daily-repeatable” option if you value speed over espresso tinkering.
-      </div>
-
-      <div class="cluster mt-4">
-        <a class="btn btn--secondary w-100"
-           href="https://www.amazon.ca/-/fr/Nespresso-DeLonghi-Essenza-mousseur-Aeroccino/dp/B072HVFSWZ?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WCIKECEZL3GH&dib=eyJ2IjoiMSJ9.eGBf3R5st1DhW8-Eq9G_HKwOQ54RmIAPl_CS_3yU3e53UAOVNnqQAAmqA2SyI54egCS37H4hDkrL5R4RragTO1OFBpXEDzpMxT44hDH-gewzTUkJf1qT2S0IynZ4NxpeQ63QodCXc3o40X3Sb--zgPqGflP1DtUClIjLNcECwd0SjBhd-_DvkZ1qOsbvk9fPF_P7XaQFH6SIXDmKQXlAHXVjm0jea_qYTTg4pzZIgOQ.dQYkEIR1puxG0qTPyajg7dw5TqKmPpEZNC8QW6JxxAs&dib_tag=se&keywords=Nespresso%2BDe%27Longhi%2BEssenza%2BMini%2Bmachine&qid=1770144350&s=kitchen&sprefix=nespresso%2Bde%27longhi%2Bessenza%2Bmini%2Bmachine%2Ckitchen%2C96&sr=1-3&xpid=KAWodPE0zGRIC&th=1&linkCode=ll2&tag=kitchengearla-20&linkId=189fa39c7a83be9a47e5244ae887e810&ref_=as_li_ss_tl"
-           target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>
-        <a class="btn btn--ghost w-100" href="#capsule-picks">Capsule section</a>
-      </div>
-    </div>
-
-    <!-- Super-automatic: Gaggia Magenta Prestige -->
-    <div class="card" id="pick-gaggia-magenta">
+    <!-- 6) Super-auto: Philips 3300 LatteGo -->
+    <section class="card" id="pick-philips-3300" style="height:100%;">
       <div class="cluster">
         <span class="badge">Super-automatic</span>
-        <span class="badge">Gaggia pick</span>
+        <span class="badge">Milk convenience</span>
       </div>
 
-      <div class="mt-4">
+      <div class="grid mt-4" style="grid-template-columns:160px 1fr;gap:14px;align-items:center;">
         <img
-          src="/assets/images/machines/gaggia-magenta-prestige-espresso-machine.webp"
-          alt="Gaggia Magenta Prestige"
-          width="800"
-          height="800"
+          src="/assets/images/machines/philips-3300-series-lattego-espresso-machine.webp"
+          width="160"
+          height="160"
+          alt="Philips 3300 Series LatteGo super-automatic espresso machine"
           loading="lazy"
           decoding="async"
-          style="width:92px;height:92px;object-fit:contain;border-radius:14px;display:block;" />
+          style="width:160px;height:auto;border-radius:14px;object-fit:contain;"
+        />
+        <div>
+          <h3 class="mb-2">Philips 3300 Series (LatteGo)</h3>
+          <p class="muted mb-0">
+            One-touch milk drinks with a simple cleaning routine. Great for daily cappuccinos without tinkering.
+          </p>
+        </div>
       </div>
 
-      <h3 class="mt-4 mb-2">Gaggia Magenta Prestige</h3>
-      <p class="muted mb-4">
-        One-touch latte-style convenience in a Gaggia platform. Great if you want “push button coffee” with less routine.
-      </p>
-
-      <div class="procon">
+      <div class="procon mt-4">
         <div class="pros">
           <h4 class="mb-2">Pros</h4>
           <ul>
-            <li>Super-automatic workflow (easy daily drinks)</li>
-            <li>Built-in grinder and automated routines</li>
-            <li>Good for households and consistency</li>
+            <li>LatteGo milk system is quick to rinse</li>
+            <li>Easy daily workflow</li>
+            <li>Good for households</li>
           </ul>
         </div>
         <div class="cons">
           <h4 class="mb-2">Cons</h4>
           <ul>
             <li>Less manual espresso control</li>
-            <li>Cleaning routine still matters</li>
+            <li>Drink quality depends on bean freshness + settings</li>
           </ul>
         </div>
       </div>
 
-      <p class="small mt-4"><strong>Best for:</strong> people who want Gaggia-style super-automatic convenience (lattes/cappuccinos) on Amazon Canada.</p>
       <div class="cluster mt-4">
         <a class="btn btn--secondary w-100"
-           href="https://www.amazon.ca/-/fr/Gaggia-Magenta-Prestige-expresso-automatique/dp/B093Y2YD5D?crid=3G2JBNGK000QG&dib=eyJ2IjoiMSJ9.cZSo1Lgx3jhpOp-dmYK3UFTKc7SET_b60P5ESiuPkUV_H_rK0v9felwfdoCibrhuv3x-JM6-mlYn8AZY7V6vNpu6gZCk-0mooQB78-TRZvHopJqWKHqlntqyk7ojCaQy0MDzwVOHeBq8G9iuWVoYx6MDOn-DJNfBRvy8Kl3tgDbqPSAd06a1U0XQu_EgzW84YG_uTYorVeqfjA1Sykv9s5fkr0BxeEnOqPgpX-HEAnmTj8rZlSrnVNsWyA85FbgpIC0ye8VpcgNH15DvfCdTRae2wBeYDbzJieTKJS_TsLY.nbP6IK_popsbcIcNDAUUbGw_N2Ca4oj2FLEFkJSgFB8&dib_tag=se&keywords=gaggia+magenta+prestige&qid=1770224930&sprefix=gaggia+magenta%2Caps%2C116&sr=8-4&linkCode=ll2&tag=kitchengearla-20&linkId=c85422911c06f13a612275c698a6bce4&ref_=as_li_ss_tl"
+           href="https://www.amazon.ca/enti%C3%A8rement-automatique-pr%C3%A9r%C3%A9glages-SilentBrew-silencieux/dp/B0CZ4GN5YT?linkCode=ll2&tag=kitchengearla-20"
            target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>
-        <a class="btn btn--ghost w-100" href="#automatic-alternatives">Automatic alternatives</a>
+        <a class="btn btn--ghost w-100" href="#automatic-alternatives">Compare automatics</a>
       </div>
-    </div>
-
-    <!-- All-in-one: AIRMSEN all-in-one burr grinder -->
-    <div class="card" id="pick-airmsen-grinder">
-      <div class="cluster">
-        <span class="badge">All-in-one</span>
-        <span class="badge">Burr grinder</span>
-      </div>
-
-      <div class="mt-4">
-        <img
-          src="/assets/images/machines/airmsen-espresso-machine-burr-grinder.webp"
-          alt="AIRMSEN Espresso Machine with Burr Grinder"
-          width="800"
-          height="800"
-          loading="lazy"
-          decoding="async"
-          style="width:92px;height:92px;object-fit:contain;border-radius:14px;display:block;" />
-      </div>
-
-      <h3 class="mt-4 mb-2">AIRMSEN Espresso Machine (with Burr Grinder)</h3>
-      <p class="muted mb-4">
-        Amazon alternative to the “machine + separate grinder” setup. Great if you want one box and fewer decisions.
-      </p>
-
-      <div class="procon">
-        <div class="pros">
-          <h4 class="mb-2">Pros</h4>
-          <ul>
-            <li>Built-in burr grinder (simpler setup)</li>
-            <li>All-in-one footprint</li>
-            <li>Convenient for first-time buyers</li>
-          </ul>
-        </div>
-        <div class="cons">
-          <h4 class="mb-2">Cons</h4>
-          <ul>
-            <li>Less upgrade flexibility than separate grinder</li>
-            <li>All-in-ones vary by build quality</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="small mt-4"><strong>Best for:</strong> people who want an Amazon-available all-in-one instead of hunting for a separate grinder.</p>
-      <div class="cluster mt-4">
-        <a class="btn btn--secondary w-100"
-           href="https://www.amazon.ca/dp/B0FHHCNBXF?tag=kitchengearla-20"
-           target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>
-        <a class="btn btn--ghost w-100" href="/best-espresso-grinders/">See separate grinders</a>
-      </div>
-    </div>
+    </section>
 
   </div>
 </section>

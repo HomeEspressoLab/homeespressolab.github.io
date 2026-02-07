@@ -1616,3 +1616,81 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
     white-space: nowrap;
   }
 }
+
+/* =========================================================
+   HOME PATCH — Top picks + Last updated + hero--full safety
+   Drop this at the END of styles.css
+   ========================================================= */
+
+/* 1) Hero "full" safety: if you keep hero--full in HTML */
+.hero--full{
+  width: 100%;
+  max-width: none;
+}
+
+/* If hero--full causes spacing weirdness, keep this tiny normalization */
+.hero.hero--banner.hero--full{
+  margin-top: var(--s-7);
+}
+
+/* 2) "Top picks right now" section spacing consistency */
+.section--tight[aria-label="Top picks right now"] .grid{
+  margin-top: var(--s-6);
+}
+
+/* 3) Small "Last updated" text style (matches your muted system) */
+.last-updated{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+.last-updated time{
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Optional: add a tiny dot separator utility */
+.sep-dot{
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.25);
+  display:inline-block;
+}
+
+/* 4) Make your "Updated 2026" badge more “real” when you include a date */
+.badge time{
+  font: inherit;
+  color: inherit;
+}
+
+/* 5) Improve card CTA density for the new top picks block */
+.section--tight[aria-label="Top picks right now"] .card p{
+  margin-bottom: var(--s-4);
+}
+.section--tight[aria-label="Top picks right now"] .card .btn{
+  margin-top: auto;
+}
+
+/* 6) Slightly stronger hover on the best card in top picks (CTR micro boost) */
+.section--tight[aria-label="Top picks right now"] .card--best:hover{
+  transform: translateY(-3px);
+  border-color: rgba(167,139,250,.38);
+}
+
+/* 7) Mobile: keep 3-card row as stacked (you already force grid-3 to 1 col)
+   but add a bit more breathing room */
+@media (max-width: 720px){
+  .section--tight[aria-label="Top picks right now"] .card{
+    padding: var(--s-6);
+  }
+}
+
+/* 8) Optional: Improve anchor focus clarity inside cards */
+.card a:focus-visible{
+  box-shadow: var(--ring);
+  border-radius: 12px;
+}
+

@@ -1580,3 +1580,10 @@ tbody tr:hover td{ background: rgba(139,92,246,.06); }
     flex: 0 0 24px;
   }
 }
+
+/* Mobile: grids en 1 colonne */
+@media (max-width: 720px){
+  .grid-3{
+    grid-template-columns: 1fr !important;
+  }
+}

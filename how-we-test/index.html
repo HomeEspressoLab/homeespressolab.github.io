@@ -18,13 +18,23 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://homeespressolab.github.io/how-we-test/" />
 
-  <!-- Hreflang (SEO: English + French URLs) -->
+  <!-- Hreflang -->
   <link rel="alternate" href="https://homeespressolab.github.io/how-we-test/" hreflang="en-CA" />
   <link rel="alternate" href="https://homeespressolab.github.io/fr/comment-on-teste/" hreflang="fr-CA" />
   <link rel="alternate" href="https://homeespressolab.github.io/how-we-test/" hreflang="x-default" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Preload HERO image (responsive) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/assets/images/hero/how-we-test-hero-2400x1260.webp"
+    imagesrcset="/assets/images/hero/how-we-test-hero-1600x840.webp 1600w, /assets/images/hero/how-we-test-hero-2400x1260.webp 2400w"
+    imagesizes="(max-width: 900px) 100vw, 1200px"
+    type="image/webp"
+  />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
@@ -37,12 +47,15 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="HomeEspressoLab testing methodology for espresso machines and grinders (Canada, 2026)" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="How We Test Espresso Machines & Grinders (Canada, 2026) | HomeEspressoLab" />
   <meta name="twitter:description" content="Workflow-first testing, repeatable checks, and honest trade-offs for espresso machines and grinders in Canada." />
   <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp" />
+  <meta name="twitter:image:alt" content="HomeEspressoLab testing methodology for espresso machines and grinders (Canada, 2026)" />
+  <meta name="twitter:url" content="https://homeespressolab.github.io/how-we-test/" />
 
   <!-- Favicons (root) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -53,7 +66,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
 
-  <!-- GA4 + Consent Mode v2 (order matters: default consent BEFORE gtag.js) -->
+  <!-- GA4 + Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
@@ -87,84 +100,84 @@
 
   <!-- JSON-LD: Organization + WebSite + WebPage + Breadcrumb + Article -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Organization",
-        "@id":"https://homeespressolab.github.io/#org",
-        "name":"HomeEspressoLab",
-        "url":"https://homeespressolab.github.io/",
-        "logo":{
-          "@type":"ImageObject",
-          "url":"https://homeespressolab.github.io/assets/images/brand/homeespressolab-brandmark-1024.png"
-        }
-      },
-      {
-        "@type":"WebSite",
-        "@id":"https://homeespressolab.github.io/#website",
-        "url":"https://homeespressolab.github.io/",
-        "name":"HomeEspressoLab",
-        "publisher":{"@id":"https://homeespressolab.github.io/#org"},
-        "inLanguage":"en-CA"
-      },
-      {
-        "@type":"BreadcrumbList",
-        "@id":"https://homeespressolab.github.io/how-we-test/#breadcrumbs",
-        "itemListElement":[
-          {
-            "@type":"ListItem",
-            "position":1,
-            "name":"Home",
-            "item":"https://homeespressolab.github.io/"
-          },
-          {
-            "@type":"ListItem",
-            "position":2,
-            "name":"How We Test",
-            "item":"https://homeespressolab.github.io/how-we-test/"
-          }
-        ]
-      },
-      {
-        "@type":"WebPage",
-        "@id":"https://homeespressolab.github.io/how-we-test/#webpage",
-        "url":"https://homeespressolab.github.io/how-we-test/",
-        "name":"How We Test Espresso Machines & Grinders (Canada, 2026)",
-        "isPartOf":{"@id":"https://homeespressolab.github.io/#website"},
-        "inLanguage":"en-CA",
-        "breadcrumb":{"@id":"https://homeespressolab.github.io/how-we-test/#breadcrumbs"},
-        "primaryImageOfPage":{
-          "@type":"ImageObject",
-          "url":"https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp",
-          "width":1200,
-          "height":630
-        },
-        "publisher":{"@id":"https://homeespressolab.github.io/#org"}
-      },
-      {
-        "@type":"Article",
-        "@id":"https://homeespressolab.github.io/how-we-test/#article",
-        "headline":"How We Test Espresso Machines & Grinders (Canada, 2026)",
-        "description":"How HomeEspressoLab tests espresso machines and grinders: workflow-first criteria, repeatable checks, and clear trade-offs.",
-        "dateModified":"2026-02-02",
-        "datePublished":"2026-02-02",
-        "mainEntityOfPage":{"@id":"https://homeespressolab.github.io/how-we-test/#webpage"},
-        "author":{
-          "@type":"Organization",
-          "name":"HomeEspressoLab Editorial Team"
-        },
-        "publisher":{"@id":"https://homeespressolab.github.io/#org"},
-        "image":{
-          "@type":"ImageObject",
-          "url":"https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp",
-          "width":1200,
-          "height":630
-        }
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://homeespressolab.github.io/#org",
+      "name":"HomeEspressoLab",
+      "url":"https://homeespressolab.github.io/",
+      "logo":{
+        "@type":"ImageObject",
+        "url":"https://homeespressolab.github.io/assets/images/brand/homeespressolab-brandmark-1024.png"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://homeespressolab.github.io/#website",
+      "url":"https://homeespressolab.github.io/",
+      "name":"HomeEspressoLab",
+      "publisher":{"@id":"https://homeespressolab.github.io/#org"},
+      "inLanguage":"en-CA"
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://homeespressolab.github.io/how-we-test/#breadcrumbs",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "position":1,
+          "name":"Home",
+          "item":"https://homeespressolab.github.io/"
+        },
+        {
+          "@type":"ListItem",
+          "position":2,
+          "name":"How We Test",
+          "item":"https://homeespressolab.github.io/how-we-test/"
+        }
+      ]
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://homeespressolab.github.io/how-we-test/#webpage",
+      "url":"https://homeespressolab.github.io/how-we-test/",
+      "name":"How We Test Espresso Machines & Grinders (Canada, 2026)",
+      "isPartOf":{"@id":"https://homeespressolab.github.io/#website"},
+      "inLanguage":"en-CA",
+      "breadcrumb":{"@id":"https://homeespressolab.github.io/how-we-test/#breadcrumbs"},
+      "primaryImageOfPage":{
+        "@type":"ImageObject",
+        "url":"https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp",
+        "width":1200,
+        "height":630
+      },
+      "publisher":{"@id":"https://homeespressolab.github.io/#org"}
+    },
+    {
+      "@type":"Article",
+      "@id":"https://homeespressolab.github.io/how-we-test/#article",
+      "headline":"How We Test Espresso Machines & Grinders (Canada, 2026)",
+      "description":"How HomeEspressoLab tests espresso machines and grinders: workflow-first criteria, repeatable checks, and clear trade-offs.",
+      "dateModified":"2026-02-02",
+      "datePublished":"2026-02-02",
+      "mainEntityOfPage":{"@id":"https://homeespressolab.github.io/how-we-test/#webpage"},
+      "author":{
+        "@type":"Organization",
+        "name":"HomeEspressoLab Editorial Team"
+      },
+      "publisher":{"@id":"https://homeespressolab.github.io/#org"},
+      "image":{
+        "@type":"ImageObject",
+        "url":"https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp",
+        "width":1200,
+        "height":630
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -285,7 +298,7 @@
         <span aria-current="page">How We Test</span>
       </nav>
 
-      <!-- Intro -->
+      <!-- Intro + HERO -->
       <header class="section--tight">
         <p class="kicker">Methodology</p>
         <h1>How We Test Espresso Machines & Grinders</h1>
@@ -293,6 +306,27 @@
           Our testing is workflow-first: what it’s like to own, clean, and repeat great results at home.
           We publish clear trade-offs, not “best overall” hype.
         </p>
+
+        <!-- HERO IMAGE (responsive 1600/2400) -->
+        <div class="hero__media mt-6">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/assets/images/hero/how-we-test-hero-1600x840.webp 1600w, /assets/images/hero/how-we-test-hero-2400x1260.webp 2400w"
+              sizes="(max-width: 900px) 100vw, 1200px"
+            />
+            <img
+              src="/assets/images/hero/how-we-test-hero-1600x840.webp"
+              alt="Home espresso station with accessories on a dark counter"
+              width="1600"
+              height="840"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+              class="hero__img"
+            />
+          </picture>
+        </div>
 
         <div class="hero__meta mt-4">
           <span class="badge badge--best">Last updated: February 2, 2026</span>

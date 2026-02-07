@@ -25,6 +25,16 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
+  <!-- Preload HERO image (responsive) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/assets/images/how-we-test/how-we-test-hero-2400x1260.webp"
+    imagesrcset="/assets/images/how-we-test/how-we-test-hero-1600x840.webp 1600w, /assets/images/how-we-test/how-we-test-hero-2400x1260.webp 2400w"
+    imagesizes="(max-width: 900px) 100vw, 1200px"
+    type="image/webp"
+  />
+
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="fr_CA" />
@@ -32,16 +42,17 @@
   <meta property="og:title" content="Comment on teste (Canada, 2026) | HomeEspressoLab" />
   <meta property="og:description" content="Notre méthode de test : routine d’abord, résultats répétables, et compromis honnêtes pour l’espresso maison." />
   <meta property="og:url" content="https://homeespressolab.github.io/fr/comment-on-teste/" />
-  <meta property="og:image" content="https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp" />
+  <meta property="og:image" content="https://homeespressolab.github.io/assets/images/og/how-we-test-espresso-og-1200x630.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="Méthode de test HomeEspressoLab pour l’espresso maison (Canada, 2026)" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Comment on teste (Canada, 2026) | HomeEspressoLab" />
   <meta name="twitter:description" content="Comment HomeEspressoLab teste les machines espresso, moulins et accessoires : routine, répétabilité, compromis clairs." />
-  <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp" />
+  <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/how-we-test-espresso-og-1200x630.webp" />
 
   <!-- Favicons (root) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -135,7 +146,7 @@
       "breadcrumb":{"@id":"https://homeespressolab.github.io/fr/comment-on-teste/#breadcrumbs"},
       "primaryImageOfPage":{
         "@type":"ImageObject",
-        "url":"https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp",
+        "url":"https://homeespressolab.github.io/assets/images/og/how-we-test-espresso-og-1200x630.webp",
         "width":1200,
         "height":630
       },
@@ -158,7 +169,7 @@
       "publisher":{"@id":"https://homeespressolab.github.io/#org"},
       "image":{
         "@type":"ImageObject",
-        "url":"https://homeespressolab.github.io/assets/images/og/how-we-test-og-1200x630.webp",
+        "url":"https://homeespressolab.github.io/assets/images/og/how-we-test-espresso-og-1200x630.webp",
         "width":1200,
         "height":630
       }
@@ -281,10 +292,10 @@
 
       <!-- Breadcrumbs -->
       <nav class="breadcrumbs" aria-label="Fil d’Ariane">
-  <a href="/fr/">Accueil</a>
-  <span class="sep">›</span>
-  <span aria-current="page">Comment on teste</span>
-</nav>
+        <a href="/fr/">Accueil</a>
+        <span class="sep">›</span>
+        <span aria-current="page">Comment on teste</span>
+      </nav>
 
       <!-- Hero -->
       <section class="section--tight">
@@ -294,6 +305,27 @@
           On teste pour la vraie vie : routine d’abord, résultats répétables, et compromis honnêtes.
           Voici exactement comment on évalue les machines espresso, les moulins et les accessoires au Canada.
         </p>
+
+        <!-- HERO IMAGE (responsive 1600/2400) -->
+        <div class="hero__media mt-6">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/assets/images/how-we-test/how-we-test-hero-1600x840.webp 1600w, /assets/images/how-we-test/how-we-test-hero-2400x1260.webp 2400w"
+              sizes="(max-width: 900px) 100vw, 1200px"
+            />
+            <img
+              src="/assets/images/how-we-test/how-we-test-hero-1600x840.webp"
+              alt="Station espresso maison avec accessoires sur un comptoir sombre"
+              width="1600"
+              height="840"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+              class="hero__img"
+            />
+          </picture>
+        </div>
 
         <div class="hero__meta">
           <span class="badge badge--best">Mis à jour : 2 février 2026</span>

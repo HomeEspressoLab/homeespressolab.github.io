@@ -367,13 +367,26 @@ blockquote{
   letter-spacing: -0.01em;
   min-width: max-content;
 }
+
+/* If you use an <img class="brand__img"> in the header (your current HTML) */
+.brand__img{
+  width: 28px;
+  height: 28px;
+  display:block;
+  background: transparent !important; /* removes the purple square */
+  box-shadow: none !important;        /* removes glow */
+  border-radius: 0 !important;        /* set to 12px if you want rounded corners */
+}
+
+/* If you ever use a <span class="brand__logo"> badge version */
 .brand__logo{
   width: 34px;
   height: 34px;
   border-radius: 12px;
-  background: var(--grad-accent);
-  box-shadow: 0 8px 20px rgba(139,92,246,.25);
+  background: transparent !important; /* removes the purple square */
+  box-shadow: none !important;        /* removes glow */
 }
+
 .brand__name{ font-size: 1.05rem; }
 
 /* Nav links */

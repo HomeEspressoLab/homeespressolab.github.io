@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
 
   <meta name="google-site-verification" content="L1PfzJJwmxprbyNPTX3LpNLl86Ic-ivCj_JlSzI0Iwk" />
 
   <title>Home Espresso Guides (Canada, 2026) | HomeEspressoLab</title>
   <meta name="description" content="Home espresso guides for Canada (2026): quick picks, comparison tables, and honest trade-offs for semi-automatic, automatic, and capsule espresso machines plus grinders." />
+  <meta name="author" content="HomeEspressoLab Editorial Team" />
 
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet=-1,max-video-preview=-1" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -21,6 +23,10 @@
   <link rel="alternate" href="https://homeespressolab.github.io/" hreflang="en-CA" />
   <link rel="alternate" href="https://homeespressolab.github.io/fr/" hreflang="fr-CA" />
   <link rel="alternate" href="https://homeespressolab.github.io/" hreflang="x-default" />
+
+  <!-- Preconnect (perf) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
   <!-- Preload (Hero image) -->
   <link rel="preload" as="image"
@@ -48,12 +54,16 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="HomeEspressoLab: home espresso guides for Canada, 2026." />
+  <meta property="article:modified_time" content="2026-02-07T00:00:00-05:00" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Home Espresso Guides (Canada, 2026) | HomeEspressoLab" />
   <meta name="twitter:description" content="Quick picks, comparison tables, and honest trade-offs for home espresso. Canada-friendly recommendations." />
   <meta name="twitter:image" content="https://homeespressolab.github.io/assets/images/og/home-espresso-og-1200x630.webp" />
+  <!-- Optional: set if you have one -->
+  <!-- <meta name="twitter:site" content="@HomeEspressoLab" /> -->
 
   <!-- Favicons (root) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -96,7 +106,7 @@
   <script defer src="/assets/js/affiliate-clicks.js"></script>
   <script defer src="/assets/js/nav.js"></script>
 
-  <!-- JSON-LD: Organization + WebSite + WebPage + Breadcrumb -->
+  <!-- JSON-LD: Organization + WebSite + WebPage + Breadcrumb + FAQPage -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -117,7 +127,12 @@
         "url":"https://homeespressolab.github.io/",
         "name":"HomeEspressoLab",
         "publisher":{"@id":"https://homeespressolab.github.io/#org"},
-        "inLanguage":"en-CA"
+        "inLanguage":"en-CA",
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://homeespressolab.github.io/search/?q={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
       },
       {
         "@type":"BreadcrumbList",
@@ -136,6 +151,7 @@
         "@id":"https://homeespressolab.github.io/#webpage",
         "url":"https://homeespressolab.github.io/",
         "name":"Home Espresso Guides (Canada, 2026)",
+        "description":"Home espresso guides for Canada (2026): quick picks, comparison tables, and honest trade-offs for semi-automatic, automatic, and capsule espresso machines plus grinders.",
         "isPartOf":{"@id":"https://homeespressolab.github.io/#website"},
         "inLanguage":"en-CA",
         "breadcrumb":{"@id":"https://homeespressolab.github.io/#breadcrumbs"},
@@ -145,7 +161,47 @@
           "width":1200,
           "height":630
         },
-        "publisher":{"@id":"https://homeespressolab.github.io/#org"}
+        "publisher":{"@id":"https://homeespressolab.github.io/#org"},
+        "dateModified":"2026-02-07"
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://homeespressolab.github.io/#faq",
+        "inLanguage":"en-CA",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What type of espresso machine should I start with?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"If you want the fastest routine with minimal cleanup, capsules are hard to beat. If you want to learn and improve your espresso over time, a semi-automatic machine (with a good grinder) is usually the best starting point. If you want one-touch milk drinks, consider a solid automatic."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Do I really need a grinder for espresso?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"For semi-auto espresso, consistency depends heavily on grind quality. A capable grinder makes results repeatable and reduces wasted shots. That’s why we keep the grinder guide close to every machine recommendation."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Are capsule machines worth it?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"If you value speed, consistency, and low maintenance, yes. The trade-off is ongoing capsule cost and less control. For many households, that’s an excellent deal."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"What should I buy first: machine or grinder?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"If you’re going semi-auto, the grinder usually has the biggest impact on shot consistency. If you’re going capsule or super-automatic, the machine choice matters more than the grinder."
+            }
+          }
+        ]
       }
     ]
   }
@@ -161,7 +217,7 @@
       <div class="consent__text">
         <strong>Cookies</strong>
         <p class="muted">
-          We use analytics to understand traffic and improve content. You can accept or decline.
+          We use analytics to understand traffic and improve content. You can accept, decline, or customize.
         </p>
         <p class="small">
           See: <a class="link-accent" href="/privacy-policy/">Privacy Policy</a>
@@ -216,7 +272,7 @@
 
         <!-- Desktop language switch -->
         <div class="lang-switch lang-switch--desktop" aria-label="Language switch">
-          <a class="btn btn--ghost btn--sm" href="/" hreflang="en-CA" lang="en-CA" aria-current="true">EN</a>
+          <a class="btn btn--ghost btn--sm" href="/" hreflang="en-CA" lang="en-CA" aria-current="page">EN</a>
           <a class="btn btn--ghost btn--sm" href="/fr/" hreflang="fr-CA" lang="fr-CA">FR</a>
         </div>
 
@@ -253,7 +309,7 @@
         </nav>
 
         <div class="mobile-nav__lang" aria-label="Language switch">
-          <a class="btn btn--ghost btn--sm" href="/" hreflang="en-CA" lang="en-CA" aria-current="true">EN</a>
+          <a class="btn btn--ghost btn--sm" href="/" hreflang="en-CA" lang="en-CA" aria-current="page">EN</a>
           <a class="btn btn--ghost btn--sm" href="/fr/" hreflang="fr-CA" lang="fr-CA">FR</a>
         </div>
       </div>
@@ -300,8 +356,8 @@
             Built for real home use, not cafés.
           </p>
 
-          <div class="hero__meta">
-            <span class="badge badge--best">Updated 2026</span>
+          <div class="hero__meta" aria-label="Page highlights">
+            <span class="badge badge--best">Last updated <time datetime="2026-02-07">Feb 7, 2026</time></span>
             <span class="badge">Canada-friendly picks</span>
             <span class="badge">Clear trade-offs</span>
           </div>
@@ -309,7 +365,7 @@
 
         <!-- Bottom bar -->
         <div class="hero__bar">
-          <div class="hero__actions">
+          <div class="hero__actions" aria-label="Primary actions">
             <div class="cluster">
               <a class="btn btn--primary btn--lg" href="/best-espresso-machines/">Best Espresso Machines</a>
               <a class="btn btn--ghost btn--lg" href="/best-espresso-grinders/">Best Espresso Grinders</a>
@@ -361,6 +417,34 @@
       </div>
 
       <article class="stack mt-6">
+
+        <!-- Top picks right now (CTR booster) -->
+        <section class="section--tight" aria-label="Top picks right now">
+          <h2><span class="h-accent">Top picks right now</span></h2>
+          <p class="muted max-65ch">
+            If you only have a minute: start here, then use the comparison tables for details.
+          </p>
+
+          <div class="grid grid-3 mt-6">
+            <div class="card card--best">
+              <h3 class="mb-2">Best overall machines (2026)</h3>
+              <p class="muted mb-4">Best picks across semi-auto, automatic, and capsules with clear trade-offs.</p>
+              <a class="btn btn--primary w-100" href="/best-espresso-machines/">See top picks</a>
+            </div>
+
+            <div class="card">
+              <h3 class="mb-2">Best beginner setup</h3>
+              <p class="muted mb-4">Low-friction choices that help you learn without the chaos.</p>
+              <a class="btn btn--secondary w-100" href="/best-espresso-machine-for-beginners/">See beginner pick</a>
+            </div>
+
+            <div class="card">
+              <h3 class="mb-2">Best grinders (most impact)</h3>
+              <p class="muted mb-4">Consistency starts here. A strong grinder fixes most “bad espresso”.</p>
+              <a class="btn btn--secondary w-100" href="/best-espresso-grinders/">See grinders</a>
+            </div>
+          </div>
+        </section>
 
         <!-- Core Guides -->
         <section class="section--tight" aria-label="Core guides">
@@ -493,7 +577,9 @@
           </div>
 
           <div class="notice notice--info mt-6">
-            <strong>Editorial note:</strong> We avoid promising prices. Availability and bundles can change by season and region (including Amazon.ca).
+            <strong>Editorial standards:</strong> We focus on practical home use, repeatability, and maintenance reality.
+            Read our method: <a class="link-accent" href="/how-we-test/">How We Test</a>.
+            <span class="small muted">Last updated <time datetime="2026-02-07">Feb 7, 2026</time>.</span>
           </div>
         </section>
 
@@ -580,6 +666,10 @@
             <div class="muted small">Home espresso guides and reviews. Clear trade-offs, easier decisions.</div>
           </div>
         </div>
+
+        <p class="small muted mt-4">
+          Updated <time datetime="2026-02-07">Feb 7, 2026</time>.
+        </p>
 
         <p class="copyright">
           © <span>2026</span> HomeEspressoLab. Informational content only. Some pages contain affiliate links.

@@ -244,32 +244,38 @@
             fetchpriority="high" />
         </figure>
 
+        <!-- ✅ UPDATED: Quick summary moved INSIDE the hero, on the right -->
         <div class="hero__content">
-          <p class="kicker">Transparency • Independence • Trust</p>
-          <h1 class="hero__title">Disclosure</h1>
-          <p class="hero__lead max-65ch">
-            Some links on this site may support our work.
-            This helps keep guides free and up to date, without influencing rankings.
-          </p>
+          <div class="grid grid-2" style="align-items:end;">
+            <!-- Left: hero text -->
+            <div>
+              <p class="kicker">Transparency • Independence • Trust</p>
+              <h1 class="hero__title">Disclosure</h1>
+              <p class="hero__lead max-65ch">
+                Some links on this site may support our work.
+                This helps keep guides free and up to date, without influencing rankings.
+              </p>
 
-          <div class="hero__meta">
-            <span class="badge badge--best">Updated: 2026-02-06</span>
-            <span class="badge">Canada-focused</span>
-            <span class="badge">No pay-for-rankings</span>
+              <div class="hero__meta">
+                <span class="badge badge--best">Updated: 2026-02-06</span>
+                <span class="badge">Canada-focused</span>
+                <span class="badge">No pay-for-rankings</span>
+              </div>
+            </div>
+
+            <!-- Right: quick summary card -->
+            <aside class="hero__panel" aria-label="Quick summary">
+              <h3 class="mb-2">Quick summary</h3>
+              <ul class="muted" style="margin:0;padding-left:18px;">
+                <li>Some links may support the site.</li>
+                <li>Price is the same for you.</li>
+                <li>We don’t accept paid placements for rankings.</li>
+              </ul>
+            </aside>
           </div>
         </div>
 
-        <div class="hero__bar">
-          <aside class="hero__panel">
-            <h3 class="mb-2">Quick summary</h3>
-            <ul class="muted" style="margin:0;padding-left:18px;">
-              <li>Some links may support the site.</li>
-              <li>Price is the same for you.</li>
-              <li>We don’t accept paid placements for rankings.</li>
-            </ul>
-          </aside>
-        </div>
-
+        <!-- ✅ Removed: hero__bar (not needed anymore) -->
       </div>
     </section>
 
